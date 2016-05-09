@@ -1,0 +1,36 @@
+/* Portfolio
+ *
+ * /sass/components/_plan.scss - Esthetic style for sitePlan page
+ *
+ * coded by Mucht!
+ */
+
+.plan{
+    &__list{
+        font-family: $aladinStack;
+    }
+    &__elt{
+        font-size: 2.4em;
+        color: $laborColor;
+        transition: 0.2s ease-in-out;
+        &::before{
+            content: "";
+            font-family: $glyphs;
+            color: $laborColor;
+            padding-right: 0.5em;
+            transition: 0.2s ease-in-out;
+        }
+        &--sub{
+        }
+    }
+}
+
+// Hover
+.plan__elt:hover{
+    color: $planHoverColor;
+}
+
+.plan__elt:hover::before{
+    content: "";
+    color: $planHoverColor;
+}

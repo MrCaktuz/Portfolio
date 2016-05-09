@@ -1,0 +1,35 @@
+/* Portfolio
+ *
+ * /sass/objects/_project.scss - Non Esthetic style for project page
+ *
+ * coded by Mucht!
+ */
+
+.projectHeader{
+    height: $projectHeaderHeight;
+    &__tags{
+        width: 100%;
+    }
+    &__tag{
+        margin-bottom: 2.08333333333333em;
+    }
+}
+
+.project{
+    width: $mainWidth;
+    margin: 2.77777777777778em 0 1.22222222222222em $mainMarge;
+    &__title{
+        margin-bottom: 1.04166666666667em;
+    }
+    &__illustration{
+        width: 100%;
+        height: auto;
+    }
+    &__botton{
+        &--label{
+            width: $mainWidth;
+            min-height: 1.66666666666667em;
+            margin: 0 auto;
+        }
+    }
+}

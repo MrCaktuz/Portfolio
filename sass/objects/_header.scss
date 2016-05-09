@@ -1,0 +1,23 @@
+/* Portfolio
+ *
+ * /sass/objects/_header.scss - Non Esthetic style for header
+ *
+ * coded by Mucht!
+ */
+
+ .indexHeader{
+     height: $indexHeaderHeight;
+     &__title::before{
+         width: 335px;
+         height: 302px;
+         margin: 0.5em auto 0.4em;
+     }
+ }
+
+ .header{
+     height: $headerHeight;
+ }
+
+ .mainNav{
+     margin-left: 25px;
+ }

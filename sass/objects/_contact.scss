@@ -1,0 +1,29 @@
+/* Portfolio
+ *
+ * /sass/objects/_contact.scss - Non Esthetic style for contact page
+ *
+ * coded by Mucht!
+ */
+
+.contact{
+    background: $contactBackground;
+    padding: 5em $mainMarge 2.5em; // 50px
+}
+
+.form{
+    &__line{
+        width: 100%;
+        min-height: 1.66666666666667em;
+        margin-bottom: 1.04166666666667em;
+    }
+    &__input{
+        width: 88%;
+    }
+    &__textarea{
+        width: 100%;
+        height: 12.5em;
+    }
+    &__submit{
+        width: 100%;
+    }
+}

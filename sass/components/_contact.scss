@@ -1,0 +1,61 @@
+/* Portfolio
+ *
+ * /sass/components/_contact.scss - Esthetic style for contact page
+ *
+ * coded by Mucht!
+ */
+
+.form{
+    font-size: 2.4em;
+    &__line{
+        border-radius: 0.83333333333333em;
+        border: 3px solid $borderFormColor;
+        position: relative;
+    }
+    &__label{
+        font-family: $aladinStack;
+        color: $labelColor;
+        padding: 0.19em 1em;
+        border-radius: 0.83333333333333em;
+        background-color: $labelBackground;
+        position: relative;
+        top: 3px;
+        left: 0px;
+        &--msg{
+            display: block;
+            top: 0;
+        }
+    }
+    &__input{
+        position: absolute;
+        top: 6px;
+        left: 100px;
+        font-size: 0.66666666666667em;
+        color: $laborColor;
+        background-color: $inputBackground;
+        border: none;
+    }
+    &__textarea{
+        font-size: 0.66666666666667em;
+        font-family: $openSansStack;
+        color: $laborColor;
+        background-color: $inputBackground;
+        border: none;
+        padding: 1em;
+    }
+    &__submit{
+        display: block;
+        font-family: $aladinStack;
+        color: $labelColor;
+        padding: 0.13em 1em;
+        border-radius: 0.83333333333333em;
+        background-color: $labelBackground;
+        font-size: 1em;
+        border: none;
+        position: absolute;
+        top: -2px;
+        &:hover{
+            color: $linksHoverColor;
+        }
+    }
+}

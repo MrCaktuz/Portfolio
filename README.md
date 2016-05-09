@@ -25,25 +25,25 @@
 - Marié, sans enfant
 
 - **Lien:** je lui ai envoyé ma lettre de motivation pour postuler pour un employe. Il va visiter mon portfolio que j'ai joint à ma lettre.
-		
+
 - **Objectif:** il visite mon portfolio pour voir de quoi je suis capable, se donner une idée de qui je suis et voir comment je travaille. Il veut pouvoir déterminer si je conviendrais au poste ou pas.
-	
+
 *Marcus Kane*
-	
+
 - 25 ans
 - Patron d'un bar qui vient d'ouvrir.
 - Célibataire
-		
+
 - **Lien:** il cherche quelqu'un pour faire le site de son bar et en cherchant sur internet il est tombé sur mon portfolio.
-		
+
 - **Objectif:** son objectif est de voir si mon style graphique conviendrait à lui et son bar. Il lui faut trouver le moyen de me contacter facilement.
 
 ***
-	
+
 **Personas secondaires :**
 
 *Derek Shepherd*
-	
+
 - 32 ans
 - Professeur
 - Marié et bientôt papa
@@ -153,13 +153,6 @@ Par contre le formulaire de bas de pages est pas top à mon goût.
 	2. [Description/Argumentation du projet]
 	3. [Feedback personnel]
 4. Contacte
-
-***
-***
-
-###Wireframes
-
-> Dirigez vous vers le dossier de se nom.
 
 ***
 ***

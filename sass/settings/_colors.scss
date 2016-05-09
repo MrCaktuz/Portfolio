@@ -1,0 +1,39 @@
+/* Portfolio
+ *
+ * /sass/settings/_colors.scss - Global colors variables
+ *
+ * coded by Mucht
+ */
+
+$presentationBackground: radial-gradient( ellipse at center, #00d5ff 0%,#0092ff 100% );
+$contactBackground: $presentationBackground;
+$planBackground: $presentationBackground;
+$projectBottonBackground: $presentationBackground;
+
+$footerBackground: linear-gradient( -45deg, #003f66 0%,#002233 45%,#002233 55%,#003f66 100% );
+$projectBackground: #003F66;
+$projectHoverBackground: rgba(255, 153, 0, 0.85);
+$titleBackground: rgba(0, 63, 102, 0.8);
+$labelBackground: #003F66;
+$inputBackground: rgba(0, 63, 102, 0);
+$legendBackground: $titleBackground;
+
+$mainTitleColor: #FF9900;
+$navColor: #FFF;
+$titleColor: #FFF;
+$tagColor: #FFF;
+$laborColor: #003F66;
+$footerTitleColor: #FFF;
+$footerTextColor: #FFF;
+$iconColor: #0092ff;
+$copyColor: #0066B2;
+$labelColor: #FFF;
+$legendColor: #FFF;
+
+$linksHoverColor: #FF9900;
+$planHoverColor: #000;
+
+$borderColor: #0066B2;
+$borderFormColor: #003F66;
+
+$SeparatorsColor: #FF9900;

@@ -1,0 +1,36 @@
+/* Portfolio
+ *
+ * /sass/components/_presentation.scss - Esthetic style for presentation section
+ *
+ * coded by Mucht!
+ */
+
+.presentation{
+    background: $presentationBackground;
+    padding: 6.5em $mainMarge; // 50px
+    &__textBloc{
+        position: relative;
+        float: left;
+        line-height: 2em;
+        font-size: 1.8em;
+        &--first::before{
+            content: "";
+            border-top: 3px solid $borderColor;
+            border-left: 3px solid $borderColor;
+            position: absolute;
+            top: -15px;
+            left: -25px;
+        }
+        &--second{
+            float: right;
+            &::after{
+                content: "";
+                border-bottom: 3px solid $borderColor;
+                border-right: 3px solid $borderColor;
+                position: absolute;
+                bottom: -15px;
+                right: -25px;
+            }
+        }
+    }
+}

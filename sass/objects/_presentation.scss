@@ -1,0 +1,25 @@
+/* Portfolio
+ *
+ * /sass/objects/_presentation.scss - Non Esthetic style for presentation section
+ *
+ * coded by Mucht!
+ */
+
+.presentation{
+    &__textBloc{
+        width: $textBlocWidth;
+        min-width: 23.88888888888889em; // 430px
+        margin: 0 80px;
+        &--first::before{
+            width: 8.33333333333333em; // 150px
+            height: 8.33333333333333em; // 150px
+        }
+        &--second{
+            margin-top: 1.38888888888889em; // 25px
+            &::after{
+                width: 8.33333333333333em; // 150px
+                height: 8.33333333333333em; // 150px
+            }
+        }
+    }
+}

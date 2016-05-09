@@ -1,0 +1,17 @@
+/* Portfolio
+ *
+ * /sass/objects/_plan.scss - Non Esthetic style for sitePlan page
+ *
+ * coded by Mucht!
+ */
+
+.plan{
+    background: $planBackground;
+    padding: 2.5em $mainMarge 5em; // 50px
+    &__list--sub{
+        margin-left: 2em;
+    }
+    &__listItem{
+        margin-top: 2.5em;
+    }
+}

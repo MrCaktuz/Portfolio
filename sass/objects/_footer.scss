@@ -1,0 +1,21 @@
+/* Portfolio
+ *
+ * /sass/objects/_footer.scss - Non Esthetic style for footer section
+ *
+ * coded by Mucht!
+ */
+
+.footer{
+    &__contact{
+        margin-bottom: 1.5625em;
+    }
+    &__social{
+        margin-bottom: 1.5625em;
+    }
+    &__title{
+        margin-bottom: 1.04166666666667em; // 25px
+    }
+    &__nav{
+        margin-bottom: 3.125em; // 50px
+    }
+}

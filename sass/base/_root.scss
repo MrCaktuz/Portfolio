@@ -1,0 +1,17 @@
+ /* => Nom du site
+  *
+  * /sass/base/_root.scss - Base styles for root element
+  *
+  * coded by Mucht
+  */
+
+ html{
+     font-size: 10px;
+     color: $laborColor;
+     font-family: $openSansStack;
+     min-width: 790px;
+ }
+
+a{
+    text-decoration: none;
+}

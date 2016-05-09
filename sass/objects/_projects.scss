@@ -1,0 +1,23 @@
+/* Portfolio
+ *
+ * /sass/objects/_projects.scss - Non Esthetic style for projects section
+ *
+ * coded by Mucht!
+ */
+
+.projects{
+    &__title{
+        width: 100%;
+        margin: 30.379746835443% 0;
+    }
+    &__project{
+        width: 50%;
+    }
+    &__img{
+        width: 100%;
+        height: auto;
+    }
+    &__hoverBloc{
+        width: 100%;
+    }
+}

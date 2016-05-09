@@ -1,0 +1,79 @@
+/* Portfolio
+ *
+ * /sass/components/_footer.scss - Esthetic style for footer section
+ *
+ * coded by Mucht!
+ */
+
+.footer{
+    background: $footerBackground;
+    padding: 5em $mainMarge 2.5em;
+    text-align: center;
+    &__contact{
+        float: left;
+        text-align: left;
+    }
+    &__social{
+        float: right;
+        text-align: right;
+    }
+    &__title{
+        font-family: $aladinStack;
+        font-size: 3.2em;
+        color: $footerTitleColor;
+    }
+    &__elt{
+        display: block;
+        font-size: 1.6em;
+        color: $footerTextColor;
+        margin-bottom: 1.5625em; // 25px
+        transition: 0.2s ease-in;
+        &--links:hover{
+            color: $linksHoverColor;
+        }
+        &::before{
+            padding-right: 0.5em;
+            font-family: $glyphs;
+            font-size: 1.3em;
+            color: $iconColor;
+        }
+        &--phone::before{
+            content: "";
+        }
+        &--mail::before{
+            content: "";
+        }
+        &::after{
+            padding-left: 0.5em;
+            font-family: $glyphs;
+            font-size: 1.3em;
+            color: $iconColor;
+        }
+        &--github::after{
+            content: "";
+        }
+        &--behance::after{
+            content: "";
+        }
+        &--linkedin::after{
+            content: "";
+        }
+    }
+    &__nav{
+        clear: both;
+        font-size: 1.6em;
+        &--elt{
+            color: $footerTextColor;
+            padding: 0 0.5em 0 0.3em;
+            border-right: 2px solid $SeparatorsColor;
+            transition: 0.2s ease-in;
+            &:last-child{
+                border: none;
+            }
+        }
+    }
+    &__copy{
+        font-size: 1.6em;
+        color: $copyColor;
+    }
+}
