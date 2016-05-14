@@ -6,7 +6,7 @@
  */
 
 .plan{
-    background: $planBackground;
+    background: url(#{ $imgPath }projectBackground1.png) fixed;;
     padding: 2.5em $mainMarge 5em; // 50px
     &__list--sub{
         margin-left: 2em;

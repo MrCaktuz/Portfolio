@@ -5,53 +5,107 @@
  * coded by Mucht!
  */
 
- .indexHeader{
-     background-image: url(#{ $imgPath }cover.png);
-     background-size: cover;
-     background-position: center center;
-     &__title{
-         text-align: center;
-         font-family: $aladinStack;
-         font-size: 6em;
-         color: $mainTitleColor;
-         &::before{
-             content: "";
-             display: block;
-             background-image: url( #{ $imgPath }portrait.png );
-             background-repeat: no-repeat;
-         }
-     }
- }
-
- .header{
-     background-image: url(#{ $imgPath }cover.png);
-     background-size: cover;
-     background-position: center center;
-     position: relative;
-     &__title{
-         text-align: center;
-         font-size: 5em;
-         font-family: $aladinStack;
-         padding: 0.5em 0;
-         color: $titleColor;
-         background-color: $titleBackground;
-         width: 100%;
-         position: absolute;
-         bottom: 0;
-     }
- }
+.header{
+    overflow: hidden;
+    background-image: url(#{ $imgPath }cover.png);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    position: relative;
+    &__img{
+        width: 100%;
+        position: relative;
+        top: -50%;
+    }
+    &__title{
+        font-size: 5em;
+        font-family: $aladinStack;
+        color: $titleColor;
+        padding-bottom: 0.5em;
+        &--mainPages{
+            padding-bottom: 0;
+        }
+    }
+    &__titles{
+        background-color: $titleBackground;
+        position: absolute;
+        bottom: 0;
+        padding: 2.5em 0;
+        text-align: center;
+        }
+    &__subTitle{
+        font-family: $openSansStack;
+        font-size: 2.4em;
+        color: $tagColor;
+        padding: 1.04166666666667em 0.5em 0 0.5em;
+        border-right: 2px solid $SeparatorsColor;
+        &:last-child{
+            padding-right: 0;
+            border: none;
+        }
+    }
+}
 
 .mainNav{
-    display: block;
-    padding-top: 2.5em;
+    display: inline-block;
+    z-index: 100;
+    position: relative;
+    top: 2.5em;
+    left: 0;
+    padding: 1em 2em 1em 5em;
+    border-radius: 2.2em;
+    background-color: $navBackground;
     &__elt{
         padding-right: 1.25em;
         font-family: $aladinStack;
         font-size: 2.4em;
         color: $navColor;
-        transition: 0.2s ease-in;
+        transition: 0.2s ease-in-out;
+        &--active{
+            color: $linksHoverColor;
+        }
+        &:last-child{
+            padding-right: 0;
+        }
         &:hover{
             color: $linksHoverColor;
         }
     }
 }
+
+ // .indexHeader{
+ //     background-image: url(#{ $imgPath }cover.png);
+ //     background-size: cover;
+ //     background-position: center center;
+ //     position: relative;
+ //     &__title{
+ //         text-align: center;
+ //         font-family: $aladinStack;
+ //         font-size: 6em;
+ //         color: $mainTitleColor;
+ //         &::before{
+ //             content: "";
+ //             display: block;
+ //             background-image: url( #{ $imgPath }portrait.png );
+ //             background-repeat: no-repeat;
+ //         }
+ //     }
+ // }
+ //
+ // .header{
+ //     background-image: url(#{ $imgPath }cover.png);
+ //     background-size: cover;
+ //     background-position: center center;
+ //     position: relative;
+ //     &__title{
+ //         text-align: center;
+ //         font-size: 5em;
+ //         font-family: $aladinStack;
+ //         padding: 0.5em 0;
+ //         color: $titleColor;
+ //         background-color: $titleBackground;
+ //         width: 100%;
+ //         position: absolute;
+ //         bottom: 0;
+ //     }
+ // }

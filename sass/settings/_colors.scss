@@ -14,6 +14,7 @@ $footerBackground: linear-gradient( -45deg, #003f66 0%,#002233 45%,#002233 55%,#
 $projectBackground: #003F66;
 $projectHoverBackground: rgba(255, 153, 0, 0.85);
 $titleBackground: rgba(0, 63, 102, 0.8);
+$navBackground: $titleBackground;
 $labelBackground: #003F66;
 $inputBackground: rgba(0, 63, 102, 0);
 $legendBackground: $titleBackground;
@@ -31,7 +32,7 @@ $labelColor: #FFF;
 $legendColor: #FFF;
 
 $linksHoverColor: #FF9900;
-$planHoverColor: #000;
+$planHoverColor: #0066B2;
 
 $borderColor: #0066B2;
 $borderFormColor: #003F66;

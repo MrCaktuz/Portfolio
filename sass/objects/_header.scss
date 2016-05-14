@@ -5,19 +5,32 @@
  * coded by Mucht!
  */
 
- .indexHeader{
-     height: $indexHeaderHeight;
-     &__title::before{
-         width: 335px;
-         height: 302px;
-         margin: 0.5em auto 0.4em;
-     }
- }
+.header{
+    height: $headerHeight;
+    &--mainPages{
+        height: $headerMainPagesHeight;
+    }
+    &__titles{
+        width: 100%;
+    }
+    &__subTitle{
+        margin: 1.04166666666667em 0;
+    }
+}
 
- .header{
-     height: $headerHeight;
- }
+ // .indexHeader{
+ //     height: $indexHeaderHeight;
+ //     &__title::before{
+ //         width: 335px;
+ //         height: 302px;
+ //         margin: 0.5em auto 0.4em;
+ //     }
+ // }
+ //
+ // .header{
+ //     height: $headerHeight;
+ // }
 
  .mainNav{
-     margin-left: 25px;
+     margin-left: -2em;
  }

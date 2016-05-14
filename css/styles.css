@@ -174,18 +174,17 @@ a {
  *
  * coded by Mucht!
  */
-.indexHeader {
-  height: 500px; }
-  .indexHeader__title::before {
-    width: 335px;
-    height: 302px;
-    margin: 0.5em auto 0.4em; }
-
 .header {
-  height: 300px; }
+  height: 400px; }
+  .header--mainPages {
+    height: 300px; }
+  .header__titles {
+    width: 100%; }
+  .header__subTitle {
+    margin: 1.04166666666667em 0; }
 
 .mainNav {
-  margin-left: 25px; }
+  margin-left: -2em; }
 
 /* Portfolio
  *
@@ -193,18 +192,13 @@ a {
  *
  * coded by Mucht!
  */
-.presentation__textBloc {
+.presentation__photo {
+  width: 24.973985431842%; }
+
+.presentation__textBlocs {
   width: 58.3333333333%;
   min-width: 23.88888888888889em;
   margin: 0 80px; }
-  .presentation__textBloc--first::before {
-    width: 8.33333333333333em;
-    height: 8.33333333333333em; }
-  .presentation__textBloc--second {
-    margin-top: 1.38888888888889em; }
-    .presentation__textBloc--second::after {
-      width: 8.33333333333333em;
-      height: 8.33333333333333em; }
 
 /* Portfolio
  *
@@ -276,7 +270,7 @@ a {
  * coded by Mucht!
  */
 .plan {
-  background: radial-gradient(ellipse at center, #00d5ff 0%, #0092ff 100%);
+  background: url(../assets/img/projectBackground1.png) fixed;
   padding: 2.5em 12.587685113% 5em; }
   .plan__list--sub {
     margin-left: 2em; }
@@ -289,18 +283,13 @@ a {
  *
  * coded by Mucht!
  */
-.projectHeader {
-  height: 400px; }
-  .projectHeader__tags {
-    width: 100%; }
-  .projectHeader__tag {
-    margin-bottom: 2.08333333333333em; }
-
 .project {
-  width: 74.824629774%;
-  margin: 2.7777777778em 0 1.2222222222em 12.587685113%; }
+  width: 100%;
+  padding: 2.7777777778em 12.587685113% 1.2222222222em 12.587685113%; }
   .project__title {
     margin-bottom: 1.04166666666667em; }
+  .project__textBlocs {
+    margin-bottom: 0.5em; }
   .project__illustration {
     width: 100%;
     height: auto; }
@@ -315,46 +304,59 @@ a {
  *
  * coded by Mucht!
  */
-.indexHeader {
-  background-image: url(../assets/img/cover.png);
-  background-size: cover;
-  background-position: center center; }
-  .indexHeader__title {
-    text-align: center;
-    font-family: "Aladin", cursive;
-    font-size: 6em;
-    color: #FF9900; }
-    .indexHeader__title::before {
-      content: "";
-      display: block;
-      background-image: url(../assets/img/portrait.png);
-      background-repeat: no-repeat; }
-
 .header {
+  overflow: hidden;
   background-image: url(../assets/img/cover.png);
   background-size: cover;
   background-position: center center;
+  position: relative;
   position: relative; }
+  .header__img {
+    width: 100%;
+    position: relative;
+    top: -50%; }
   .header__title {
-    text-align: center;
     font-size: 5em;
     font-family: "Aladin", cursive;
-    padding: 0.5em 0;
     color: #FFF;
+    padding-bottom: 0.5em; }
+    .header__title--mainPages {
+      padding-bottom: 0; }
+  .header__titles {
     background-color: rgba(0, 63, 102, 0.8);
-    width: 100%;
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    padding: 2.5em 0;
+    text-align: center; }
+  .header__subTitle {
+    font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.4em;
+    color: #FFF;
+    padding: 1.04166666666667em 0.5em 0 0.5em;
+    border-right: 2px solid #FF9900; }
+    .header__subTitle:last-child {
+      padding-right: 0;
+      border: none; }
 
 .mainNav {
-  display: block;
-  padding-top: 2.5em; }
+  display: inline-block;
+  z-index: 100;
+  position: relative;
+  top: 2.5em;
+  left: 0;
+  padding: 1em 2em 1em 5em;
+  border-radius: 2.2em;
+  background-color: rgba(0, 63, 102, 0.8); }
   .mainNav__elt {
     padding-right: 1.25em;
     font-family: "Aladin", cursive;
     font-size: 2.4em;
     color: #FFF;
-    transition: 0.2s ease-in; }
+    transition: 0.2s ease-in-out; }
+    .mainNav__elt--active {
+      color: #FF9900; }
+    .mainNav__elt:last-child {
+      padding-right: 0; }
     .mainNav__elt:hover {
       color: #FF9900; }
 
@@ -367,27 +369,14 @@ a {
 .presentation {
   background: radial-gradient(ellipse at center, #00d5ff 0%, #0092ff 100%);
   padding: 6.5em 12.587685113%; }
-  .presentation__textBloc {
+  .presentation__photo {
+    float: left; }
+  .presentation__textBlocs {
     position: relative;
     float: left;
+    text-align: center;
     line-height: 2em;
-    font-size: 1.8em; }
-    .presentation__textBloc--first::before {
-      content: "";
-      border-top: 3px solid #0066B2;
-      border-left: 3px solid #0066B2;
-      position: absolute;
-      top: -15px;
-      left: -25px; }
-    .presentation__textBloc--second {
-      float: right; }
-      .presentation__textBloc--second::after {
-        content: "";
-        border-bottom: 3px solid #0066B2;
-        border-right: 3px solid #0066B2;
-        position: absolute;
-        bottom: -15px;
-        right: -25px; }
+    font-size: 2em; }
 
 /* Portfolio
  *
@@ -471,7 +460,7 @@ a {
     font-size: 1.6em;
     color: #FFF;
     margin-bottom: 1.5625em;
-    transition: 0.2s ease-in; }
+    transition: 0.1s ease-in; }
     .footer__elt--links:hover {
       color: #FF9900; }
     .footer__elt::before {
@@ -501,7 +490,7 @@ a {
       color: #FFF;
       padding: 0 0.5em 0 0.3em;
       border-right: 2px solid #FF9900;
-      transition: 0.2s ease-in; }
+      transition: 0.1s ease-in; }
       .footer__nav--elt:last-child {
         border: none; }
   .footer__copy {
@@ -573,20 +562,20 @@ a {
 .plan__elt {
   font-size: 2.4em;
   color: #003F66;
-  transition: 0.2s ease-in-out; }
+  transition: 0.1s ease-in-out; }
   .plan__elt::before {
     content: "";
     font-family: "Glyphs";
     color: #003F66;
     padding-right: 0.5em;
-    transition: 0.2s ease-in-out; }
+    transition: 0.1s ease-in-out; }
 
 .plan__elt:hover {
-  color: #000; }
+  color: #0066B2; }
 
 .plan__elt:hover::before {
   content: "";
-  color: #000; }
+  color: #0066B2; }
 
 /* Portfolio
  *
@@ -594,34 +583,14 @@ a {
  *
  * coded by Mucht!
  */
-.projectHeader {
-  background-image: url(../assets/img/surUnBaobabCover.png);
-  background-size: cover;
-  background-position: center center;
-  position: relative; }
-  .projectHeader__tags {
-    background-color: rgba(0, 63, 102, 0.8);
-    position: absolute;
-    bottom: 0;
-    padding: 5em 0;
-    text-align: center; }
-  .projectHeader__title {
-    font-size: 5em;
-    font-family: "Aladin", cursive;
-    color: #FFF;
-    padding-bottom: 0.4em; }
-  .projectHeader__tag {
-    font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2.4em;
-    color: #FFF;
-    padding: 0 15px;
-    border-right: 2px solid #FF9900; }
-    .projectHeader__tag:last-child {
-      padding-right: 0;
-      border: none; }
-
 .project {
   font-size: 1.8em; }
+  .project--context {
+    background: url(../assets/img/projectBackground1.png) fixed; }
+  .project--approche {
+    background: url(../assets/img/projectBackground1.png) fixed; }
+  .project--recul {
+    background: url(../assets/img/projectBackground1.png) fixed; }
   .project__title {
     font-size: 1.33333333333333em;
     font-family: "Aladin", cursive; }

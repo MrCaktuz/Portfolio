@@ -5,39 +5,17 @@
  * coded by Mucht!
  */
 
-.projectHeader{
-    background-image: url(#{ $imgPath }surUnBaobabCover.png);
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-    &__tags{
-        background-color: $titleBackground;
-        position: absolute;
-        bottom: 0;
-        padding: 5em 0;
-        text-align: center;
-    }
-    &__title{
-        font-size: 5em;
-        font-family: $aladinStack;
-        color: $titleColor;
-        padding-bottom: 0.4em;
-    }
-    &__tag{
-        font-family: $openSansStack;
-        font-size: 2.4em;
-        color: $tagColor;
-        padding: 0 15px;
-        border-right: 2px solid $SeparatorsColor;
-        &:last-child{
-            padding-right: 0;
-            border: none;
-        }
-    }
-}
-
 .project{
     font-size: 1.8em;
+    &--context{
+        background: url(#{ $imgPath }projectBackground1.png) fixed;
+    }
+    &--approche{
+        background: url(#{ $imgPath }projectBackground1.png) fixed;
+    }
+    &--recul{
+        background: url(#{ $imgPath }projectBackground1.png) fixed;
+    }
     &__title{
         font-size: 1.33333333333333em;
         font-family: $aladinStack;

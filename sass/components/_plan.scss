@@ -12,13 +12,13 @@
     &__elt{
         font-size: 2.4em;
         color: $laborColor;
-        transition: 0.2s ease-in-out;
+        transition: 0.1s ease-in-out;
         &::before{
             content: "";
             font-family: $glyphs;
             color: $laborColor;
             padding-right: 0.5em;
-            transition: 0.2s ease-in-out;
+            transition: 0.1s ease-in-out;
         }
         &--sub{
         }

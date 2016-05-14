@@ -3,25 +3,32 @@
 <head>
     <meta charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/styles.css" media="screen" title="no title" charset="utf-8">
     <title>Mathieu Claessens</title>
 </head>
 <body>
-    <header class="indexHeader">
+    <header class="header">
         <nav class="mainNav">
-            <a class="mainNav__elt" href="#">Accueil</a>
+            <h2 class="hidden">Navigation principale</h2>
+            <a class="mainNav__elt mainNav__elt--active" href="#">Accueil</a>
             <a class="mainNav__elt" href="./realisations.html">Réalisations</a>
             <a class="mainNav__elt" href="./contact.html">Contact</a>
         </nav>
-        <h1 class="indexHeader__title">Mathieu Claessens</h1>
+        <div class="header__titles">
+            <h1 class="header__title">Mathieu Claessens</h1>
+            <span class="header__subTitle">— Web Master —</span>
+        </div>
     </header>
     <main class="wrap">
 
         <section class="presentation clear">
 
             <h2 class="presentation__title hidden">Presentation</h2>
-            <p class="presentation__textBloc presentation__textBloc--first">Doté d’un esprit vif et créatif, je vous propose mes services pour concevoir et designer des sites web et des applications mobiles. Accessibilité, ergonomie et performances font partie des valeurs qui me guident. Je suis constamment en quête de nouveautés. Bien que très efficace en solitaire, je m’intègre facilement dans une équipe.</p>
-            <p class="presentation__textBloc presentation__textBloc--second">Je maitrise HTML5 et CSS3 et j’ai de bonnes connaissances en JavaScript et canvas. Concernant le Back-End mes compétences portent sur wordpress et PHP en ajoutant des notions de SQL.</p>
+            <img class="presentation__photo" src="./assets/img/portrait.png" alt="" width="271" hieght="300"/>
+            <div class="presentation__textBlocs">
+                <p class="presentation__textBloc">Je suis <strong>jeune</strong> et <strong>motivé</strong>, Les blagues de papa et les jeux de mots à deux balles sont ma spécialité.</p>
+                <p class="presentation__textBloc">Ho ! Et le web aussi !</p>
+            </div>
 
         </section>
 
@@ -80,11 +87,11 @@
         </div>
 
         <div class="footer__nav">
-            <a class="footer__elt--links footer__nav--elt" href="./sitePlan.html">Plan du site</a>
             <a class="footer__elt--links footer__nav--elt" href="#">Accueil</a>
             <a class="footer__elt--links footer__nav--elt" href="./realisations.html">Réalisations</a>
             <a class="footer__elt--links footer__nav--elt" href="./contact.html">Contact</a>
-            <a class="footer__elt--links footer__nav--elt" href="#">Haute de la page</a>
+            <a class="footer__elt--links footer__nav--elt" href="#">Haut de la page</a>
+            <a class="footer__elt--links footer__nav--elt" href="./sitePlan.html">Plan du site</a>
         </div>
 
         <small class="footer__copy">&copy; Mucht 2016</small>
