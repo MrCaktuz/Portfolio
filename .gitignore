@@ -6,4 +6,4 @@ dev/*
 dev/wp-content/*
 !dev/wp-content/themes/
 dev/wp-content/themes/*
-!dev_wp-content/themes/portfolio/
+!dev/wp-content/themes/portfolio/
