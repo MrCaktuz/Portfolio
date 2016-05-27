@@ -5,57 +5,127 @@
  * coded by Mucht!
  */
 
+ .contact{
+     float: left;
+ }
+
 .form{
     font-size: 2.4em;
     &__line{
-        border-radius: 0.83333333333333em;
-        border: 3px solid $borderFormColor;
         position: relative;
+        text-align: center;
     }
     &__label{
-        font-family: $aladinStack;
-        color: $labelColor;
-        padding: 0.19em 1em;
-        border-radius: 0.83333333333333em;
-        background-color: $labelBackground;
-        position: relative;
-        top: 3px;
-        left: 0px;
+        font-family: $edoStack;
+        color: $laborColor;
+        padding: 0.19em 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
         &--msg{
             display: block;
-            top: 0;
+            top: 3px;
         }
-    }
-    &__input{
-        position: absolute;
-        top: 6px;
-        left: 100px;
-        font-size: 0.66666666666667em;
-        color: $laborColor;
-        background-color: $inputBackground;
-        border: none;
-    }
-    &__textarea{
-        font-size: 0.66666666666667em;
-        font-family: $openSansStack;
-        color: $laborColor;
-        background-color: $inputBackground;
-        border: none;
-        padding: 1em;
-    }
-    &__submit{
-        display: block;
-        font-family: $aladinStack;
-        color: $labelColor;
-        padding: 0.13em 1em;
-        border-radius: 0.83333333333333em;
-        background-color: $labelBackground;
-        font-size: 1em;
-        border: none;
-        position: absolute;
-        top: -2px;
         &:hover{
             color: $linksHoverColor;
+        }
+    }
+    input[ type="text" ], input[ type="email" ], input[ type="url" ], textarea {
+        border-radius: 1.125em;
+        background-color: #FFF;
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+        padding: 0.5em 0 0.5em 140px;
+        font-size: 0.66666666666667em;
+        color: $laborColor;
+        background-color: $inputBackground;
+        border: none;
+     }
+    textarea {
+        display: block;
+        padding: 0.65em 2em 2em 140px;
+    }
+    input[ type="submit" ] {
+        display: block;
+        font-family: $edoStack;
+        color: $buttonColor;
+        padding: 0 1em 0.13em 1em;
+        border-radius: 0.83333333333333em;
+        background-color: $laborColor;
+        font-size: 1em;
+        border: none;
+    }
+    input[ type="submit" ]:hover {
+        color: $linksHoverColor;
+    }
+    .wpcf7-validation-errors, .wpcf7-not-valid-tip, .wpcf7-mail-sent-ng, .wpcf7-mail-sent-ok {
+        font-size: 0.66666666666667em;
+        color: $errorsColor;
+        text-align: center;
+    }
+    .wpcf7-mail-sent-ok {
+        color: $succesColor;
+    }
+}
+
+.businessCard{
+    float: right;
+    text-align: center;
+    &__wrap{
+        width: auto;
+    }
+    &__photo{
+        border-top-left-radius: 50% 50%;
+        border-top-right-radius: 50% 50%;
+        border: 1px #FF9900 solid;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 75);
+    }
+    &__elt{
+        display: inline-block;
+        font-size: 1.6em;
+        color: $laborColor;
+        transition: 0.1s ease-in;
+        &--links:hover{
+            color: $planHoverColor;
+        }
+        &::before{
+            padding-right: 0.5em;
+            font-family: $glyphs;
+            font-size: 1.3em;
+            color: $iconColor;
+        }
+        &--phone::before{
+            content: "";
+        }
+        &--mail::before{
+            content: "";
+        }
+        &--github::before{
+            content: "";
+        }
+        &--behance::before{
+            content: "";
+        }
+        &--linkedin::before{
+            content: "";
+        }
+    }
+}
+
+// focus
+.form__input:focus, .form__textarea:focus{
+    box-shadow: 0px 0px 3px 0px $linksHoverColor;
+}
+
+// ===== media query =====
+@media screen and (max-width: 980px) {
+    .contact{
+        float: none;
+    }
+    .businessCard{
+        float: none;
+        &__photo{
+            border-top-left-radius: 50% 50%;
+            border-top-right-radius: 50% 50%;
         }
     }
 }

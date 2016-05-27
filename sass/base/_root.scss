@@ -6,12 +6,11 @@
   */
 
  html{
-    //  background-image: url( #{ $imgPath }mainBackground.png );
-    //  background-position: fixed;
      font-size: 10px;
      color: $laborColor;
      font-family: $openSansStack;
-     min-width: 790px;
+     min-width: 500px;
+     background: url(#{ $imgPath }projectBackground1.png) fixed;
  }
 
 a{

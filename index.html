@@ -2,13 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../assets/img/favicon.ico" />
+    <link rel="icon" type="image/png" href=../assets/img/logo.png" />
     <title>Mathieu Claessens</title>
 </head>
 <body>
     <header class="header">
-        <nav class="mainNav">
+        <nav class="mainNav wow bounceInLeft">
             <h2 class="hidden">Navigation principale</h2>
             <a class="mainNav__elt mainNav__elt--active" href="#">Accueil</a>
             <a class="mainNav__elt" href="./realisations.html">Réalisations</a>
@@ -21,13 +25,15 @@
     </header>
     <main class="wrap">
 
-        <section class="presentation clear">
+        <section class="presentation clear wow bounceInUp">
 
             <h2 class="presentation__title hidden">Presentation</h2>
-            <img class="presentation__photo" src="./assets/img/portrait.png" alt="" width="271" hieght="300"/>
-            <div class="presentation__textBlocs">
-                <p class="presentation__textBloc">Je suis <strong>jeune</strong> et <strong>motivé</strong>, Les blagues de papa et les jeux de mots à deux balles sont ma spécialité.</p>
-                <p class="presentation__textBloc">Ho ! Et le web aussi !</p>
+            <div class="presentation__wrap clear">
+                <img class="presentation__photo" src="./assets/img/portrait.jpg" alt="" width="271" hieght="300"/>
+                <div class="presentation__textBlocs">
+                    <p class="presentation__textBloc">Je suis <strong>jeune</strong> et <strong>motivé</strong>, les blagues de papas et les jeux de mots à deux balles sont ma spécialité.</p>
+                    <p class="presentation__textBloc">Ho, et le web aussi !</p>
+                </div>
             </div>
 
         </section>
@@ -35,7 +41,7 @@
         <section class="projects clear">
             <h2 class="projects__title hidden">Dernières réalisations</h2>
 
-            <a class="projects__project" href="./project.html">
+            <a class="projects__project wow bounceInLeft" href="./project.html">
                 <h3 class="projects__title">Sur Un Baobab</h3>
                 <img class="projects__img" src="assets/img/surUnBaobab.png" alt="" />
                 <div class="projects__hoverBloc projects__hoverBloc--over"> </div>
@@ -43,7 +49,7 @@
                 <div class="projects__hoverBloc projects__hoverBloc--lower projects__hoverBloc--rotated"></div>
             </a>
 
-            <a class="projects__project" href="./project.html">
+            <a class="projects__project wow bounceInRight" href="./project.html">
                 <h3 class="projects__title">Curriculum Vitae</h3>
                 <img class="projects__img" src="assets/img/curriculumVitae.png" alt="" />
                 <div class="projects__hoverBloc projects__hoverBloc--over"></div>
@@ -51,7 +57,7 @@
                 <div class="projects__hoverBloc projects__hoverBloc--lower projects__hoverBloc--rotated"></div>
             </a>
 
-            <a class="projects__project" href="./project.html">
+            <a class="projects__project wow bounceInLeft" href="./project.html">
                 <h3 class="projects__title">Nicolas De Staël</h3>
                 <img class="projects__img" src="assets/img/nicolasDeStael.png" alt="" />
                 <div class="projects__hoverBloc projects__hoverBloc--over"></div>
@@ -59,7 +65,7 @@
                 <div class="projects__hoverBloc projects__hoverBloc--lower projects__hoverBloc--rotated"></div>
             </a>
 
-            <a class="projects__project" href="./project.html">
+            <a class="projects__project wow bounceInRight" href="./project.html">
                 <h3 class="projects__title">Flapi Deadpool</h3>
                 <img class="projects__img" src="assets/img/flapiDeadpool.png" alt="" />
                 <div class="projects__hoverBloc projects__hoverBloc--over"></div>
@@ -67,6 +73,8 @@
                 <div class="projects__hoverBloc projects__hoverBloc--upper projects__hoverBloc--rotated"></div>
                 <div class="projects__hoverBloc projects__hoverBloc--lower projects__hoverBloc--rotated"></div>
             </a>
+
+
 
         </section>
 
@@ -97,5 +105,7 @@
         <small class="footer__copy">&copy; Mucht 2016</small>
 
     </footer>
+    <script src="./js/wow.js"></script>
+    <script>new WOW().init();</script>
 </body>
 </html>

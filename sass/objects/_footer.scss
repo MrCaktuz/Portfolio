@@ -19,3 +19,23 @@
         margin-bottom: 3.125em; // 50px
     }
 }
+
+// ===== media query =====
+
+@media screen and (max-width: 700px) {
+    .footer{
+        &__contact{
+            margin-bottom: 1.5625em;
+        }
+        &__social{
+            margin: 5em 0 1.5625em 0;
+        }
+        &__title{
+            margin-bottom: 1.04166666666667em; // 25px
+        }
+        &__nav{
+            width: 500px;
+            margin: 3.125em auto; // 50px
+        }
+    }
+}

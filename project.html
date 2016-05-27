@@ -2,29 +2,28 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Mathieu Claessens</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="mainNav mainNav--realisations">
+    <header class="header header--realisations">
+        <nav class="mainNav wow bounceInLeft">
             <a class="mainNav__elt" href="./index.html">Accueil</a>
-            <a class="mainNav__elt" href="./realisations.html">Réalisations</a>
+            <a class="mainNav__elt mainNav__elt--active" href="./realisations.html">Réalisations</a>
             <a class="mainNav__elt" href="./contact.html">Contact</a>
         </nav>
-        <img class="header__img" src="./assets/img/surUnBaobabCover.png" alt="" />
         <div class="header__titles">
             <h1 class="header__title">Sur Un Baobab</h1>
-            <span class="header__subTitle">Design</span>
-            <a class="header__subTitle">Développement</a>
-            <a class="header__subTitle">Refonte</a>
-            <a class="header__subTitle">Wordpress</a>
+            <p class="header__subTitle header__subTitle--tags">Design</p>
+            <p class="header__subTitle header__subTitle--tags">Développement</p>
+            <p class="header__subTitle header__subTitle--tags">Refonte</p>
+            <p class="header__subTitle header__subTitle--tags">Wordpress</p>
         </div>
     </header>
     <main class="wrap">
 
-        <section class="project project--context clear">
+        <section class="project project--context clear wow bounceInUp">
             <h2 class="project__title">Contexte</h2>
             <div class="project__textBlocs">
                 <p class="project__textBloc">Le collectif « Sur Un Baobab » se résume par Éléna et François qui voyagent sac au dos en proposant des ateliers de cinéma d’animation pour enfants, adolescents et/ou adultes. Ensemble, ils se lancent dans la création de petits dessins animés qui s’inscrivent dans le soutien d’une cause sociale.</p>
@@ -32,12 +31,12 @@
             </div>
         </section>
 
-        <div class="project__illustrations">
-            <img class="project__illustration" src="./assets/img/surUnBaobabOld.png" alt="Screenshot du vieux site" width="1000" height="250"/>
+        <div class="project__illustrations wow bounceInUp">
+            <img class="project__illustration" src="./assets/img/surUnBaobabOld.jpg" alt="Screenshot du vieux site" width="1000" height="250"/>
             <span class="project__illustration--legend">Ancien site</span>
         </div>
 
-        <section class="project project--approche clear">
+        <section class="project project--approche clear wow bounceInUp">
 
             <h2 class="project__title">Mon approche</h2>
             <div class="project__textBlocs">
@@ -48,12 +47,12 @@
 
         </section>
 
-        <div class="project__illustrations">
-            <img class="project__illustration" src="./assets/img/surUnBaobabHeader.png" alt="Screenshot du vieux site" width="1000" height="250"/>
+        <div class="project__illustrations wow bounceInUp">
+            <img class="project__illustration" src="./assets/img/surUnBaobabDesign.jpg" alt="Screenshot du vieux site" width="1000" height="250"/>
             <span class="project__illustration--legend">Nouveau site</span>
         </div>
 
-        <section class="project project--recul clear">
+        <section class="project project--recul clear wow bounceInUp">
 
             <h2 class="project__title">Un peu de recul</h2>
             <div class="project__textBlocs">
@@ -65,8 +64,8 @@
 
         </section>
 
-        <section class="project__botton">
-            <h2><a class="project__botton--label" href="#">Voir le projet</a></h2>
+        <section class="project__button">
+            <h2><a class="project__button--label wow bounceInUp" href="#">Voir le projet</a></h2>
         </section>
 
     </main>
@@ -96,5 +95,7 @@
         <small class="footer__copy">&copy; Mucht 2016</small>
 
     </footer>
+    <script src="./js/wow.js"></script>
+    <script>new WOW().init();</script>
 </body>
 </html>

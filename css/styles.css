@@ -65,6 +65,13 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'edoregular';
+  src: url("../assets/fonts/edo/edo-webfont.eot");
+  src: url("../assets/fonts/edo/edo-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/edo/edo-webfont.woff") format("woff"), url("../assets/fonts/edo/edo-webfont.ttf") format("truetype"), url("../assets/fonts/edo/edo-webfont.svg#edoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /* Portfolio
  *
  * /sass/settings/_sizes.scss - Global sizes variables
@@ -77,8 +84,9 @@
  *
  * coded by Mucht
  */
-.hidden {
-  display: none; }
+.hidden, .screen-reader-response, .screen-reader-response a, hr {
+  position: absolute;
+  left: -100%; }
 
 .clear {
   clear: both; }
@@ -163,7 +171,8 @@ html {
   font-size: 10px;
   color: #003F66;
   font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  min-width: 790px; }
+  min-width: 500px;
+  background: url(../assets/img/projectBackground1.png) fixed; }
 
 a {
   text-decoration: none; }
@@ -175,13 +184,14 @@ a {
  * coded by Mucht!
  */
 .header {
-  height: 400px; }
+  height: 400px;
+  min-width: 0px; }
   .header--mainPages {
     height: 300px; }
   .header__titles {
     width: 100%; }
   .header__subTitle {
-    margin: 1.04166666666667em 0; }
+    margin: 0 0.25em; }
 
 .mainNav {
   margin-left: -2em; }
@@ -192,13 +202,29 @@ a {
  *
  * coded by Mucht!
  */
+.presentation__wrap {
+  width: 62.353858144973%;
+  min-width: 800px;
+  margin: 0 auto; }
+
 .presentation__photo {
-  width: 24.973985431842%; }
+  width: 30%;
+  max-width: 300px; }
 
 .presentation__textBlocs {
-  width: 58.3333333333%;
-  min-width: 23.88888888888889em;
-  margin: 0 80px; }
+  width: 59.375%;
+  margin: 7% 0 0 10%; }
+
+@media screen and (max-width: 850px) {
+  .presentation__wrap {
+    text-align: center;
+    min-width: 500px;
+    margin: 0 auto; }
+  .presentation__photo {
+    width: 300px; }
+  .presentation__textBlocs {
+    width: 100%;
+    margin: 10% 0 0 0; } }
 
 /* Portfolio
  *
@@ -220,6 +246,10 @@ a {
 .projects__hoverBloc {
   width: 100%; }
 
+@media screen and (max-width: 700px) {
+  .projects__project {
+    width: 100%; } }
+
 /* Portfolio
  *
  * /sass/objects/_footer.scss - Non Esthetic style for footer section
@@ -238,6 +268,17 @@ a {
 .footer__nav {
   margin-bottom: 3.125em; }
 
+@media screen and (max-width: 700px) {
+  .footer__contact {
+    margin-bottom: 1.5625em; }
+  .footer__social {
+    margin: 5em 0 1.5625em 0; }
+  .footer__title {
+    margin-bottom: 1.04166666666667em; }
+  .footer__nav {
+    width: 500px;
+    margin: 3.125em auto; } }
+
 /* Portfolio
  *
  * /sass/objects/_contact.scss - Non Esthetic style for contact page
@@ -245,23 +286,52 @@ a {
  * coded by Mucht!
  */
 .contact {
-  background: radial-gradient(ellipse at center, #00d5ff 0%, #0092ff 100%);
-  padding: 5em 12.587685113% 2.5em; }
+  margin: 5em 0;
+  margin-left: 12.548713951676%; }
 
-.form__line {
-  width: 100%;
-  min-height: 1.66666666666667em;
-  margin-bottom: 1.04166666666667em; }
+.form {
+  width: 50.038971161341%;
+  min-width: 400px;
+  margin: 0 auto; }
+  .form__line {
+    margin-bottom: 1.041666667em; }
+  .form input[type="text"], .form input[type="email"], .form input[type="url"], .form textarea {
+    width: 100%; }
+  .form textarea {
+    min-height: 12.5em; }
+  .form input[type="submit"] {
+    width: 100%; }
+  .form .wpcf7-validation-errors, .form .wpcf7-not-valid-tip, .form .wpcf7-mail-sent-ng {
+    margin-top: 0.5em; }
 
-.form__input {
-  width: 88%; }
+.businessCard {
+  margin: 5em 0;
+  margin-right: 12.548713951676%; }
+  .businessCard__wrap {
+    margin: 0 auto; }
+  .businessCard__photo {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 2.5em; }
+  .businessCard__textBox {
+    width: auto;
+    margin: 0 auto; }
+  .businessCard__elt {
+    width: auto;
+    margin: 1em 0 0 0; }
 
-.form__textarea {
-  width: 100%;
-  height: 12.5em; }
-
-.form__submit {
-  width: 100%; }
+@media screen and (max-width: 980px) {
+  .contact {
+    margin-left: 0; }
+  .businessCard {
+    margin-right: 0; }
+    .businessCard__wrap {
+      width: auto;
+      margin: 0 auto; }
+    .businessCard__photo {
+      width: 50%;
+      max-width: 300px;
+      min-width: 250px; } }
 
 /* Portfolio
  *
@@ -273,7 +343,7 @@ a {
   background: url(../assets/img/projectBackground1.png) fixed;
   padding: 2.5em 12.587685113% 5em; }
   .plan__list--sub {
-    margin-left: 2em; }
+    margin-left: 3em; }
   .plan__listItem {
     margin-top: 2.5em; }
 
@@ -290,13 +360,35 @@ a {
     margin-bottom: 1.04166666666667em; }
   .project__textBlocs {
     margin-bottom: 0.5em; }
+  .project__illustrations {
+    width: 74.824629774%;
+    margin: 0 auto; }
   .project__illustration {
     width: 100%;
     height: auto; }
-  .project__botton--label {
+  .project__button--label {
     width: 74.824629774%;
     min-height: 1.66666666666667em;
     margin: 0 auto; }
+
+@media screen and (min-width: 475px) {
+  .project {
+    width: 100%;
+    padding: 2.7777777778em 12.587685113% 1.2222222222em 12.587685113%; }
+    .project__title {
+      margin-bottom: 1.04166666666667em; }
+    .project__textBlocs {
+      margin-bottom: 0.5em; }
+    .project__illustrations {
+      width: 74.824629774%;
+      margin: 0 auto; }
+    .project__illustration {
+      width: 100%;
+      height: auto; }
+    .project__botton--label {
+      width: 74.824629774%;
+      min-height: 1.66666666666667em;
+      margin: 0 auto; } }
 
 /* Portfolio
  *
@@ -306,18 +398,15 @@ a {
  */
 .header {
   overflow: hidden;
-  background-image: url(../assets/img/cover.png);
+  background-image: url(../assets/img/cover.jpg);
   background-size: cover;
   background-position: center center;
-  position: relative;
   position: relative; }
-  .header__img {
-    width: 100%;
-    position: relative;
-    top: -50%; }
+  .header--realisations {
+    background-image: url(../assets/img/surUnBaobabcover.jpg); }
   .header__title {
     font-size: 5em;
-    font-family: "Aladin", cursive;
+    font-family: "edoregular", cursive;
     color: #FFF;
     padding-bottom: 0.5em; }
     .header__title--mainPages {
@@ -329,19 +418,21 @@ a {
     padding: 2.5em 0;
     text-align: center; }
   .header__subTitle {
+    display: inline-block;
     font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2.4em;
     color: #FFF;
-    padding: 1.04166666666667em 0.5em 0 0.5em;
-    border-right: 2px solid #FF9900; }
-    .header__subTitle:last-child {
-      padding-right: 0;
-      border: none; }
+    padding: 0.2em 0.5em 0.3em; }
+    .header__subTitle--tags {
+      background-color: #003F66;
+      border-right: 2px solid #FF9900;
+      border-left: 2px solid #FF9900;
+      border-radius: 0.75em; }
 
 .mainNav {
   display: inline-block;
   z-index: 100;
-  position: relative;
+  position: absolute;
   top: 2.5em;
   left: 0;
   padding: 1em 2em 1em 5em;
@@ -349,7 +440,7 @@ a {
   background-color: rgba(0, 63, 102, 0.8); }
   .mainNav__elt {
     padding-right: 1.25em;
-    font-family: "Aladin", cursive;
+    font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2.4em;
     color: #FFF;
     transition: 0.2s ease-in-out; }
@@ -360,6 +451,10 @@ a {
     .mainNav__elt:hover {
       color: #FF9900; }
 
+@media screen and (max-width: 635px) {
+  .header__subTitle {
+    font-size: 1.6em; } }
+
 /* Portfolio
  *
  * /sass/components/_presentation.scss - Esthetic style for presentation section
@@ -367,16 +462,35 @@ a {
  * coded by Mucht!
  */
 .presentation {
-  background: radial-gradient(ellipse at center, #00d5ff 0%, #0092ff 100%);
-  padding: 6.5em 12.587685113%; }
+  background: transparent url("../assets/img/projectBackground1.png") repeat fixed 0 0;
+  padding: 6.5em 0; }
   .presentation__photo {
-    float: left; }
+    float: left;
+    border-top-left-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    border: 1px #FF9900 solid;
+    box-shadow: 0px 0px 5px 0px black;
+    transition: 0.5s ease-in-out; }
   .presentation__textBlocs {
     position: relative;
     float: left;
     text-align: center;
     line-height: 2em;
     font-size: 2em; }
+
+@media screen and (max-width: 850px) {
+  .presentation__photo {
+    float: none;
+    margin: 0 auto;
+    border-top-left-radius: 50% 50%;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 50% 50%; }
+  .presentation__textBlocs {
+    position: relative;
+    float: none;
+    text-align: center;
+    line-height: 2em;
+    font-size: 2em; } }
 
 /* Portfolio
  *
@@ -390,7 +504,7 @@ a {
   display: block;
   text-align: center;
   font-size: 5em;
-  font-family: "Aladin", cursive;
+  font-family: "edoregular", cursive;
   position: absolute;
   transition: 0.2s ease-in-out; }
 
@@ -398,7 +512,8 @@ a {
   float: left;
   position: relative;
   background-color: #003F66;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: 0.5s ease-in-out; }
 
 .projects__hoverBloc {
   display: block;
@@ -435,6 +550,22 @@ a {
   bottom: -50%;
   right: -60%; }
 
+@media screen and (min-width: 700px) {
+  .projects__title {
+    font-size: 3em; } }
+
+@media screen and (min-width: 800px) {
+  .projects__title {
+    font-size: 4em; } }
+
+@media screen and (min-width: 900px) {
+  .projects__title {
+    font-size: 5em; } }
+
+@media screen and (min-width: 1500px) {
+  .projects__title {
+    font-size: 8em; } }
+
 /* Portfolio
  *
  * /sass/components/_footer.scss - Esthetic style for footer section
@@ -452,7 +583,7 @@ a {
     float: right;
     text-align: right; }
   .footer__title {
-    font-family: "Aladin", cursive;
+    font-family: "edoregular", cursive;
     font-size: 3.2em;
     color: #FFF; }
   .footer__elt {
@@ -497,58 +628,130 @@ a {
     font-size: 1.6em;
     color: #0066B2; }
 
+@media screen and (max-width: 700px) {
+  .footer {
+    padding: 5em 0 2.5em; }
+    .footer__contact {
+      float: none;
+      text-align: center; }
+    .footer__social {
+      float: none;
+      text-align: center; }
+    .footer__elt--github::after {
+      content: ""; }
+    .footer__elt--behance::after {
+      content: ""; }
+    .footer__elt--linkedin::after {
+      content: ""; }
+    .footer__elt--github::before {
+      content: ""; }
+    .footer__elt--behance::before {
+      content: ""; }
+    .footer__elt--linkedin::before {
+      content: ""; }
+    .footer__nav--elt {
+      line-height: 2em; } }
+
 /* Portfolio
  *
  * /sass/components/_contact.scss - Esthetic style for contact page
  *
  * coded by Mucht!
  */
+.contact {
+  float: left; }
+
 .form {
   font-size: 2.4em; }
   .form__line {
-    border-radius: 0.83333333333333em;
-    border: 3px solid #003F66;
-    position: relative; }
-  .form__label {
-    font-family: "Aladin", cursive;
-    color: #FFF;
-    padding: 0.19em 1em;
-    border-radius: 0.83333333333333em;
-    background-color: #003F66;
     position: relative;
-    top: 3px;
-    left: 0px; }
+    text-align: center; }
+  .form__label {
+    font-family: "edoregular", cursive;
+    color: #003F66;
+    padding: 0.19em 25px;
+    position: absolute;
+    top: 0;
+    left: 0; }
     .form__label--msg {
       display: block;
-      top: 0; }
-  .form__input {
-    position: absolute;
-    top: 6px;
-    left: 100px;
+      top: 3px; }
+    .form__label:hover {
+      color: #FF9900; }
+  .form input[type="text"], .form input[type="email"], .form input[type="url"], .form textarea {
+    border-radius: 1.125em;
+    background-color: #FFF;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+    padding: 0.5em 0 0.5em 140px;
     font-size: 0.66666666666667em;
     color: #003F66;
-    background-color: rgba(0, 63, 102, 0);
+    background-color: #FFF;
     border: none; }
-  .form__textarea {
-    font-size: 0.66666666666667em;
-    font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #003F66;
-    background-color: rgba(0, 63, 102, 0);
-    border: none;
-    padding: 1em; }
-  .form__submit {
+  .form textarea {
     display: block;
-    font-family: "Aladin", cursive;
+    padding: 0.65em 2em 2em 140px; }
+  .form input[type="submit"] {
+    display: block;
+    font-family: "edoregular", cursive;
     color: #FFF;
-    padding: 0.13em 1em;
+    padding: 0 1em 0.13em 1em;
     border-radius: 0.83333333333333em;
     background-color: #003F66;
     font-size: 1em;
-    border: none;
-    position: absolute;
-    top: -2px; }
-    .form__submit:hover {
-      color: #FF9900; }
+    border: none; }
+  .form input[type="submit"]:hover {
+    color: #FF9900; }
+  .form .wpcf7-validation-errors, .form .wpcf7-not-valid-tip, .form .wpcf7-mail-sent-ng, .form .wpcf7-mail-sent-ok {
+    font-size: 0.66666666666667em;
+    color: #ff0000;
+    text-align: center; }
+  .form .wpcf7-mail-sent-ok {
+    color: #008000; }
+
+.businessCard {
+  float: right;
+  text-align: center; }
+  .businessCard__wrap {
+    width: auto; }
+  .businessCard__photo {
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border: 1px #FF9900 solid;
+    box-shadow: 0px 0px 5px 0px black; }
+  .businessCard__elt {
+    display: inline-block;
+    font-size: 1.6em;
+    color: #003F66;
+    transition: 0.1s ease-in; }
+    .businessCard__elt--links:hover {
+      color: #0066B2; }
+    .businessCard__elt::before {
+      padding-right: 0.5em;
+      font-family: "Glyphs";
+      font-size: 1.3em;
+      color: #0092ff; }
+    .businessCard__elt--phone::before {
+      content: ""; }
+    .businessCard__elt--mail::before {
+      content: ""; }
+    .businessCard__elt--github::before {
+      content: ""; }
+    .businessCard__elt--behance::before {
+      content: ""; }
+    .businessCard__elt--linkedin::before {
+      content: ""; }
+
+.form__input:focus, .form__textarea:focus {
+  box-shadow: 0px 0px 3px 0px #FF9900; }
+
+@media screen and (max-width: 980px) {
+  .contact {
+    float: none; }
+  .businessCard {
+    float: none; }
+    .businessCard__photo {
+      border-top-left-radius: 50% 50%;
+      border-top-right-radius: 50% 50%; } }
 
 /* Portfolio
  *
@@ -557,7 +760,7 @@ a {
  * coded by Mucht!
  */
 .plan__list {
-  font-family: "Aladin", cursive; }
+  font-family: "edoregular", cursive; }
 
 .plan__elt {
   font-size: 2.4em;
@@ -585,22 +788,16 @@ a {
  */
 .project {
   font-size: 1.8em; }
-  .project--context {
-    background: url(../assets/img/projectBackground1.png) fixed; }
-  .project--approche {
-    background: url(../assets/img/projectBackground1.png) fixed; }
-  .project--recul {
-    background: url(../assets/img/projectBackground1.png) fixed; }
   .project__title {
     font-size: 1.33333333333333em;
-    font-family: "Aladin", cursive; }
+    font-family: "edoregular", cursive; }
   .project__textBlocs {
     columns: 2;
-    column-gap: 8.88888888888889em;
+    column-gap: 4em;
     -moz-columns: 2;
-    -moz-column-gap: 8.88888888888889em;
+    -moz-column-gap: 4em;
     -webkit-columns: 2;
-    -webkit-column-gap: 8.88888888888889em; }
+    -webkit-column-gap: 4em; }
   .project__textBloc {
     line-height: 2em;
     padding-bottom: 1em; }
@@ -610,28 +807,36 @@ a {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
     .project__illustration--legend {
       display: inline-block;
-      font-family: "Aladin", cursive;
-      font-size: 3.6em;
+      font-family: "edoregular", cursive;
+      font-size: 2em;
       padding: 0.41666666666667em 0.69444444444444em;
-      background-color: rgba(0, 63, 102, 0.8);
-      color: #FFF;
+      border-bottom-right-radius: 1.08108108108em;
+      background-color: #0092ff;
+      color: #000;
       position: absolute;
-      right: 0;
-      bottom: 0; }
-  .project__botton {
+      left: 0;
+      top: 0; }
+  .project__button {
     font-size: 2.4em;
-    background-image: radial-gradient(ellipse at center, #00d5ff 0%, #0092ff 100%);
     padding: 2.08333333333333em 0; }
-    .project__botton--label {
+    .project__button--label {
       display: block;
       text-align: center;
       padding: 0.33333333333333em 0;
       border-radius: 0.83333333333333em;
-      font-family: "Aladin", cursive;
+      font-family: "edoregular", cursive;
       color: #FFF;
       background-color: #003F66;
       transition: 0.2s ease-in-out; }
-      .project__botton--label:hover {
+      .project__button--label:hover {
         color: #FF9900; }
+    .project__button--dark {
+      color: #FFF; }
+
+@media screen and (max-width: 750px) {
+  .project__textBlocs {
+    columns: 1;
+    -moz-columns: 1;
+    -webkit-columns: 1; } }
 
 /*# sourceMappingURL=styles.css.map */

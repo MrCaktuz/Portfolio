@@ -2,41 +2,59 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Contact - Mathieu Claessens</title>
 </head>
 <body>
     <header class="header">
-        <nav class="mainNav">
+        <nav class="mainNav wow bounceInLeft">
             <a class="mainNav__elt" href="./index.html">Accueil</a>
             <a class="mainNav__elt" href="./realisations.html">Réalisations</a>
-            <a class="mainNav__elt" href="#">Contact</a>
+            <a class="mainNav__elt mainNav__elt--active" href="#">Contact</a>
         </nav>
-        <h1 class="header__title">Contact</h1>
+        <div class="header__titles">
+            <h1 class="header__title">call me maybe</h1>
+        </div>
     </header>
-    <main class="wrap">
+    <main class="wrap clear">
+
+        <section class="businessCard">
+
+            <h2 class="businessCard__title hidden">Business Card</h2>
+            <div class="businessCard__wrap clear">
+                <img class="businessCard__photo wow bounceInRight" src="./assets/img/portrait.jpg" alt="" width="271" hieght="300"/>
+                <div class="businessCard__textBox">
+                    <p><a class="businessCard__elt wow bounceInRight businessCard__elt--links businessCard__elt--mail" href="mailto:mathieu_claessens@hotmail.com">mathieu_claessens@hotmail.com</a></p>
+                    <p class="businessCard__elt wow bounceInRight businessCard__elt--phone">+32 476 52 42 85</p>
+                    <p><a class="businessCard__elt wow bounceInRight businessCard__elt--links businessCard__elt--linkedin" href="https://www.linkedin.com/in/mathieuclaessens" rel="external">Linkedin</a></p>
+                    <p><a class="businessCard__elt wow bounceInRight businessCard__elt--links businessCard__elt--behance" href="https://www.behance.net/mathieuclaessens" rel="external">Behance</a></p>
+                    <p><a class="businessCard__elt wow bounceInRight businessCard__elt--links businessCard__elt--github" href="https://github.com/Mucht" rel="external">GitHub</a></p>
+                </div>
+            </div>
+
+        </section>
 
         <section class="contact">
 
-            <form class="form" action="" method="post">
-                <div class="form__line">
+            <form class="form" action="mailto:mathieu_claessens@hotmail.com" method="post" enctype="text/plain">
+                <div class="form__line wow bounceInLeft">
                     <label class="form__label form__label--name" for="name">Nom</label>
-                    <input class="form__input form__input--name" id="name" type="text" name="name" placeholder="Wade Wilson">
+                    <input class="form__input form__input--name" id="name" type="text" name="name" placeholder="votre nom ici">
                 </div>
 
-                <div class="form__line">
+                <div class="form__line wow bounceInLeft">
                     <label class="form__label form__label--mail" for="mail">Mail</label>
-                    <input class="form__input form__input--mail" id="mail" type="email" name="mail" placeholder="deadpool@exemple.com">
+                    <input class="form__input form__input--mail" id="mail" type="email" name="mail" placeholder="votre adresse mail ici">
                 </div>
 
-                <div class="form__line">
+                <div class="form__line wow bounceInLeft">
                     <label class="form__label form__label--msg" for="msg">Message</label>
-                    <textarea class="form__textarea" rows="2" id="msg" placeholder="Tapez votre message ici..."/></textarea>
+                    <textarea class="form__textarea" rows="10" cols="20" id="msg" placeholder="Tapez votre message ici..."/></textarea>
                 </div>
 
-                <div class="form__line">
-                    <input class="form__submit" type="submit" name="envoyer" value="Envoyer">
+                <div class=" form__line form__line--submit wow bounceInLeft">
+                    <input class=" form__submit" type="submit" name="envoyer" value="Envoyer">
                 </div>
             </form>
 
@@ -47,15 +65,15 @@
 
         <div class="footer__contact">
             <h2 class="footer__title">Me contacter</h2>
-            <p class="footer__elt footer__elt--phone">+32 476 52 42 85</p>
             <a class="footer__elt footer__elt--links footer__elt--mail" href="mailto:mathieu_claessens@hotmail.com">mathieu_claessens@hotmail.com</a>
+            <p class="footer__elt footer__elt--phone">+32 476 52 42 85</p>
         </div>
 
         <div class="footer__social">
             <H2 class="footer__title">Me suivre</H2>
-            <a class="footer__elt footer__elt--links footer__elt--github" href="https://github.com/Mucht" rel="external">GitHub</a>
-            <a class="footer__elt footer__elt--links footer__elt--behance" href="https://www.behance.net/mathieuclaessens" rel="external">Behance</a>
             <a  class="footer__elt footer__elt--links footer__elt--linkedin" href="https://www.linkedin.com/in/mathieuclaessens" rel="external">Linkedin</a>
+            <a class="footer__elt footer__elt--links footer__elt--behance" href="https://www.behance.net/mathieuclaessens" rel="external">Behance</a>
+            <a class="footer__elt footer__elt--links footer__elt--github" href="https://github.com/Mucht" rel="external">GitHub</a>
         </div>
 
         <div class="footer__nav">
@@ -69,5 +87,7 @@
         <small class="footer__copy">&copy; Mucht 2016</small>
 
     </footer>
+    <script src="./js/wow.js"></script>
+    <script>new WOW().init();</script>
 </body>
 </html>

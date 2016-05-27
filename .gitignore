@@ -1,5 +1,6 @@
 node_modules
 js
+FTP-files
 
 dev/*
 !dev/wp-content/

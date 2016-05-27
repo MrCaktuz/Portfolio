@@ -1,0 +1,840 @@
+@charset "UTF-8";
+/* Portfolio
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Mucht
+ */
+/* Portfolio
+ *
+ * /sass/settings/_paths.scss - Global paths variables
+ *
+ * coded by Mucht
+ */
+/* Portfolio
+ *
+ * /sass/settings/_colors.scss - Global colors variables
+ *
+ * coded by Mucht
+ */
+/* => Nom du site
+ *
+ * /sass/settings/_fonts.scss - Global fonts variables & fonts loading
+ *
+ * coded by Mucht
+ */
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-regular-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-regular-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-regular-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-italic-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-italic-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-italic-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-italic-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-italic-webfont.svg#open_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-semibold-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-semibold-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-semibold-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-semibold-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-bold-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-bold-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-bold-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-bolditalic-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.svg#open_sansbold") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Glyphs';
+  src: url("../assets/fonts/fontawesome/fontawesome-webfont.eot");
+  src: url("../assets/fonts/fontawesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/fontawesome/fontawesome-webfont.woff2") format("woff2"), url("../assets/fonts/fontawesome/fontawesome-webfont.woff") format("woff"), url("../assets/fonts/fontawesome/fontawesome-webfont.ttf") format("truetype"), url("../assets/fonts/fontawesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'edoregular';
+  src: url("../assets/fonts/edo/edo-webfont.eot");
+  src: url("../assets/fonts/edo/edo-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/edo/edo-webfont.woff") format("woff"), url("../assets/fonts/edo/edo-webfont.ttf") format("truetype"), url("../assets/fonts/edo/edo-webfont.svg#edoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Portfolio
+ *
+ * /sass/settings/_sizes.scss - Global sizes variables
+ *
+ * coded by Mucht
+ */
+/* => Nom du site
+ *
+ * /sass/tools/_utils.scss - Small utilities
+ *
+ * coded by Mucht
+ */
+.hidden, .screen-reader-response, .screen-reader-response a, hr {
+  position: absolute;
+  left: -100%; }
+
+.clear {
+  clear: both; }
+
+.clear::after {
+  content: " ";
+  display: table;
+  clear: both; }
+
+/* => Nom du site
+ *
+ * /sass/generic/_meyer-reset.scss - Eric Meyer's CSS reset - http://meyerweb.com/eric/tools/css/reset/
+ *
+ * coded by Mucht
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* => Nom du site
+ *
+ * /sass/generic/_box-sizing.scss - box-sizing reset
+ *
+ * coded by Mucht
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* => Nom du site
+  *
+  * /sass/base/_root.scss - Base styles for root element
+  *
+  * coded by Mucht
+  */
+html {
+  font-size: 10px;
+  color: #003F66;
+  font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 500px;
+  background: url(../assets/img/projectBackground1.png) fixed; }
+
+a {
+  text-decoration: none; }
+
+/* Portfolio
+ *
+ * /sass/objects/_header.scss - Non Esthetic style for header
+ *
+ * coded by Mucht!
+ */
+.header {
+  height: 400px;
+  min-width: 0px; }
+  .header--mainPages {
+    height: 300px; }
+  .header__titles {
+    width: 100%; }
+  .header__subTitle {
+    margin: 0 0.25em; }
+
+.mainNav {
+  margin-left: -2em; }
+
+/* Portfolio
+ *
+ * /sass/objects/_presentation.scss - Non Esthetic style for presentation section
+ *
+ * coded by Mucht!
+ */
+.presentation__wrap {
+  width: 62.353858144973%;
+  min-width: 800px;
+  margin: 0 auto; }
+
+.presentation__photo {
+  width: 30%;
+  max-width: 300px; }
+
+.presentation__textBlocs {
+  width: 59.375%;
+  margin: 7% 0 0 10%; }
+
+@media screen and (max-width: 850px) {
+  .presentation__wrap {
+    text-align: center;
+    min-width: 500px;
+    margin: 0 auto; }
+  .presentation__photo {
+    width: 300px; }
+  .presentation__textBlocs {
+    width: 100%;
+    margin: 10% 0 0 0; } }
+
+/* Portfolio
+ *
+ * /sass/objects/_projects.scss - Non Esthetic style for projects section
+ *
+ * coded by Mucht!
+ */
+.projects__title {
+  width: 100%;
+  margin: 30.379746835443% 0; }
+
+.projects__project {
+  width: 50%; }
+
+.projects__img {
+  width: 100%;
+  height: auto; }
+
+.projects__hoverBloc {
+  width: 100%; }
+
+@media screen and (max-width: 700px) {
+  .projects__project {
+    width: 100%; } }
+
+/* Portfolio
+ *
+ * /sass/objects/_footer.scss - Non Esthetic style for footer section
+ *
+ * coded by Mucht!
+ */
+.footer__contact {
+  margin-bottom: 1.5625em; }
+
+.footer__social {
+  margin-bottom: 1.5625em; }
+
+.footer__title {
+  margin-bottom: 1.04166666666667em; }
+
+.footer__nav {
+  margin-bottom: 3.125em; }
+
+@media screen and (max-width: 700px) {
+  .footer__contact {
+    margin-bottom: 1.5625em; }
+  .footer__social {
+    margin: 5em 0 1.5625em 0; }
+  .footer__title {
+    margin-bottom: 1.04166666666667em; }
+  .footer__nav {
+    width: 500px;
+    margin: 3.125em auto; } }
+
+/* Portfolio
+ *
+ * /sass/objects/_contact.scss - Non Esthetic style for contact page
+ *
+ * coded by Mucht!
+ */
+.contact {
+  margin: 5em 0;
+  margin-left: 12.548713951676%; }
+
+.form {
+  width: 50.038971161341%;
+  min-width: 400px;
+  margin: 0 auto; }
+  .form__line {
+    margin-bottom: 1.041666667em; }
+  .form input[type="text"], .form input[type="email"], .form input[type="url"], .form textarea {
+    width: 100%; }
+  .form textarea {
+    min-height: 12.5em; }
+  .form input[type="submit"] {
+    width: 100%; }
+  .form .wpcf7-validation-errors, .form .wpcf7-not-valid-tip, .form .wpcf7-mail-sent-ng {
+    margin-top: 0.5em; }
+
+.businessCard {
+  margin: 5em 0;
+  margin-right: 12.548713951676%; }
+  .businessCard__wrap {
+    margin: 0 auto; }
+  .businessCard__photo {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 2.5em; }
+  .businessCard__textBox {
+    width: auto;
+    margin: 0 auto; }
+  .businessCard__elt {
+    width: auto;
+    margin: 1em 0 0 0; }
+
+@media screen and (max-width: 980px) {
+  .contact {
+    margin-left: 0; }
+  .businessCard {
+    margin-right: 0; }
+    .businessCard__wrap {
+      width: auto;
+      margin: 0 auto; }
+    .businessCard__photo {
+      width: 50%;
+      max-width: 300px;
+      min-width: 250px; } }
+
+/* Portfolio
+ *
+ * /sass/objects/_plan.scss - Non Esthetic style for sitePlan page
+ *
+ * coded by Mucht!
+ */
+.plan {
+  background: url(../assets/img/projectBackground1.png) fixed;
+  padding: 2.5em 12.587685113% 5em; }
+  .plan__list--sub {
+    margin-left: 3em; }
+  .plan__listItem {
+    margin-top: 2.5em; }
+
+/* Portfolio
+ *
+ * /sass/objects/_project.scss - Non Esthetic style for project page
+ *
+ * coded by Mucht!
+ */
+.project {
+  width: 100%;
+  padding: 2.7777777778em 12.587685113% 1.2222222222em 12.587685113%; }
+  .project__title {
+    margin-bottom: 1.04166666666667em; }
+  .project__textBlocs {
+    margin-bottom: 0.5em; }
+  .project__illustrations {
+    width: 74.824629774%;
+    margin: 0 auto; }
+  .project__illustration {
+    width: 100%;
+    height: auto; }
+  .project__button--label {
+    width: 74.824629774%;
+    min-height: 1.66666666666667em;
+    margin: 0 auto; }
+
+@media screen and (min-width: 475px) {
+  .project {
+    width: 100%;
+    padding: 2.7777777778em 12.587685113% 1.2222222222em 12.587685113%; }
+    .project__title {
+      margin-bottom: 1.04166666666667em; }
+    .project__textBlocs {
+      margin-bottom: 0.5em; }
+    .project__illustrations {
+      width: 74.824629774%;
+      margin: 0 auto; }
+    .project__illustration {
+      width: 100%;
+      height: auto; }
+    .project__botton--label {
+      width: 74.824629774%;
+      min-height: 1.66666666666667em;
+      margin: 0 auto; } }
+
+/* Portfolio
+ *
+ * /sass/components/_header.scss - Esthetic style for header
+ *
+ * coded by Mucht!
+ */
+.header {
+  overflow: hidden;
+  background-image: url(../assets/img/cover.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
+  .header--realisations {
+    background-image: url(../assets/img/surUnBaobabcover.jpg); }
+  .header__title {
+    font-size: 5em;
+    font-family: "edoregular", cursive;
+    color: #FFF;
+    padding-bottom: 0.5em; }
+    .header__title--mainPages {
+      padding-bottom: 0; }
+  .header__titles {
+    background-color: rgba(0, 63, 102, 0.8);
+    position: absolute;
+    bottom: 0;
+    padding: 2.5em 0;
+    text-align: center; }
+  .header__subTitle {
+    display: inline-block;
+    font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.4em;
+    color: #FFF;
+    padding: 0.2em 0.5em 0.3em; }
+    .header__subTitle--tags {
+      background-color: #003F66;
+      border-right: 2px solid #FF9900;
+      border-left: 2px solid #FF9900;
+      border-radius: 0.75em; }
+
+.mainNav {
+  display: inline-block;
+  z-index: 100;
+  position: absolute;
+  top: 2.5em;
+  left: 0;
+  padding: 1em 2em 1em 5em;
+  border-radius: 2.2em;
+  background-color: rgba(0, 63, 102, 0.8); }
+  .mainNav__elt {
+    padding-right: 1.25em;
+    font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.4em;
+    color: #FFF;
+    transition: 0.2s ease-in-out; }
+    .mainNav__elt--active {
+      color: #FF9900; }
+    .mainNav__elt:last-child {
+      padding-right: 0; }
+    .mainNav__elt:hover {
+      color: #FF9900; }
+
+@media screen and (max-width: 635px) {
+  .header__subTitle {
+    font-size: 1.6em; } }
+
+/* Portfolio
+ *
+ * /sass/components/_presentation.scss - Esthetic style for presentation section
+ *
+ * coded by Mucht!
+ */
+.presentation {
+  background: transparent url("../assets/img/projectBackground1.png") repeat fixed 0 0;
+  padding: 6.5em 0; }
+  .presentation__photo {
+    float: left;
+    border-top-left-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    border: 1px #FF9900 solid;
+    box-shadow: 0px 0px 5px 0px black;
+    transition: 0.5s ease-in-out; }
+  .presentation__textBlocs {
+    position: relative;
+    float: left;
+    text-align: center;
+    line-height: 2em;
+    font-size: 2em; }
+
+@media screen and (max-width: 850px) {
+  .presentation__photo {
+    float: none;
+    margin: 0 auto;
+    border-top-left-radius: 50% 50%;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 50% 50%; }
+  .presentation__textBlocs {
+    position: relative;
+    float: none;
+    text-align: center;
+    line-height: 2em;
+    font-size: 2em; } }
+
+/* Portfolio
+ *
+ * /sass/components/_projects.scss - Esthetic style for projects section
+ *
+ * coded by Mucht!
+ */
+.projects__title {
+  color: transparent;
+  z-index: 100;
+  display: block;
+  text-align: center;
+  font-size: 5em;
+  font-family: "edoregular", cursive;
+  position: absolute;
+  transition: 0.2s ease-in-out; }
+
+.projects__project {
+  float: left;
+  position: relative;
+  background-color: #003F66;
+  overflow: hidden;
+  transition: 0.5s ease-in-out; }
+
+.projects__hoverBloc {
+  display: block;
+  padding-top: 70.046801872075%;
+  transition: 0.2s ease-in-out; }
+  .projects__hoverBloc--over {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 153, 0, 0.85); }
+  .projects__hoverBloc--rotated {
+    transform: rotate(-35deg);
+    background-color: #003F66;
+    position: absolute; }
+  .projects__hoverBloc--upper {
+    top: -79.746835443038%;
+    left: -103.79746835443%; }
+  .projects__hoverBloc--lower {
+    bottom: -79.746835443038%;
+    right: -103.79746835443%; }
+
+.projects__project:hover .projects__title {
+  color: #003F66; }
+
+.projects__project:hover .projects__hoverBloc--over {
+  opacity: 0.9; }
+
+.projects__project:hover .projects__hoverBloc--upper {
+  top: -50%;
+  left: -60%; }
+
+.projects__project:hover .projects__hoverBloc--lower {
+  bottom: -50%;
+  right: -60%; }
+
+@media screen and (min-width: 700px) {
+  .projects__title {
+    font-size: 3em; } }
+
+@media screen and (min-width: 800px) {
+  .projects__title {
+    font-size: 4em; } }
+
+@media screen and (min-width: 900px) {
+  .projects__title {
+    font-size: 5em; } }
+
+@media screen and (min-width: 1500px) {
+  .projects__title {
+    font-size: 8em; } }
+
+/* Portfolio
+ *
+ * /sass/components/_footer.scss - Esthetic style for footer section
+ *
+ * coded by Mucht!
+ */
+.footer {
+  background: linear-gradient(-45deg, #003f66 0%, #002233 45%, #002233 55%, #003f66 100%);
+  padding: 5em 12.587685113% 2.5em;
+  text-align: center; }
+  .footer__contact {
+    float: left;
+    text-align: left; }
+  .footer__social {
+    float: right;
+    text-align: right; }
+  .footer__title {
+    font-family: "edoregular", cursive;
+    font-size: 3.2em;
+    color: #FFF; }
+  .footer__elt {
+    display: block;
+    font-size: 1.6em;
+    color: #FFF;
+    margin-bottom: 1.5625em;
+    transition: 0.1s ease-in; }
+    .footer__elt--links:hover {
+      color: #FF9900; }
+    .footer__elt::before {
+      padding-right: 0.5em;
+      font-family: "Glyphs";
+      font-size: 1.3em;
+      color: #0092ff; }
+    .footer__elt--phone::before {
+      content: ""; }
+    .footer__elt--mail::before {
+      content: ""; }
+    .footer__elt::after {
+      padding-left: 0.5em;
+      font-family: "Glyphs";
+      font-size: 1.3em;
+      color: #0092ff; }
+    .footer__elt--github::after {
+      content: ""; }
+    .footer__elt--behance::after {
+      content: ""; }
+    .footer__elt--linkedin::after {
+      content: ""; }
+  .footer__nav {
+    clear: both;
+    font-size: 1.6em; }
+    .footer__nav--elt {
+      color: #FFF;
+      padding: 0 0.5em 0 0.3em;
+      border-right: 2px solid #FF9900;
+      transition: 0.1s ease-in; }
+      .footer__nav--elt:last-child {
+        border: none; }
+  .footer__copy {
+    font-size: 1.6em;
+    color: #0066B2; }
+
+@media screen and (max-width: 700px) {
+  .footer {
+    padding: 5em 0 2.5em; }
+    .footer__contact {
+      float: none;
+      text-align: center; }
+    .footer__social {
+      float: none;
+      text-align: center; }
+    .footer__elt--github::after {
+      content: ""; }
+    .footer__elt--behance::after {
+      content: ""; }
+    .footer__elt--linkedin::after {
+      content: ""; }
+    .footer__elt--github::before {
+      content: ""; }
+    .footer__elt--behance::before {
+      content: ""; }
+    .footer__elt--linkedin::before {
+      content: ""; }
+    .footer__nav--elt {
+      line-height: 2em; } }
+
+/* Portfolio
+ *
+ * /sass/components/_contact.scss - Esthetic style for contact page
+ *
+ * coded by Mucht!
+ */
+.contact {
+  float: left; }
+
+.form {
+  font-size: 2.4em; }
+  .form__line {
+    position: relative;
+    text-align: center; }
+  .form__label {
+    font-family: "edoregular", cursive;
+    color: #003F66;
+    padding: 0.19em 25px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .form__label--msg {
+      display: block;
+      top: 3px; }
+    .form__label:hover {
+      color: #FF9900; }
+  .form input[type="text"], .form input[type="email"], .form input[type="url"], .form textarea {
+    border-radius: 1.125em;
+    background-color: #FFF;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+    padding: 0.5em 0 0.5em 140px;
+    font-size: 0.66666666666667em;
+    color: #003F66;
+    background-color: #FFF;
+    border: none; }
+  .form textarea {
+    display: block;
+    padding: 0.65em 2em 2em 140px; }
+  .form input[type="submit"] {
+    display: block;
+    font-family: "edoregular", cursive;
+    color: #FFF;
+    padding: 0 1em 0.13em 1em;
+    border-radius: 0.83333333333333em;
+    background-color: #003F66;
+    font-size: 1em;
+    border: none; }
+  .form input[type="submit"]:hover {
+    color: #FF9900; }
+  .form .wpcf7-validation-errors, .form .wpcf7-not-valid-tip, .form .wpcf7-mail-sent-ng {
+    font-size: 0.66666666666667em;
+    color: #ff0000;
+    text-align: center; }
+
+.businessCard {
+  float: right;
+  text-align: center; }
+  .businessCard__wrap {
+    width: auto; }
+  .businessCard__photo {
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border: 1px #FF9900 solid;
+    box-shadow: 0px 0px 5px 0px black; }
+  .businessCard__elt {
+    display: inline-block;
+    font-size: 1.6em;
+    color: #003F66;
+    transition: 0.1s ease-in; }
+    .businessCard__elt--links:hover {
+      color: #0066B2; }
+    .businessCard__elt::before {
+      padding-right: 0.5em;
+      font-family: "Glyphs";
+      font-size: 1.3em;
+      color: #0092ff; }
+    .businessCard__elt--phone::before {
+      content: ""; }
+    .businessCard__elt--mail::before {
+      content: ""; }
+    .businessCard__elt--github::before {
+      content: ""; }
+    .businessCard__elt--behance::before {
+      content: ""; }
+    .businessCard__elt--linkedin::before {
+      content: ""; }
+
+.form__input:focus, .form__textarea:focus {
+  box-shadow: 0px 0px 3px 0px #FF9900; }
+
+@media screen and (max-width: 980px) {
+  .contact {
+    float: none; }
+  .businessCard {
+    float: none; }
+    .businessCard__photo {
+      border-top-left-radius: 50% 50%;
+      border-top-right-radius: 50% 50%; } }
+
+/* Portfolio
+ *
+ * /sass/components/_plan.scss - Esthetic style for sitePlan page
+ *
+ * coded by Mucht!
+ */
+.plan__list {
+  font-family: "edoregular", cursive; }
+
+.plan__elt {
+  font-size: 2.4em;
+  color: #003F66;
+  transition: 0.1s ease-in-out; }
+  .plan__elt::before {
+    content: "";
+    font-family: "Glyphs";
+    color: #003F66;
+    padding-right: 0.5em;
+    transition: 0.1s ease-in-out; }
+
+.plan__elt:hover {
+  color: #0066B2; }
+
+.plan__elt:hover::before {
+  content: "";
+  color: #0066B2; }
+
+/* Portfolio
+ *
+ * /sass/components/_project.scss - Esthetic style for project page
+ *
+ * coded by Mucht!
+ */
+.project {
+  font-size: 1.8em; }
+  .project__title {
+    font-size: 1.33333333333333em;
+    font-family: "edoregular", cursive; }
+  .project__textBlocs {
+    columns: 2;
+    column-gap: 4em;
+    -moz-columns: 2;
+    -moz-column-gap: 4em;
+    -webkit-columns: 2;
+    -webkit-column-gap: 4em; }
+  .project__textBloc {
+    line-height: 2em;
+    padding-bottom: 1em; }
+  .project__illustrations {
+    position: relative; }
+  .project__illustration {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+    .project__illustration--legend {
+      display: inline-block;
+      font-family: "edoregular", cursive;
+      font-size: 2em;
+      padding: 0.41666666666667em 0.69444444444444em;
+      border-bottom-right-radius: 1.08108108108em;
+      background-color: #0092ff;
+      color: #000;
+      position: absolute;
+      left: 0;
+      top: 0; }
+  .project__button {
+    font-size: 2.4em;
+    padding: 2.08333333333333em 0; }
+    .project__button--label {
+      display: block;
+      text-align: center;
+      padding: 0.33333333333333em 0;
+      border-radius: 0.83333333333333em;
+      font-family: "edoregular", cursive;
+      color: #FFF;
+      background-color: #003F66;
+      transition: 0.2s ease-in-out; }
+      .project__button--label:hover {
+        color: #FF9900; }
+    .project__button--dark {
+      color: #FFF; }
+
+@media screen and (max-width: 750px) {
+  .project__textBlocs {
+    columns: 1;
+    -moz-columns: 1;
+    -webkit-columns: 1; } }
+
+/*# sourceMappingURL=styles.css.map */

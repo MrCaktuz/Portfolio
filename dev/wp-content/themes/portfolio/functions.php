@@ -1,23 +1,4 @@
 <?php
-/*
- * Defines custom poste_types
- *
- */
-
-// register_post_type( 'realisations', [
-//     'label' => 'Réalisations',
-//     'labels' => [
-//             'singular_name' => 'Réalisation',
-//             'add_new' => 'Ajouter une nouvelle réalisation'
-//         ],
-//     'description' => 'La liste de toutes les réalisation que j\'ai faites',
-//     'public' => true,
-//     'menu_position' => 5,
-//     'menu_icon' => 'dashicons-editor-paste-word',
-//     'supports' => [ 'title', 'author', 'thumbnail' ],
-//     'taxonomies' => [ 'Design', 'Refonte', 'Développement', 'Wordpress', 'PHP', 'JavaScript' ],
-//     'has_archive' => true
-//     ] );
 
 /*
  * get caption from media
@@ -42,3 +23,45 @@
 
  add_theme_support( 'post-thumbnails' );
   // register_post_type( $post_type, $args );
+
+/*
+*
+* générate navigaiton
+*
+*/
+
+register_nav_menu( 'main-nav', 'Menu principal' );
+register_nav_menu( 'map-nav', 'Menu du plan du site' );
+
+/*
+*
+* générate a custom menu array
+*
+*/
+function pf_get_menu_id( $location ){
+  $locations = get_nav_menu_locations();
+  if ( isset( $locations[ $location ] ) ) {
+      return $locations[ $location ];
+  }
+  return false;
+}
+
+function pf_is_current( $obj ) {
+  global $post;
+  return ( $obj -> object_id == $post -> ID );
+}
+
+function pf_get_menu_items( $location ) {
+
+  $navItems = [];
+  foreach ( wp_get_nav_menu_items( pf_get_menu_id( $location ) ) as $obj) {
+      $item = new stdClass();
+      $item -> isCurrent = pf_is_current( $obj );
+      $item -> url = $obj -> url;
+      $item -> label = $obj -> title;
+      $item -> icon = $obj -> classes[0];
+      array_push( $navItems, $item );
+  }
+  // var_dump( $navItems ); die();
+  return $navItems;
+}

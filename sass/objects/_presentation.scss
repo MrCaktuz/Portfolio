@@ -6,12 +6,34 @@
  */
 
 .presentation{
+    &__wrap{
+        width: 62.353858144973%;
+        min-width: 800px;
+        margin: 0 auto;
+    }
     &__photo{
-        width: 24.973985431842%;
+        width: 30%;
+        max-width: 300px;
     }
     &__textBlocs{
         width: $textBlocWidth;
-        min-width: 23.88888888888889em; // 430px
-        margin: 0 80px;
+        margin: 7% 0 0 10%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .presentation{
+        &__wrap{
+            text-align: center;
+            min-width: 500px;
+            margin: 0 auto;
+        }
+        &__photo{
+            width: 300px;
+        }
+        &__textBlocs{
+            width: 100%;
+            margin: 10% 0 0 0;
+        }
     }
 }

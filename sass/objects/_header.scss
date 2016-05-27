@@ -7,6 +7,7 @@
 
 .header{
     height: $headerHeight;
+    min-width: 0px;
     &--mainPages{
         height: $headerMainPagesHeight;
     }
@@ -14,22 +15,9 @@
         width: 100%;
     }
     &__subTitle{
-        margin: 1.04166666666667em 0;
+        margin: 0 0.25em;
     }
 }
-
- // .indexHeader{
- //     height: $indexHeaderHeight;
- //     &__title::before{
- //         width: 335px;
- //         height: 302px;
- //         margin: 0.5em auto 0.4em;
- //     }
- // }
- //
- // .header{
- //     height: $headerHeight;
- // }
 
  .mainNav{
      margin-left: -2em;

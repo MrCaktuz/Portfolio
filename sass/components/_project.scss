@@ -7,26 +7,17 @@
 
 .project{
     font-size: 1.8em;
-    &--context{
-        background: url(#{ $imgPath }projectBackground1.png) fixed;
-    }
-    &--approche{
-        background: url(#{ $imgPath }projectBackground1.png) fixed;
-    }
-    &--recul{
-        background: url(#{ $imgPath }projectBackground1.png) fixed;
-    }
     &__title{
         font-size: 1.33333333333333em;
-        font-family: $aladinStack;
+        font-family: $edoStack;
     }
     &__textBlocs{
         columns: 2;
-        column-gap: 8.88888888888889em;
+        column-gap: 4em;
         -moz-columns: 2;
-        -moz-column-gap: 8.88888888888889em;
+        -moz-column-gap: 4em;
         -webkit-columns: 2;
-        -webkit-column-gap: 8.88888888888889em;
+        -webkit-column-gap: 4em;
     }
     &__textBloc{
         line-height: 2em;
@@ -39,32 +30,47 @@
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
         &--legend{
             display: inline-block;
-            font-family: $aladinStack;
-            font-size: 3.6em;
+            font-family: $edoStack;
+            font-size: 2em;
             padding: 0.41666666666667em 0.69444444444444em;
+            border-bottom-right-radius: 1.08108108108em;
             background-color: $legendBackground;
             color: $legendColor;
             position: absolute;
-            right: 0;
-            bottom: 0;
+            left: 0;
+            top: 0;
         }
     }
-    &__botton{
+    &__button{
         font-size: 2.4em;
-        background-image: $projectBottonBackground;
         padding: 2.08333333333333em 0;
         &--label{
             display: block;
             text-align: center;
             padding: 0.33333333333333em 0;
             border-radius: 0.83333333333333em;
-            font-family: $aladinStack;
-            color: $labelColor;
+            font-family: $edoStack;
+            color: $buttonColor;
             background-color: $labelBackground;
             transition: 0.2s ease-in-out;
             &:hover{
                 color: $linksHoverColor;
             }
+        }
+        &--dark{
+            color: $buttonColor;
+        }
+    }
+}
+
+// ===== media query =====
+
+@media screen and (max-width: 750px) {
+    .project{
+        &__textBlocs{
+            columns: 1;
+            -moz-columns: 1;
+            -webkit-columns: 1;
         }
     }
 }

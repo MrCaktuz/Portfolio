@@ -2,13 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Réalisation - Mathieu Claessens</title>
 </head>
 <body>
     <header class="header header--mainPages">
-        <nav class="mainNav">
+        <nav class="mainNav wow bounceInLeft">
             <a class="mainNav__elt" href="./index.html">Accueil</a>
             <a class="mainNav__elt mainNav__elt--active" href="#">Réalisations</a>
             <a class="mainNav__elt" href="./contact.html">Contact</a>
@@ -22,7 +22,7 @@
         <section class="projects clear">
             <h2 class="projects__title hidden">Dernières réalisations</h2>
 
-            <a class="projects__project" href="./project.html">
+            <a class="projects__project wow bounceInLeft" href="./project.html">
                 <h3 class="projects__title">Sur Un Baobab</h3>
                 <img class="projects__img" src="assets/img/surUnBaobab.png" alt="" />
                 <div class="projects__hoverBloc projects__hoverBloc--over"> </div>
@@ -30,7 +30,7 @@
                 <div class="projects__hoverBloc projects__hoverBloc--lower projects__hoverBloc--rotated"></div>
             </a>
 
-            <a class="projects__project" href="./project.html">
+            <a class="projects__project wow bounceInRight" href="./project.html">
                 <h3 class="projects__title">Curriculum Vitae</h3>
                 <img class="projects__img" src="assets/img/curriculumVitae.png" alt="" />
                 <div class="projects__hoverBloc projects__hoverBloc--over"></div>
@@ -38,7 +38,7 @@
                 <div class="projects__hoverBloc projects__hoverBloc--lower projects__hoverBloc--rotated"></div>
             </a>
 
-            <a class="projects__project" href="./project.html">
+            <a class="projects__project wow bounceInLeft" href="./project.html">
                 <h3 class="projects__title">Nicolas De Staël</h3>
                 <img class="projects__img" src="assets/img/nicolasDeStael.png" alt="" />
                 <div class="projects__hoverBloc projects__hoverBloc--over"></div>
@@ -46,7 +46,7 @@
                 <div class="projects__hoverBloc projects__hoverBloc--lower projects__hoverBloc--rotated"></div>
             </a>
 
-            <a class="projects__project" href="./project.html">
+            <a class="projects__project wow bounceInRight" href="./project.html">
                 <h3 class="projects__title">Flapi Deadpool</h3>
                 <img class="projects__img" src="assets/img/flapiDeadpool.png" alt="" />
                 <div class="projects__hoverBloc projects__hoverBloc--over"></div>
@@ -55,7 +55,7 @@
                 <div class="projects__hoverBloc projects__hoverBloc--lower projects__hoverBloc--rotated"></div>
             </a>
 
-            <a class="projects__project" href="./project.html">
+            <a class="projects__project wow bounceInLeft" href="./project.html">
                 <h3 class="projects__title">Mucht Books</h3>
                 <img class="projects__img" src="assets/img/muchtBooks.png" alt="" />
                 <div class="projects__hoverBloc projects__hoverBloc--over"></div>
@@ -64,7 +64,7 @@
                 <div class="projects__hoverBloc projects__hoverBloc--lower projects__hoverBloc--rotated"></div>
             </a>
 
-            <a class="projects__project" href="./project.html">
+            <a class="projects__project wow bounceInRight" href="./project.html">
                 <h3 class="projects__title">Catch Up Sim</h3>
                 <img class="projects__img" src="assets/img/catchUpSim.png" alt="" />
                 <div class="projects__hoverBloc projects__hoverBloc--over"></div>
@@ -102,5 +102,7 @@
         <small class="footer__copy">&copy; Mucht 2016</small>
 
     </footer>
+    <script src="./js/wow.js"></script>
+    <script>new WOW().init();</script>
 </body>
 </html>

@@ -21,3 +21,13 @@
         width: 100%;
     }
 }
+
+// ===== media query =====
+
+@media screen and (max-width: 700px) {
+    .projects{
+        &__project{
+            width: 100%;
+        }
+    }
+}

@@ -14,15 +14,49 @@
     &__textBlocs{
         margin-bottom: 0.5em;
     }
+    &__illustrations{
+        width: $mainWidth;
+        margin: 0 auto;
+    }
     &__illustration{
         width: 100%;
         height: auto;
     }
-    &__botton{
+    &__button{
         &--label{
             width: $mainWidth;
             min-height: 1.66666666666667em;
             margin: 0 auto;
+        }
+    }
+}
+
+// ===== media query =====
+
+@media screen and (min-width: 475px) {
+    .project{
+        width: 100%;
+        padding: 2.77777777777778em $mainMarge 1.22222222222222em $mainMarge;
+        &__title{
+            margin-bottom: 1.04166666666667em;
+        }
+        &__textBlocs{
+            margin-bottom: 0.5em;
+        }
+        &__illustrations{
+            width: $mainWidth;
+            margin: 0 auto;
+        }
+        &__illustration{
+            width: 100%;
+            height: auto;
+        }
+        &__botton{
+            &--label{
+                width: $mainWidth;
+                min-height: 1.66666666666667em;
+                margin: 0 auto;
+            }
         }
     }
 }

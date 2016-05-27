@@ -2,34 +2,29 @@
 /*
 Template Name: Sitemap
 */
+get_header();
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" title="no title" charset="utf-8">
-    <link rel="icon" href="./assets/img/portfolio.ico" />
-    <title>Plan du site - Mathieu Claessens</title>
-</head>
 <body>
     <header class="header">
         <nav class="mainNav">
-            <a class="mainNav__elt" href="<?php echo home_url('/'); ?>">Accueil</a>
-            <a class="mainNav__elt" href="realisations">Réalisations</a>
-            <a class="mainNav__elt" href="contact">Contact</a>
+            <h2 class="hidden">Navigation principale</h2>
+            <?php foreach ( pf_get_menu_items( 'main-nav' ) as $navItem ): ?>
+                <a href="<?php echo $navItem -> url; ?>" class="mainNav__elt<?php echo $navItem -> isCurrent ? ' mainNav__elt--active' : ''; ?>"><?php echo $navItem -> label ?></a>
+            <?php endforeach; ?>
         </nav>
-        <h1 class="header__title">Plan du site</h1>
+        <div class="header__titles">
+            <h1 class="header__title"><?php the_title(); ?></h1>
+        </div>
     </header>
     <main class="wrap">
 
         <section class="plan">
 
             <ol class="plan__list">
-                <li class="plan__listItem">
+                <li class="plan__listItem wow bounceInLeft">
                     <a class="plan__elt" href="<?php echo home_url('/'); ?>">Accueil</a>
                 </li>
-                <li class="plan__listItem">
+                <li class="plan__listItem wow bounceInLeft">
                     <a class="plan__elt" href="realisations">Réalisations</a>
                     <ol class="plan__list plan__list--sub">
 
@@ -38,7 +33,7 @@ Template Name: Sitemap
                             if ( $posts -> have_posts() ): while ( $posts -> have_posts() ): $posts -> the_post();
                         ?>
 
-                            <li class="plan__listItem">
+                            <li class="plan__listItem wow bounceInLeft">
                                 <a class="plan__elt plan__elt--sub" href="<?php the_permalink(); ?>">
                                     <?php the_title(); ?>
                                 </a>
@@ -48,7 +43,7 @@ Template Name: Sitemap
 
                     </ol>
                 </li>
-                <li class="plan__listItem">
+                <li class="plan__listItem wow bounceInLeft">
                     <a class="plan__elt" href="contact">Contact</a>
                 </li>
             </ol>

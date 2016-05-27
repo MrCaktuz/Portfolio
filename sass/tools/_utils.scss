@@ -15,8 +15,9 @@
 //     opacity: 0.5;
 // }
 // Other
-.hidden {
-    display: none;
+.hidden, .screen-reader-response, .screen-reader-response a, hr {
+    position: absolute;
+    left: -100%;
 }
 
 .clear{
