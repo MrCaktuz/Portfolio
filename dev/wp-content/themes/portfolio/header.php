@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name ="viewport" content="width=device-width,initial-scale1">
     <meta name="author" content="Mucht - Mathieu Claessens">
-    <meta name="description" content="Découvrez qui est Mathieu Claessens et ce qu'il fait.">
-    <meta name="keywords" content="Web Master, Mathieu, Claessens, Mucht, Design, Dev, Front-end, Professional, Portfolio, Liège, Personnal, Web Designer, Web Developer">
+    <meta name="description" content="<?php the_field( 'meta_description' ); ?>">
+    <meta name="keywords" content="<?php the_field( 'meta_keywords' ); ?>">
 
     <meta property="og:image" content="http://mathieuclaessens.be/wp-content/uploads/2016/05/portrait.jpg" />
 
