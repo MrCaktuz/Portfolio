@@ -7,7 +7,7 @@ get_header();
 <body>
     <header class="header">
         <div class="header__titles">
-            <h1 class="header__title">call me maybe</h1>
+            <h1 class="header__title">Me contacter</h1>
         </div>
         <nav class="mainNav">
             <h2 class="hidden">Navigation principale</h2>
@@ -25,13 +25,13 @@ get_header();
             ?>
                 <h2 class="businessCard__title hidden">Business Card</h2>
                 <div class="businessCard__wrap clear">
-                    <img class="businessCard__photo wow bounceInRight" src="<?php the_post_thumbnail_url(); ?>" alt="" width="300" height="300"/>
+                    <img class="businessCard__photo" src="<?php the_post_thumbnail_url(); ?>" alt="" width="300" height="300"/>
                     <div class="businessCard__textBox">
-                        <p><a class="businessCard__elt wow bounceInRight businessCard__elt--links businessCard__elt--mail" href="mailto:<?php echo the_field( 'mail' ); ?>"><?php echo the_field( 'mail' ); ?></a></p>
-                        <p class="businessCard__elt wow bounceInRight businessCard__elt--phone"><?php echo the_field( 'phoneNumber' ); ?></p>
-                        <p><a class="businessCard__elt wow bounceInRight businessCard__elt--links businessCard__elt--linkedin" href="<?php echo the_field( 'linkedin' ); ?>" rel="external">Linkedin</a></p>
-                        <p><a class="businessCard__elt wow bounceInRight businessCard__elt--links businessCard__elt--behance" href="<?php echo the_field( 'behance' ); ?>" rel="external">Behance</a></p>
-                        <p><a class="businessCard__elt wow bounceInRight businessCard__elt--links businessCard__elt--github" href="<?php echo the_field( 'github' ); ?>" rel="external">GitHub</a></p>
+                        <p><a class="businessCard__elt businessCard__elt--links businessCard__elt--mail" href="mailto:<?php echo the_field( 'mail' ); ?>"><?php echo the_field( 'mail' ); ?></a></p>
+                        <p class="businessCard__elt businessCard__elt--phone"><?php echo the_field( 'phoneNumber' ); ?></p>
+                        <p><a class="businessCard__elt businessCard__elt--links businessCard__elt--linkedin" href="<?php echo the_field( 'linkedin' ); ?>" rel="external">Linkedin</a></p>
+                        <p><a class="businessCard__elt businessCard__elt--links businessCard__elt--behance" href="<?php echo the_field( 'behance' ); ?>" rel="external">Behance</a></p>
+                        <p><a class="businessCard__elt businessCard__elt--links businessCard__elt--github" href="<?php echo the_field( 'github' ); ?>" rel="external">GitHub</a></p>
                     </div>
                 </div>
             <?php endwhile; endif; ?>

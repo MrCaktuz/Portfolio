@@ -23,10 +23,10 @@ get_header();
             <h2 class="hidden">Plan</h2>
 
             <ol class="plan__list">
-                <li class="plan__listItem wow bounceInLeft">
+                <li class="plan__listItem">
                     <a class="plan__elt" href="<?php echo home_url('/'); ?>">Accueil</a>
                 </li>
-                <li class="plan__listItem wow bounceInLeft">
+                <li class="plan__listItem">
                     <a class="plan__elt" href="realisations">Réalisations</a>
                     <ol class="plan__list plan__list--sub">
 
@@ -35,7 +35,7 @@ get_header();
                             if ( $posts -> have_posts() ): while ( $posts -> have_posts() ): $posts -> the_post();
                         ?>
 
-                            <li class="plan__listItem wow bounceInLeft">
+                            <li class="plan__listItem">
                                 <a class="plan__elt plan__elt--sub" href="<?php the_permalink(); ?>">
                                     <?php the_title(); ?>
                                 </a>
@@ -45,7 +45,7 @@ get_header();
 
                     </ol>
                 </li>
-                <li class="plan__listItem wow bounceInLeft">
+                <li class="plan__listItem">
                     <a class="plan__elt" href="contact">Contact</a>
                 </li>
             </ol>
