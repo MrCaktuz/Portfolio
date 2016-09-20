@@ -20,37 +20,39 @@ get_header();
         </nav>
     </header>
     <main class="wrap">
+        <section>
+            <h2 class="hidden">Contenu</h2>
 
         <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 
             <article class="project project--context clear">
-                <h2 class="project__title">Contexte</h2>
+                <h3 class="project__title">Contexte</h3>
                 <div class="project__textBlocs">
                     <?php the_field( 'contexte' ); ?>
                 </div>
             </article>
 
             <section class="project__illustrations">
-                <h2 class="project__title hidden">Illustration : <?php the_field( 'firstIlluCaption' ); ?></h2>
+                <h3 class="project__title hidden">Illustration : <?php the_field( 'firstIlluCaption' ); ?></h3>
                 <img class="project__illustration" src="<?php the_field( 'firstIllu' ); ?>" alt="Screenshot du vieux site" width="1000" height="250"/>
                 <span class="project__illustration--legend"><?php the_field( 'firstIlluCaption' ); ?></span>
             </section>
 
             <article class="project project--approche clear">
-                <h2 class="project__title">Mon approche</h2>
+                <h3 class="project__title">Mon approche</h3>
                 <div class="project__textBlocs">
                     <?php the_field( 'approche' ); ?>
                 </div>
             </article>
 
             <section class="project__illustrations">
-                <h2 class="project__title hidden">Illustration : <?php the_field( 'secondIlluCaption' ); ?></h2>
+                <h3 class="project__title hidden">Illustration : <?php the_field( 'secondIlluCaption' ); ?></h3>
                 <img class="project__illustration" src="<?php the_field( 'secondIllu' ); ?>" alt="Screenshot du vieux site" width="1000" height="250"/>
                 <span class="project__illustration--legend"><?php the_field( 'secondIlluCaption' ); ?></span>
             </section>
 
             <article class="project project--recul clear">
-                <h2 class="project__title">Un peu de recul</h2>
+                <h3 class="project__title">Un peu de recul</h3>
                 <div class="project__textBlocs">
                     <?php the_field( 'recul' ) ?>
                 </div>
@@ -60,6 +62,7 @@ get_header();
                 <a class="project__button--label" rel="external" href="<?php the_field( 'link' ) ?>">Voir le projet</a>
             </div>
 
+        </section>
         <?php endwhile; endif; ?>
 
 <?php get_footer();
