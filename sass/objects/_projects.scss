@@ -8,14 +8,15 @@
 .projects{
     &__title{
         width: 100%;
-        margin: 30.379746835443% 0;
+        margin: 75px 0;
     }
     &__project{
         width: 50%;
+        height: 200px;
     }
     &__img{
         width: 100%;
-        height: auto;
+        min-height: 250px;
     }
     &__hoverBloc{
         width: 100%;

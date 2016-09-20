@@ -6,19 +6,21 @@ get_header();
 ?>
 <body>
     <header class="header">
+        <div class="header__titles">
+            <h1 class="header__title"><?php the_title(); ?></h1>
+        </div>
         <nav class="mainNav">
             <h2 class="hidden">Navigation principale</h2>
             <?php foreach ( pf_get_menu_items( 'main-nav' ) as $navItem ): ?>
                 <a href="<?php echo $navItem -> url; ?>" class="mainNav__elt<?php echo $navItem -> isCurrent ? ' mainNav__elt--active' : ''; ?>"><?php echo $navItem -> label ?></a>
             <?php endforeach; ?>
         </nav>
-        <div class="header__titles">
-            <h1 class="header__title"><?php the_title(); ?></h1>
-        </div>
     </header>
     <main class="wrap">
 
         <section class="plan">
+
+            <h2 class="hidden">Plan</h2>
 
             <ol class="plan__list">
                 <li class="plan__listItem wow bounceInLeft">

@@ -31,6 +31,7 @@
         }
     }
     input[ type="text" ], input[ type="email" ], input[ type="url" ], textarea {
+        font-family: $openSansStack;
         border-radius: 1.125em;
         background-color: #FFF;
         box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
@@ -43,6 +44,7 @@
     textarea {
         display: block;
         padding: 0.65em 2em 2em 140px;
+        resize: vertical;
     }
     input[ type="submit" ] {
         display: block;
@@ -69,10 +71,7 @@
 
 .businessCard{
     float: right;
-    text-align: center;
-    &__wrap{
-        width: auto;
-    }
+    text-align: left;
     &__photo{
         border-top-left-radius: 50% 50%;
         border-top-right-radius: 50% 50%;
@@ -117,7 +116,7 @@
 }
 
 // ===== media query =====
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1100px) {
     .contact{
         float: none;
     }

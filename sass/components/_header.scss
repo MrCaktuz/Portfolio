@@ -11,15 +11,13 @@
     background-size: cover;
     background-position: center center;
     position: relative;
-    &--realisations{
-        background-image: url(#{ $imgPath }surUnBaobabcover.jpg);
+    &__titles{
+        background-color: $titleBackground;
+        position: absolute;
+        bottom: 0;
+        padding: 2.5em 0;
+        text-align: center;
     }
-    // &__cover{
-    //     width: auto%;
-    //     height: 100%
-    //     position: relative;
-    //     top: -40%;
-    // }
     &__title{
         font-size: 5em;
         font-family: $edoStack;
@@ -29,13 +27,6 @@
             padding-bottom: 0;
         }
     }
-    &__titles{
-        background-color: $titleBackground;
-        position: absolute;
-        bottom: 0;
-        padding: 2.5em 0;
-        text-align: center;
-        }
     &__subTitle{
         display: inline-block;
         font-family: $openSansStack;
@@ -78,6 +69,24 @@
     }
 }
 
+.section{
+    overflow: hidden;
+    background-image: url(#{ $imgPath }cover.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    &__header{
+        font-size: 5em;
+        font-family: $edoStack;
+        color: $titleColor;
+        background-color: $sectionTitleBackground;
+    }
+    &__title{
+        padding: 0.5em 0;
+        text-align: center;
+    }
+}
+
 // ===== media query =====
 
 @media screen and (max-width: 635px) {
@@ -86,4 +95,19 @@
             font-size: 1.6em;
         }
     }
+    .mainNav{
+        &__elt{
+            font-size: 2em;
+        }
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .mainNav{
+        &__elt{
+            font-size: 1.6em;
+        }
+    }
+
 }

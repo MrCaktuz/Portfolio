@@ -6,53 +6,55 @@ get_header();
 ?>
 <body>
     <header class="header" style="background-image: url( <?php the_post_thumbnail_url(); ?> );">
-        <nav class="mainNav wow bounceInLeft">
-            <h2 class="hidden">Navigation principale</h2>
-            <?php foreach ( pf_get_menu_items( 'main-nav' ) as $navItem ): ?>
-                <a href="<?php echo $navItem -> url; ?>" class="mainNav__elt<?php echo $navItem -> isCurrent ? ' mainNav__elt--active' : ''; ?>"><?php echo $navItem -> label ?></a>
-            <?php endforeach; ?>
-        </nav>
         <div class="header__titles">
             <h1 class="header__title"><?php the_title(); ?></h1>
             <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
                 <?php the_field( 'tags' ); ?>
             <?php endwhile; endif; ?>
         </div>
+        <nav class="mainNav wow bounceInLeft">
+            <h2 class="hidden">Navigation principale</h2>
+            <?php foreach ( pf_get_menu_items( 'main-nav' ) as $navItem ): ?>
+                <a href="<?php echo $navItem -> url; ?>" class="mainNav__elt<?php echo $navItem -> isCurrent ? ' mainNav__elt--active' : ''; ?>"><?php echo $navItem -> label ?></a>
+            <?php endforeach; ?>
+        </nav>
     </header>
     <main class="wrap">
 
         <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 
-            <section class="project project--context clear wow bounceInUp">
+            <article class="project project--context clear wow bounceInUp">
                 <h2 class="project__title">Contexte</h2>
                 <div class="project__textBlocs">
                     <?php the_field( 'contexte' ); ?>
                 </div>
-            </section>
+            </article>
 
-            <div class="project__illustrations wow bounceInUp">
+            <section class="project__illustrations wow bounceInUp">
+                <h2 class="project__title hidden">Illustration</h2>
                 <img class="project__illustration" src="<?php the_field( 'firstIllu' ); ?>" alt="Screenshot du vieux site" width="1000" height="250"/>
                 <span class="project__illustration--legend"><?php the_field( 'firstIlluCaption' ); ?></span>
-            </div>
+            </section>
 
-            <section class="project project--approche clear wow bounceInUp">
+            <article class="project project--approche clear wow bounceInUp">
                 <h2 class="project__title">Mon approche</h2>
                 <div class="project__textBlocs">
                     <?php the_field( 'approche' ); ?>
                 </div>
-            </section>
+            </article>
 
-            <div class="project__illustrations wow bounceInUp">
+            <section class="project__illustrations wow bounceInUp">
+                <h2 class="project__title hidden">Illustration</h2>
                 <img class="project__illustration" src="<?php the_field( 'secondIllu' ); ?>" alt="Screenshot du vieux site" width="1000" height="250"/>
                 <span class="project__illustration--legend"><?php the_field( 'secondIlluCaption' ); ?></span>
-            </div>
+            </section>
 
-            <section class="project project--recul clear wow bounceInUp">
+            <article class="project project--recul clear wow bounceInUp">
                 <h2 class="project__title">Un peu de recul</h2>
                 <div class="project__textBlocs">
                     <?php the_field( 'recul' ) ?>
                 </div>
-            </section>
+            </article>
 
             <div class="project__button">
                 <a class="project__button--label wow bounceInUp" rel="external" href="<?php the_field( 'link' ) ?>">Voir le projet</a>

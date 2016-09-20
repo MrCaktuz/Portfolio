@@ -23,9 +23,13 @@
         overflow: hidden;
         transition: 0.5s ease-in-out;
     }
+    &__img{
+        position: relative;
+        top: -50px;
+    }
     &__hoverBloc{
         display: block;
-        padding-top: 70.046801872075%;
+        min-height: 200px;
         transition: 0.2s ease-in-out;
         &--over{
             opacity: 0;
@@ -62,12 +66,12 @@
 
 .projects__project:hover .projects__hoverBloc--upper{
     top: -50%;
-    left: -60%;
+    left: -50%;
 }
 
 .projects__project:hover .projects__hoverBloc--lower{
     bottom: -50%;
-    right: -60%;
+    right: -50%;
 }
 
 // ===== media query =====

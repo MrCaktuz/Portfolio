@@ -171,8 +171,8 @@ html {
   font-size: 10px;
   color: #003F66;
   font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  min-width: 500px;
-  background: url(../assets/img/projectBackground1.png) fixed; }
+  min-width: 320px;
+  background: url(../assets/img/mainBackground.png) fixed; }
 
 a {
   text-decoration: none; }
@@ -209,7 +209,8 @@ a {
 
 .presentation__photo {
   width: 30%;
-  max-width: 300px; }
+  max-width: 300px;
+  height: auto; }
 
 .presentation__textBlocs {
   width: 59.375%;
@@ -218,7 +219,7 @@ a {
 @media screen and (max-width: 850px) {
   .presentation__wrap {
     text-align: center;
-    min-width: 500px;
+    min-width: 300px;
     margin: 0 auto; }
   .presentation__photo {
     width: 300px; }
@@ -234,14 +235,15 @@ a {
  */
 .projects__title {
   width: 100%;
-  margin: 30.379746835443% 0; }
+  margin: 75px 0; }
 
 .projects__project {
-  width: 50%; }
+  width: 50%;
+  height: 200px; }
 
 .projects__img {
   width: 100%;
-  height: auto; }
+  min-height: 250px; }
 
 .projects__hoverBloc {
   width: 100%; }
@@ -276,7 +278,7 @@ a {
   .footer__title {
     margin-bottom: 1.04166666666667em; }
   .footer__nav {
-    width: 500px;
+    width: 300px;
     margin: 3.125em auto; } }
 
 /* Portfolio
@@ -291,7 +293,7 @@ a {
 
 .form {
   width: 50.038971161341%;
-  min-width: 400px;
+  min-width: 320px;
   margin: 0 auto; }
   .form__line {
     margin-bottom: 1.041666667em; }
@@ -308,11 +310,13 @@ a {
   margin: 5em 0;
   margin-right: 12.548713951676%; }
   .businessCard__wrap {
+    width: 300px;
     margin: 0 auto; }
   .businessCard__photo {
     width: 100%;
     max-width: 300px;
-    margin-bottom: 2.5em; }
+    margin-bottom: 2.5em;
+    height: auto; }
   .businessCard__textBox {
     width: auto;
     margin: 0 auto; }
@@ -320,16 +324,14 @@ a {
     width: auto;
     margin: 1em 0 0 0; }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1100px) {
   .contact {
     margin-left: 0; }
   .businessCard {
     margin-right: 0; }
     .businessCard__wrap {
-      width: auto;
       margin: 0 auto; }
     .businessCard__photo {
-      width: 50%;
       max-width: 300px;
       min-width: 250px; } }
 
@@ -339,13 +341,11 @@ a {
  *
  * coded by Mucht!
  */
-.plan {
-  background: url(../assets/img/projectBackground1.png) fixed;
-  padding: 2.5em 12.587685113% 5em; }
-  .plan__list--sub {
-    margin-left: 3em; }
-  .plan__listItem {
-    margin-top: 2.5em; }
+.plan__list--sub {
+  margin-left: 3em; }
+
+.plan__listItem {
+  margin-top: 2.5em; }
 
 /* Portfolio
  *
@@ -402,8 +402,12 @@ a {
   background-size: cover;
   background-position: center center;
   position: relative; }
-  .header--realisations {
-    background-image: url(../assets/img/surUnBaobabcover.jpg); }
+  .header__titles {
+    background-color: rgba(0, 63, 102, 0.8);
+    position: absolute;
+    bottom: 0;
+    padding: 2.5em 0;
+    text-align: center; }
   .header__title {
     font-size: 5em;
     font-family: "edoregular", cursive;
@@ -411,12 +415,6 @@ a {
     padding-bottom: 0.5em; }
     .header__title--mainPages {
       padding-bottom: 0; }
-  .header__titles {
-    background-color: rgba(0, 63, 102, 0.8);
-    position: absolute;
-    bottom: 0;
-    padding: 2.5em 0;
-    text-align: center; }
   .header__subTitle {
     display: inline-block;
     font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -451,8 +449,29 @@ a {
     .mainNav__elt:hover {
       color: #FF9900; }
 
+.section {
+  overflow: hidden;
+  background-image: url(../assets/img/cover.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
+  .section__header {
+    font-size: 5em;
+    font-family: "edoregular", cursive;
+    color: #FFF;
+    background-color: #003F66; }
+  .section__title {
+    padding: 0.5em 0;
+    text-align: center; }
+
 @media screen and (max-width: 635px) {
   .header__subTitle {
+    font-size: 1.6em; }
+  .mainNav__elt {
+    font-size: 2em; } }
+
+@media screen and (max-width: 350px) {
+  .mainNav__elt {
     font-size: 1.6em; } }
 
 /* Portfolio
@@ -462,15 +481,13 @@ a {
  * coded by Mucht!
  */
 .presentation {
-  background: transparent url("../assets/img/projectBackground1.png") repeat fixed 0 0;
   padding: 6.5em 0; }
   .presentation__photo {
     float: left;
     border-top-left-radius: 50% 50%;
     border-bottom-left-radius: 50% 50%;
     border: 1px #FF9900 solid;
-    box-shadow: 0px 0px 5px 0px black;
-    transition: 0.5s ease-in-out; }
+    box-shadow: 0px 0px 5px 0px black; }
   .presentation__textBlocs {
     position: relative;
     float: left;
@@ -515,9 +532,13 @@ a {
   overflow: hidden;
   transition: 0.5s ease-in-out; }
 
+.projects__img {
+  position: relative;
+  top: -50px; }
+
 .projects__hoverBloc {
   display: block;
-  padding-top: 70.046801872075%;
+  min-height: 200px;
   transition: 0.2s ease-in-out; }
   .projects__hoverBloc--over {
     opacity: 0;
@@ -544,11 +565,11 @@ a {
 
 .projects__project:hover .projects__hoverBloc--upper {
   top: -50%;
-  left: -60%; }
+  left: -50%; }
 
 .projects__project:hover .projects__hoverBloc--lower {
   bottom: -50%;
-  right: -60%; }
+  right: -50%; }
 
 @media screen and (min-width: 700px) {
   .projects__title {
@@ -649,8 +670,10 @@ a {
       content: ""; }
     .footer__elt--linkedin::before {
       content: ""; }
-    .footer__nav--elt {
-      line-height: 2em; } }
+    .footer__nav {
+      font-size: 1.3em; }
+      .footer__nav--elt {
+        line-height: 2em; } }
 
 /* Portfolio
  *
@@ -679,6 +702,7 @@ a {
     .form__label:hover {
       color: #FF9900; }
   .form input[type="text"], .form input[type="email"], .form input[type="url"], .form textarea {
+    font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     border-radius: 1.125em;
     background-color: #FFF;
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
@@ -689,7 +713,8 @@ a {
     border: none; }
   .form textarea {
     display: block;
-    padding: 0.65em 2em 2em 140px; }
+    padding: 0.65em 2em 2em 140px;
+    resize: vertical; }
   .form input[type="submit"] {
     display: block;
     font-family: "edoregular", cursive;
@@ -701,16 +726,16 @@ a {
     border: none; }
   .form input[type="submit"]:hover {
     color: #FF9900; }
-  .form .wpcf7-validation-errors, .form .wpcf7-not-valid-tip, .form .wpcf7-mail-sent-ng {
+  .form .wpcf7-validation-errors, .form .wpcf7-not-valid-tip, .form .wpcf7-mail-sent-ng, .form .wpcf7-mail-sent-ok {
     font-size: 0.66666666666667em;
     color: #ff0000;
     text-align: center; }
+  .form .wpcf7-mail-sent-ok {
+    color: #008000; }
 
 .businessCard {
   float: right;
-  text-align: center; }
-  .businessCard__wrap {
-    width: auto; }
+  text-align: left; }
   .businessCard__photo {
     border-top-left-radius: 50% 50%;
     border-top-right-radius: 50% 50%;
@@ -742,7 +767,7 @@ a {
 .form__input:focus, .form__textarea:focus {
   box-shadow: 0px 0px 3px 0px #FF9900; }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1100px) {
   .contact {
     float: none; }
   .businessCard {
@@ -757,19 +782,20 @@ a {
  *
  * coded by Mucht!
  */
-.plan__list {
-  font-family: "edoregular", cursive; }
-
-.plan__elt {
-  font-size: 2.4em;
-  color: #003F66;
-  transition: 0.1s ease-in-out; }
-  .plan__elt::before {
-    content: "";
-    font-family: "Glyphs";
+.plan {
+  padding: 2.5em 12.587685113% 5em; }
+  .plan__list {
+    font-family: "edoregular", cursive; }
+  .plan__elt {
+    font-size: 2.4em;
     color: #003F66;
-    padding-right: 0.5em;
     transition: 0.1s ease-in-out; }
+    .plan__elt::before {
+      content: "";
+      font-family: "Glyphs";
+      color: #003F66;
+      padding-right: 0.5em;
+      transition: 0.1s ease-in-out; }
 
 .plan__elt:hover {
   color: #0066B2; }
