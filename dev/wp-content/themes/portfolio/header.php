@@ -10,7 +10,6 @@
     <meta property="og:image" content="http://mathieuclaessens.be/wp-content/uploads/2016/05/portrait.jpg" />
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/styles.css'; ?>" media="screen" title="no title">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/animate.css'; ?>">
 
     <link rel="icon" href="<?php echo get_template_directory_uri() . '/assets/img/logo.ico'; ?>" />
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/assets/img/favicon.ico'; ?>" />
