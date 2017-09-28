@@ -9,6 +9,7 @@ html{
     font-size: 10px;
     color: $white;
     background: $grey;
+    background: linear-gradient(to left, rgba(38,50,56,1) 0%,rgba(48,68,73,1) 50%,rgba(38,50,56,1) 100%);
 }
 
 a{
