@@ -31,7 +31,7 @@
 	<h1 class="sr-only">Mathieu Claessens - Front-End Developer & Web Designer</h1>
 	<nav class="navigation">
 		<h2 class="sr-only">Navigation</h2>
-		<a class="navigation-button" href="#" title="Ouvrir le menu">
+		<a class="navigation-button" href="#" title="Open the menu">
 			Menu
 			<span class="navigation-button-bar"></span>
 			<span class="navigation-button-bar"></span>
@@ -55,9 +55,9 @@
 						<path fill="#F58020" d="M382.765,286.848c-39.38,0-71.263-46.951-72.104-105.273l-62.373,61.9 c20.861,67.17,72.976,115.086,134.476,115.086c47.125,0,88.853-28.106,115.235-71.403l-45.004-44.539 C430.53,269.512,409.144,286.848,382.765,286.848z"/>
 					</svg>
 					<div class="about-logo-socials">
-						<a class="about-logo-socials-link about-logo-socials-link-git" href="https://github.com/Mucht" title="Check out my Github profil" target="_blanc">Github</a>
-						<a class="about-logo-socials-link about-logo-socials-link-insta" href="https://www.instagram.com/mucht08" title="Check out my Instagram profil" target="_blanc">Instagram</a>
-						<a class="about-logo-socials-link about-logo-socials-link-in" href="https://www.linkedin.com/in/mucht/" title="Check out my Linkedin profil" target="_blanc">Linkedin</a>
+						<a class="about-logo-socials-link about-logo-socials-link-git" href="https://github.com/Mucht" title="Goto my Github profil" target="_blanc">Github</a>
+						<a class="about-logo-socials-link about-logo-socials-link-insta" href="https://www.instagram.com/mucht08" title="Go to my Instagram profil" target="_blanc">Instagram</a>
+						<a class="about-logo-socials-link about-logo-socials-link-in" href="https://www.linkedin.com/in/mucht/" title="Go to my Linkedin profil" target="_blanc">Linkedin</a>
 					</div>
 				</div>
 			</div>
@@ -66,35 +66,37 @@
 				<div class="about-intro">My perfect day is made of some music to set the mood, a big smile to lighten the room, a project to work on, one or two burgers to stay fit and some dad's jokes to laugh at least 10 times a day.</div>
 			</div>
 		</div>
+		<a class="section-next" href="#portfolio" title="Go to my portfolio">Check the rest</a>
 	</section>
 	<section id="portfolio" class="section portfolio">
 		<h2 class="section-title">Portfolio</h2>
 		<div class="section-wrap portfolio-content">
 			<article class="portfolio-project">
-				<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
+				<a href="/exit.php" class="portfolio-project-link" title="Go to the projet's page">
 					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
 					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
 				</a>
 			</article>
 			<article class="portfolio-project">
-				<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
+				<a href="/exit.php" class="portfolio-project-link" title="Go to the projet's page">
 					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
 					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
 				</a>
 			</article>
 			<article class="portfolio-project">
-				<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
+				<a href="/exit.php" class="portfolio-project-link" title="Go to the projet's page">
 					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
 					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
 				</a>
 			</article>
 			<article class="portfolio-project">
-				<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
+				<a href="/exit.php" class="portfolio-project-link" title="Go to the projet's page">
 					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
 					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
 				</a>
 			</article>
 		</div>
+		<a class="section-next" href="#experience" title="Check my experience">Check the rest</a>
 	</section>
 	<section class="section experience" id="experience">
 		<h2 class="section-title">Experience</h2>
@@ -118,6 +120,7 @@
 				<p class="experience-description">Integration of the agency’s website using the CMS Wordpress</p>
 			</article>
 		</div>
+		<a class="section-next" href="#contact" title="Get in touch">Check the rest</a>
 	</section>
 	<section class="section contact" id="contact">
 		<h2 class="section-title">Get in touch</h2>
@@ -134,7 +137,7 @@
 				</fieldset class="contact-form-fieldset">
 				<fieldset class="contact-form-fieldset">
 					<label class="contact-form-label" for="inputurl">URL</label>
-					<input required class="contact-form-input" type="url" name="url" value="" id="inputurl" placeholder="http://">
+					<input class="contact-form-input" type="url" name="url" value="" id="inputurl" placeholder="http://">
 				</fieldset class="contact-form-fieldset">
 				<fieldset class="contact-form-fieldset">
 					<label class="contact-form-label" for="inputmessage">Message</label>

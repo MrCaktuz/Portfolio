@@ -7,6 +7,7 @@
 
 .about{
 	&-content{
+		position: relative;
 		max-width: 27rem;
 		margin: 0 auto;
 	}
@@ -25,6 +26,7 @@
 			color: $lightBlue;
 			text-align: right;
 			line-height: 1.5;
+			transition: $mainTrans;
 			&::after{
 				content: "";
 				position: absolute;
@@ -36,6 +38,7 @@
 				background-color: $orange;
 				border-radius: 50%;
 				border: .8rem solid $grey;
+				transition: $mainTrans;
 			}
 		}
 		&-border{
@@ -48,6 +51,7 @@
 			border: 1rem solid $greyLight;
 			background-color: $grey;
 			box-shadow: $logoShadow;
+			transition: $mainTrans;
 		}
 		&-socials{
 			position: absolute;
