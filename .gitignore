@@ -1,10 +1,2 @@
 node_modules
-js
-FTP-files
-
-dev/*
-!dev/wp-content/
-dev/wp-content/*
-!dev/wp-content/themes/
-dev/wp-content/themes/*
-!dev/wp-content/themes/portfolio/
+build
