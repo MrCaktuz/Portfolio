@@ -45,8 +45,8 @@
 			<a href="#contact" class="navigation-link">Contact</a>
 		</div>
 	</nav>
-	<section class="section about">
-		<div class="about-content">
+	<section class="section about" id="about">
+		<div class="about-content section-wrap">
 			<div class="about-logo-wrap">
 				<div class="about-logo-border">
 					<a class="about-logo-available" href="#contact" title="Get in touch with me">Available for work</a>
@@ -69,74 +69,80 @@
 	</section>
 	<section id="portfolio" class="section portfolio">
 		<h2 class="section-title">Portfolio</h2>
-		<article class="portfolio-project">
-			<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
-				<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
-				<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
-			</a>
-		</article>
-		<article class="portfolio-project">
-			<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
-				<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
-				<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
-			</a>
-		</article>
-		<article class="portfolio-project">
-			<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
-				<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
-				<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
-			</a>
-		</article>
-		<article class="portfolio-project">
-			<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
-				<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
-				<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
-			</a>
-		</article>
+		<div class="section-wrap">
+			<article class="portfolio-project">
+				<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
+					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
+					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
+				</a>
+			</article>
+			<article class="portfolio-project">
+				<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
+					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
+					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
+				</a>
+			</article>
+			<article class="portfolio-project">
+				<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
+					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
+					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
+				</a>
+			</article>
+			<article class="portfolio-project">
+				<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
+					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
+					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
+				</a>
+			</article>
+		</div>
 	</section>
 	<section class="section experience" id="experience">
 		<h2 class="section-title">Experience</h2>
-		<article class="experience-elt">
-			<p class="experience-date">Mai 2017 - September 2017</p>
-			<h3 class="experience-title">RBC Ciney</h3>
-			<p class="experience-job">Website</p>
-			<p class="experience-description">As my end of studies project, I made the web site from scratch for my basketball club.</p>
-		</article>
-		<article class="experience-elt">
-			<p class="experience-date">September 2014 - September 2017</p>
-			<h3 class="experience-title">Haute École de  la Province de Liège (HEPL)</h3>
-			<p class="experience-job">Web dev & design studies</p>
-			<p class="experience-description">Graduated a three-year studies in Web development and design with distinction</p>
-		</article>
-		<article class="experience-elt">
-			<p class="experience-date">February 2017 - Mai 2017</p>
-			<h3 class="experience-title">EXIT Studio</h3>
-			<p class="experience-job">Internship Front-End Developer & Designer</p>
-			<p class="experience-description">Integration of the agency’s website using the CMS Wordpress</p>
-		</article>
+		<div class="section-wrap">
+			<article class="experience-elt">
+				<p class="experience-date">Mai 2017 - September 2017</p>
+				<h3 class="experience-title">RBC Ciney</h3>
+				<p class="experience-job">Website</p>
+				<p class="experience-description">As my end of studies project, I made the web site from scratch for my basketball club.</p>
+			</article>
+			<article class="experience-elt">
+				<p class="experience-date">September 2014 - September 2017</p>
+				<h3 class="experience-title">Haute École de  la Province de Liège (HEPL)</h3>
+				<p class="experience-job">Web dev & design studies</p>
+				<p class="experience-description">Graduated a three-year studies in Web development and design with distinction</p>
+			</article>
+			<article class="experience-elt">
+				<p class="experience-date">February 2017 - Mai 2017</p>
+				<h3 class="experience-title">EXIT Studio</h3>
+				<p class="experience-job">Internship Front-End Developer & Designer</p>
+				<p class="experience-description">Integration of the agency’s website using the CMS Wordpress</p>
+			</article>
+		</div>
 	</section>
 	<section class="section contact" id="contact">
 		<h2 class="section-title">Get in touch</h2>
-		<p class="contact-intro">Send me an email if you want to start a new project, a new collaboration or send a dad's joke to contribute to my 10 laugh a day therapy.</p>
-		<form class="contact-form" action="contact.php" method="POST" id="contact-form">
-			<fieldset class="contact-form-fieldset">
-				<label class="contact-form-label" for="inputname">Name</label>
-				<input required class="contact-form-input" type="text" name="name" value="" id="inputname" placeholder="Your name here">
-			</fieldset>
-			<fieldset class="contact-form-fieldset">
-				<label class="contact-form-label" for="inputmail">Email</label>
-				<input required class="contact-form-input" type="email" name="email" value="" id="inputmail" placeholder="Your email here">
-			</fieldset class="contact-form-fieldset">
-			<fieldset class="contact-form-fieldset">
-				<label class="contact-form-label" for="inputurl">URL</label>
-				<input required class="contact-form-input" type="url" name="url" value="" id="inputurl" placeholder="http://">
-			</fieldset class="contact-form-fieldset">
-			<fieldset class="contact-form-fieldset">
-				<label class="contact-form-label" for="inputmessage">Message</label>
-				<textarea required class="contact-form-textarea" name="message" id="inputmessage" rows="8" cols="10" placeholder="Your message here"></textarea>
-			</fieldset>
-			<button class="contact-form-submit" type="submit" name="submit">Send</button>
+		<div class="section-wrap">
+			<p class="contact-intro">Send me an email if you want to start a new project, a new collaboration or send a dad's joke to contribute to my 10 laugh a day therapy.</p>
+			<form class="contact-form" action="contact.php" method="POST" id="contact-form">
+				<fieldset class="contact-form-fieldset">
+					<label class="contact-form-label" for="inputname">Name</label>
+					<input required class="contact-form-input" type="text" name="name" value="" id="inputname" placeholder="Your name here">
+				</fieldset>
+				<fieldset class="contact-form-fieldset">
+					<label class="contact-form-label" for="inputmail">Email</label>
+					<input required class="contact-form-input" type="email" name="email" value="" id="inputmail" placeholder="Your email here">
+				</fieldset class="contact-form-fieldset">
+				<fieldset class="contact-form-fieldset">
+					<label class="contact-form-label" for="inputurl">URL</label>
+					<input required class="contact-form-input" type="url" name="url" value="" id="inputurl" placeholder="http://">
+				</fieldset class="contact-form-fieldset">
+				<fieldset class="contact-form-fieldset">
+					<label class="contact-form-label" for="inputmessage">Message</label>
+					<textarea required class="contact-form-textarea" name="message" id="inputmessage" rows="8" cols="10" placeholder="Your message here"></textarea>
+				</fieldset>
+				<button class="contact-form-submit" type="submit" name="submit">Send</button>
 			</form>
+		</div>
 	</section>
 </body>
 <footer class="footer">
