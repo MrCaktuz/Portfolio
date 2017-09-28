@@ -24,12 +24,25 @@
 		// margin: 0 auto;
 	}
 	&-title{
-		@include font-size(3.5);
+		@include font-size(3);
 		line-height: 1;
+		&-name{
+			letter-spacing: .748rem;
+		}
 		&-function{
-			@include font-size(2.5);
+			@include font-size(2.55);
 		}
 	}
+}
+
+// ******** Contact section ********
+.contact{
+	&-content{
+		max-width: 64rem;
+	}
 	&-intro{
+		max-width: 44rem;
+		margin: 0 auto 3rem auto;
+		text-align: center;
 	}
 }

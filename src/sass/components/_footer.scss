@@ -9,9 +9,6 @@
 	background-color: $greyDark;
 	padding: 2.5rem;
 	&-wrap{
-		// display: flex;
-		// justify-content: space-between;
-		// align-items: center;
 		display: block;
 		height: 15rem;
 		background: rgb(38,50,56); /* Old browsers */
@@ -61,10 +58,9 @@
 	&-mail{
 		@include font-size(1.4);
 		position: absolute;
-		left: 0;
-		right: 0;
+		right: 50%;
 		bottom: .6rem;
-		text-align: center;
+		transform: translateX(50%);
 		&::before{
 			content:"";
 			position: relative;

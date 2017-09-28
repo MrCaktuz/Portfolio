@@ -8,7 +8,7 @@
 .contact{
 	&-intro{
 		@include font-size(1.4);
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 		font-weight: $light;
 		line-height: 1.6;
 	}
@@ -35,7 +35,7 @@
 			background-color: $transparent;
 			outline: none;
     		&::placeholder{
-    			color: $greyLight;
+    			color: $placeholder;
     		}
     		&:focus, &:active{
     			border-bottom-color: $lightBlue;

@@ -4,3 +4,106 @@
  *  Version:        1.0 - 25/09/2017
  *  Author :        Mucht - claessens.mathieu@gmail.com
 */
+
+// ******** Portfolio section ********
+.portfolio{
+	&-content{
+		max-width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+	}
+	&-project{
+		width: 50%;
+		margin-top: 2rem;
+		&:nth-child(2n){ // Even
+			& .portfolio-project-title{
+				text-align: right;
+			}
+		}
+		&:nth-child(4n+1){ // 1st of 4
+			clip-path: polygon(0% 0, 100% 0%, 90% 100%, 0% 100%);
+		}
+		&:nth-child(4n+2){ // 2nd of 4
+			clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+			& .portfolio-project-title{
+				padding-left: 4rem;
+			}
+		}
+		&:nth-child(4n+3){ // 3rd of 4
+			clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+			& .portfolio-project-title{
+				padding-right: 4rem;
+			}
+		}
+		&:nth-child(4n){ // 4th of 4
+			clip-path: polygon(0% 0, 100% 0%, 100% 100%, 10% 100%);
+		}
+	}
+}
+
+// ******** Experience section ********
+.experience{
+	&-content{
+		max-width: 100%;
+	}
+	&-elt{
+		width: 50%;
+		&:nth-child(2n+1){ // Odd
+			margin: 0 0 0 auto;
+			padding-left: 1.25rem;
+		}
+		&:nth-child(2n){ // Even
+			margin: 0 auto 0 0;
+			padding-right: 1.25rem;
+			text-align: right;
+		}
+	}
+}
+
+// ******** Navigation ********
+.navigation{
+	&-links{
+		padding: 0 1.25rem;
+	}
+	&-link{
+		display: inline-block;
+		padding: 3.8rem 1.25rem;
+		& + .navigation-link{
+			padding-top: 3.8rem;
+		}
+	}
+}
+
+// ******** Footer section ********
+.footer{
+	&-phone{
+		top: 50%;
+		left: 2.5rem;
+		transform: translate(0%, -50%);
+		&::before{
+			margin-right: .5rem;
+		}
+	}
+	&-mail{
+		bottom: 50%;
+		right: 2.5rem;
+		transform: translate(0%, 50%);
+		&::before{
+			display: none;
+		}
+		&::after{
+			content:"";
+			position: relative;
+			top: .1rem;
+			display: inline-block;
+			width: 1.4rem;
+			height: 1.4rem;
+			margin-left: .5rem;
+			background-image: url('/build/img/icons/mail.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+}

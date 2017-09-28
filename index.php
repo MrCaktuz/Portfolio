@@ -46,7 +46,7 @@
 		</div>
 	</nav>
 	<section class="section about" id="about">
-		<div class="about-content section-wrap">
+		<div class="section-wrap about-content">
 			<div class="about-logo-wrap">
 				<div class="about-logo-border">
 					<a class="about-logo-available" href="#contact" title="Get in touch with me">Available for work</a>
@@ -69,7 +69,7 @@
 	</section>
 	<section id="portfolio" class="section portfolio">
 		<h2 class="section-title">Portfolio</h2>
-		<div class="section-wrap">
+		<div class="section-wrap portfolio-content">
 			<article class="portfolio-project">
 				<a href="/exit.php" class="portfolio-project-link" title="check out the projet">
 					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
@@ -98,7 +98,7 @@
 	</section>
 	<section class="section experience" id="experience">
 		<h2 class="section-title">Experience</h2>
-		<div class="section-wrap">
+		<div class="section-wrap experience-content">
 			<article class="experience-elt">
 				<p class="experience-date">Mai 2017 - September 2017</p>
 				<h3 class="experience-title">RBC Ciney</h3>
@@ -121,7 +121,7 @@
 	</section>
 	<section class="section contact" id="contact">
 		<h2 class="section-title">Get in touch</h2>
-		<div class="section-wrap">
+		<div class="section-wrap contact-content">
 			<p class="contact-intro">Send me an email if you want to start a new project, a new collaboration or send a dad's joke to contribute to my 10 laugh a day therapy.</p>
 			<form class="contact-form" action="contact.php" method="POST" id="contact-form">
 				<fieldset class="contact-form-fieldset">

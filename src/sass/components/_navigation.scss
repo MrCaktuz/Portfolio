@@ -50,7 +50,7 @@
 		}
 	}
 	&-links{
-		padding: 5rem;
+		padding: 2.5rem;
 		background-color: $navigationBcg;
 	    transform: translateX(0%);
 	    transition: $mainTrans;
@@ -94,9 +94,8 @@
 	&-link{
 		@include font-size(2);
 		display: block;
-		padding-bottom: 2rem;
 		& + .navigation-link{
-			// padding-left: 2rem;
+			padding-top: 2rem;
 		}
 	}
 }
