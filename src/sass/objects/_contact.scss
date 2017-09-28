@@ -1,0 +1,54 @@
+/*
+ *	Description:    Stylesheet for the contact elements
+ *	File:    		_contact.scss
+ *	Version:        1.0 - 28/09/2017
+ *	Author :        Mucht - claessens.mathieu@gmail.com
+*/
+
+.contact{
+	&-intro{
+		@include font-size(1.4);
+		margin-bottom: 2rem;
+		font-weight: $light;
+		line-height: 1.6;
+	}
+	&-form{
+		&-fieldset{
+			position: relative;
+			margin-bottom: 2rem;
+		}
+		&-label{
+			@include font-size(1.4);
+			position: absolute;
+			top: 1rem;
+			left: 0;
+			margin-right: 1rem;
+		}
+		&-input, &-textarea{
+			@include font-size(1.4);
+			width: 100%;
+			padding: 1rem 1rem 1rem 7rem;
+			color: $lightBlue;
+    		resize: vertical;
+			border: 0;
+			border-bottom: .1rem solid $greyLight;
+			background-color: $transparent;
+			outline: none;
+    		&::placeholder{
+    			color: $greyLight;
+    		}
+    		&:focus, &:active{
+    			border-bottom-color: $lightBlue;
+    		}
+		}
+		&-submit{
+			@include font-size(1.8);
+			display: block;
+			margin: 2rem auto 0;
+			padding: 1rem 2rem;
+			color: $white;
+			border: 0;
+			background-color: $orange;
+		}
+	}
+}

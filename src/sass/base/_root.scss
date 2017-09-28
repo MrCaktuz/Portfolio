@@ -1,0 +1,44 @@
+/*
+ *    Description:    Stylesheet for the based elements
+ *    File:            _root.scss
+ *    Version:        1.0 - 25/09/2017
+ *    Author :        Mucht - claessens.mathieu@gmail.com
+*/
+html{
+    font-family: $fontStack;
+    font-size: 10px;
+    color: $white;
+    background: $grey;
+}
+
+a{
+    color: $white;
+    text-decoration: none;
+}
+
+.section{
+    // min-height: 100vh;
+    padding: 5rem 2.5rem 5rem 2.5rem;
+    &:first-of-type{
+        padding-top: 12.1rem;
+    }
+    &-title{
+        @include font-size(2);
+        position: relative;
+        margin-bottom: 5rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -1rem;
+            display: block;
+            width: 5rem;
+            height: .2rem;
+            background-color: $orange;
+            transform: translateX(-50%);
+        }
+    }
+}
