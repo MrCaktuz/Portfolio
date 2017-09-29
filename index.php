@@ -76,26 +76,14 @@
 		<div class="section-wrap portfolio-content">
 			<article class="portfolio-project">
 				<a href="/exit.php" class="portfolio-project-link" title="Go to the projet's page">
-					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
-					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
+					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Development & Design</span></h3>
+					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="/build/img/portfolio/exit/exit-320.jpg 320w, /build/img/portfolio/exit/exit-440.jpg 440w" alt="Image du projet d'EXIT Studio">
 				</a>
 			</article>
 			<article class="portfolio-project">
-				<a href="/exit.php" class="portfolio-project-link" title="Go to the projet's page">
-					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
-					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
-				</a>
-			</article>
-			<article class="portfolio-project">
-				<a href="/exit.php" class="portfolio-project-link" title="Go to the projet's page">
-					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
-					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
-				</a>
-			</article>
-			<article class="portfolio-project">
-				<a href="/exit.php" class="portfolio-project-link" title="Go to the projet's page">
-					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Front-End Developer & Designer</span></h3>
-					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="" alt="Image du projet d'EXIT Studio">
+				<a href="/rbcciney.php" class="portfolio-project-link" title="Go to the projet's page">
+					<h3 class="portfolio-project-title">RBC Ciney<span class="portfolio-project-role">Development & Design</span></h3>
+					<img class="portfolio-project-img" src="/build/img/portfolio/rbcciney/rbcciney.jpg" srcset="/build/img/portfolio/rbcciney/rbcciney-320.jpg 320w, /build/img/portfolio/rbcciney/rbcciney-440.jpg 440w" alt="Image du projet du RBC Ciney">
 				</a>
 			</article>
 		</div>
