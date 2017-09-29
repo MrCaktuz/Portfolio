@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE HTML>
 <!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
 <!--[if lt IE 7 ]><html class="no-js ie6" lang="fr"><![endif]-->
@@ -128,21 +131,40 @@
 		<div class="section-wrap contact-content">
 			<p class="contact-intro">Send me an email if you want to start a new project, a new collaboration or send a dad's joke to contribute to my 10 laugh a day therapy.</p>
 			<form class="contact-form" action="contact.php" method="POST" id="contact-form">
+				<div class="contact-form-feedback">
+					<?php if(!empty($_SESSION['errors'])): ?>
+						<ul class="contact-form-feedback-list contact-form-feedback-error">
+							<?php if(isset($_SESSION['errors']['name'])): ?>
+								<li class="contact-form-feedback-elt"><?php echo $_SESSION['errors']['name']; ?></li>
+							<?php endif; ?>
+							<?php if(isset($_SESSION['errors']['email'])): ?>
+								<li class="contact-form-feedback-elt"><?php echo $_SESSION['errors']['email']; ?></li>
+							<?php endif; ?><?php if(isset($_SESSION['errors']['url'])): ?>
+								<li class="contact-form-feedback-elt"><?php echo $_SESSION['errors']['url']; ?></li>
+							<?php endif; ?><?php if(isset($_SESSION['errors']['message'])): ?>
+								<li class="contact-form-feedback-elt"><?php echo $_SESSION['errors']['message']; ?></li>
+							<?php endif; ?>
+						</ul>
+					<?php endif; ?>
+					<?php if(isset($_SESSION['success'])): ?>
+						<p class="contact-form-feedback-success"><?php echo $_SESSION['success']; ?></p>
+					<?php endif; ?>
+				</div>
 				<fieldset class="contact-form-fieldset">
 					<label class="contact-form-label" for="inputname">Name</label>
-					<input required class="contact-form-input" type="text" name="name" value="" id="inputname" placeholder="Your name here">
+					<input class="contact-form-input<?php echo isset($_SESSION['errors']['name']) ? " contact-form-input-error" : "" ?>" type="text" name="name" value="<?php echo isset($_SESSION['data']['name']) ? $_SESSION['data']['name'] : "" ?>" id="inputname" placeholder="Your name here">
 				</fieldset>
 				<fieldset class="contact-form-fieldset">
 					<label class="contact-form-label" for="inputmail">Email</label>
-					<input required class="contact-form-input" type="email" name="email" value="" id="inputmail" placeholder="Your email here">
+					<input class="contact-form-input<?php echo isset($_SESSION['errors']['email']) ? " contact-form-input-error" : "" ?>" type="email" name="email" value="<?php echo isset($_SESSION['data']['email']) ? $_SESSION['data']['email'] : "" ?>" id="inputmail" placeholder="Your email here">
 				</fieldset class="contact-form-fieldset">
 				<fieldset class="contact-form-fieldset">
 					<label class="contact-form-label" for="inputurl">URL</label>
-					<input class="contact-form-input" type="url" name="url" value="" id="inputurl" placeholder="http://">
+					<input class="contact-form-input<?php echo isset($_SESSION['errors']['url']) ? " contact-form-input-error" : "" ?>" type="url" name="url" value="<?php echo isset($_SESSION['data']['url']) ? $_SESSION['data']['url'] : "" ?>" id="inputurl" placeholder="http://">
 				</fieldset class="contact-form-fieldset">
 				<fieldset class="contact-form-fieldset">
 					<label class="contact-form-label" for="inputmessage">Message</label>
-					<textarea required class="contact-form-textarea" name="message" id="inputmessage" rows="8" cols="10" placeholder="Your message here"></textarea>
+					<textarea class="contact-form-textarea<?php echo isset($_SESSION['errors']['message']) ? " contact-form-textarea-error" : "" ?>" name="message" id="inputmessage" rows="8" cols="10" placeholder="Your message here"><?php echo isset($_SESSION['data']['message']) ? $_SESSION['data']['message'] : "" ?></textarea>
 				</fieldset>
 				<button class="contact-form-submit" type="submit" name="submit">Send</button>
 			</form>
@@ -165,5 +187,9 @@
 <script src="./build/js/jquery-3.2.1.min.js"></script>
 <script src="./build/js/fullPage.js"></script>
 <script src="./build/js//scripts.js"></script>
-
 </html>
+<?php
+    unset( $_SESSION['errors'] );
+    unset( $_SESSION['success'] );
+    unset( $_SESSION['data'] );
+?>
