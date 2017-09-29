@@ -66,7 +66,7 @@
 				<div class="about-intro">My perfect day is made of some music to set the mood, a big smile to lighten the room, a project to work on, one or two burgers to stay fit and some dad's jokes to laugh at least 10 times a day.</div>
 			</div>
 		</div>
-		<a class="section-next" href="#portfolio" title="Go to my portfolio">Check the rest</a>
+		<a class="section-next" href="#portfolio" title="Go to my portfolio">What's next ?</a>
 	</section>
 	<section id="portfolio" class="section portfolio">
 		<h2 class="section-title">Portfolio</h2>
@@ -96,7 +96,7 @@
 				</a>
 			</article>
 		</div>
-		<a class="section-next" href="#experience" title="Check my experience">Check the rest</a>
+		<a class="section-next" href="#experience" title="Check my experience">Still want more ?</a>
 	</section>
 	<section class="section experience" id="experience">
 		<h2 class="section-title">Experience</h2>
@@ -120,7 +120,7 @@
 				<p class="experience-description">Integration of the agency’s website using the CMS Wordpress</p>
 			</article>
 		</div>
-		<a class="section-next" href="#contact" title="Get in touch">Check the rest</a>
+		<a class="section-next" href="#contact" title="Get in touch">Say hello !</a>
 	</section>
 	<section class="section contact" id="contact">
 		<h2 class="section-title">Get in touch</h2>
@@ -162,6 +162,7 @@
 </footer>
 <!-- Script -->
 <script src="./build/js/jquery-3.2.1.min.js"></script>
+<script src="./build/js/fullPage.js"></script>
 <script src="./build/js//scripts.js"></script>
 
 </html>

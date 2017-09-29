@@ -1,12 +1,17 @@
 jQuery( document ).ready( function($) {
 	// ******** Global variables declaration ********
-	var windowWidth = $( window ).width();
-	var windowHeight = $( window ).height();
-	console.log("Height => " + windowHeight);
+	var windowWidth = $( window ).width(),
+		aboutHeight = $('#about').height(),
+		portfolioHeight = $('#portfolio').height(),
+		experienceHeight = $('#experience').height(),
+		contactHeight = $('#contact').height();
 	// ******** Window resize ********
 	$( window ).resize( function(){
-		windowWidth = $( window ).width();
-		windowHeight = $( window ).height();
+		windowWidth = $( window ).width(),
+		aboutHeight = $('#about').height(),
+		portfolioHeight = $('#portfolio').height(),
+		experienceHeight = $('#experience').height(),
+		contactHeight = $('#contact').height();
 	} );
 
 	// ******** Navigation managment ********
@@ -20,8 +25,24 @@ jQuery( document ).ready( function($) {
          e.stopPropagation();
 	} );
 
-	// ******** Set section's min-height ********
-	// var cssStr = 'min-height: ' + windowHeight + 'px;';
-	// console.log(cssStr);
-	// $('.section').attr("style", cssStr);
+	// ******** Smooth scroll ********
+	$('.navigation-link, .section-next, .about-logo-available').click(function() {
+        $('.navigation-open').removeClass('navigation-open');
+		var $root = $('html, body'),
+        	href = $.attr(this, 'href');
+        $root.stop().animate({ scrollTop: $(href).offset().top
+        }, 500, function () {
+            window.location.hash = href;
+        });
+        return false;
+    });
+
+    // ******** Available button ********
+    if ( windowWidth > 980 ) {
+	    $('.about-logo-wrap').mouseover(function(e) {
+			$('.about-logo-available').html('Get in touch');
+		} ).mouseleave(function(e){
+			$('.about-logo-available').html('Available for work');
+		});
+	}
 } );
