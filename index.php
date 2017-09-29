@@ -119,6 +119,7 @@
 				<p class="experience-job">Internship Front-End Developer & Designer</p>
 				<p class="experience-description">Integration of the agency’s website using the CMS Wordpress</p>
 			</article>
+			<a href="/resume.pdf" class="experience-resume" title="Download my resume" target="_blanc">Download my resume (fr)</a>
 		</div>
 		<a class="section-next" href="#contact" title="Get in touch">Say hello !</a>
 	</section>

@@ -137,6 +137,12 @@
 			padding-right: 2.5rem;
 		}
 	}
+	&-resume{
+		&:hover{
+			color: $greyDark;
+			background-color: $lightBlue;
+		}
+	}
 }
 
 // ******** Contact section ********
