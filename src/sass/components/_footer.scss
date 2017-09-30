@@ -17,9 +17,10 @@
 	&-phone{
 		@include font-size(1.4);
 		position: absolute;
-		left: 50%;
+		left: 0%;
 		top: .6rem;
-		transform: translateX(-50%);
+		width: 100%;
+		text-align: center;
 		z-index: 1;
 		transition: $mainTrans;
 		&::before{
@@ -59,9 +60,10 @@
 	&-mail{
 		@include font-size(1.4);
 		position: absolute;
-		right: 50%;
+		right: 0%;
 		bottom: .6rem;
-		transform: translateX(50%);
+		width: 100%;
+		text-align: center;
 		transition: $mainTrans;
 		&::before{
 			content:"";

@@ -26,7 +26,7 @@
 	<meta name="theme-color" content="#ffffff">
 	<!-- Practical info -->
 	<meta name="description" content="Personal website of Mathieu Claessens web developper and designer">
-	<meta author="Claessens Mathieu">
+	<meta author="Mucht">
 
     <title>Mathieu Claessens - Front-End Developer &  Web Designer</title>
 </head>
@@ -87,7 +87,7 @@
 				</a>
 			</article>
 		</div>
-		<a class="section-next" href="#experience" title="Check my experience">Still want more ?</a>
+		<!-- <a class="section-next" href="#experience" title="Check my experience">Still want more ?</a> -->
 	</section>
 	<section class="section experience" id="experience">
 		<h2 class="section-title">Experience</h2>
@@ -110,9 +110,9 @@
 				<p class="experience-job">Internship Front-End Developer & Designer</p>
 				<p class="experience-description">Integration of the agency’s website using the CMS Wordpress</p>
 			</article>
-			<a href="/resume.pdf" class="experience-resume" title="Download my resume" target="_blanc">Download my resume (fr)</a>
+			<a href="/resume.pdf" class="experience-resume btn btn-secondary" title="Download my resume" target="_blanc">Download my resume (fr)</a>
 		</div>
-		<a class="section-next" href="#contact" title="Get in touch">Say hello !</a>
+		<!-- <a class="section-next" href="#contact" title="Get in touch">Say hello !</a> -->
 	</section>
 	<section class="section contact" id="contact">
 		<h2 class="section-title">Get in touch</h2>
@@ -154,7 +154,7 @@
 					<label class="contact-form-label" for="inputmessage">Message</label>
 					<textarea class="contact-form-textarea<?php echo isset($_SESSION['errors']['message']) ? " contact-form-textarea-error" : "" ?>" name="message" id="inputmessage" rows="8" cols="10" placeholder="Your message here"><?php echo isset($_SESSION['data']['message']) ? $_SESSION['data']['message'] : "" ?></textarea>
 				</fieldset>
-				<button class="contact-form-submit" type="submit" name="submit">Send</button>
+				<button class="contact-form-submit btn btn-primary" type="submit" name="submit">Send</button>
 			</form>
 		</div>
 	</section>
@@ -173,7 +173,6 @@
 </footer>
 <!-- Script -->
 <script src="./build/js/jquery-3.2.1.min.js"></script>
-<script src="./build/js/fullPage.js"></script>
 <script src="./build/js//scripts.js"></script>
 </html>
 <?php

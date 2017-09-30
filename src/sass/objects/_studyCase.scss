@@ -1,0 +1,25 @@
+/*
+ *	Description:    Stylesheet for the study cases elements
+ *	File:    		_studyCase.scss
+ *	Version:        1.0 - 30/09/2017
+ *	Author :        Mucht - claessens.mathieu@gmail.com
+*/
+
+.studyCase{
+	&-img{
+		width: 100%;
+		height: auto;
+		margin-bottom: 2.5rem;
+		clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+	}
+	&-description{
+		@include font-size(1.6);
+		font-weight: $light;
+		line-height: 1.5
+	}
+	&-link{
+		max-width: 28rem;
+		margin-top: 5rem;
+		margin-bottom: 10rem;
+	}
+}

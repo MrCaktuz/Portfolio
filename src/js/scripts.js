@@ -1,17 +1,13 @@
 jQuery( document ).ready( function($) {
 	// ******** Global variables declaration ********
 	var windowWidth = $( window ).width(),
-		aboutHeight = $('#about').height(),
-		portfolioHeight = $('#portfolio').height(),
-		experienceHeight = $('#experience').height(),
-		contactHeight = $('#contact').height();
+		windowHeight = $( window ).outerHeight(),
+		footerHeight = $('.footer').outerHeight();
 	// ******** Window resize ********
 	$( window ).resize( function(){
 		windowWidth = $( window ).width(),
-		aboutHeight = $('#about').height(),
-		portfolioHeight = $('#portfolio').height(),
-		experienceHeight = $('#experience').height(),
-		contactHeight = $('#contact').height();
+		windowHeight = $( window ).height(),
+		footerHeight = $('.footer').height();
 	} );
 
 	// ******** Navigation managment ********
@@ -44,5 +40,11 @@ jQuery( document ).ready( function($) {
 		} ).mouseleave(function(e){
 			$('.about-logo-available').html('Available for work');
 		});
+	}
+
+	// ******** Manage study cases section height ********
+	if ( windowWidth > 980 ) {
+		var studyCaseHeight = windowHeight - footerHeight;
+	    $('.studyCase').css('min-height', studyCaseHeight);
 	}
 } );

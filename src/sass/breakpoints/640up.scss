@@ -26,11 +26,13 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-
 	}
 	&-project{
 		width: 50%;
 		margin-top: 2rem;
+		& + &{
+			margin-top: 2.5rem;
+		}
 		&:nth-child(2n){ // Even
 			& .portfolio-project-title{
 				text-align: right;
@@ -81,6 +83,7 @@
 	&-phone{
 		top: 50%;
 		left: 2.5rem;
+		width: auto;
 		transform: translate(0%, -50%);
 		&::before{
 			margin-right: .5rem;
@@ -89,6 +92,7 @@
 	&-mail{
 		bottom: 50%;
 		right: 2.5rem;
+		width: auto;
 		transform: translate(0%, 50%);
 		&::before{
 			display: none;

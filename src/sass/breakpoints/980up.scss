@@ -40,6 +40,14 @@
 	}
 }
 
+// ******** Button ********
+.btn{
+	&:hover{
+		color: $greyDark;
+		background-color: $lightBlue;
+	}
+}
+
 // ******** Sections ********
 .section{
 	padding-left: 5rem;
@@ -51,6 +59,11 @@
 		display: block;
 		&:hover{
 			color: $white;
+		}
+	}
+	&-prev{
+		&:hover{
+			color: $lightBlue;
 		}
 	}
 }
@@ -93,7 +106,7 @@
 
 // ******** Portfolio section ********
 .portfolio{
-	min-height: 100vh;
+	// min-height: 100vh;
 	&-project{
 		margin: 2.5rem 0;
 		&:nth-child(2n+1){
@@ -128,19 +141,13 @@
 
 // ******** Experience section ********
 .experience{
-	min-height: 100vh;
+	// min-height: 100vh;
 	&-elt{
 		&:nth-child(2n+1){ // Odd
 			padding-left: 2.5rem;
 		}
 		&:nth-child(2n){ // Even
 			padding-right: 2.5rem;
-		}
-	}
-	&-resume{
-		&:hover{
-			color: $greyDark;
-			background-color: $lightBlue;
 		}
 	}
 }
@@ -154,6 +161,13 @@
 				background-color: $lightBlue;
 			}
 		}
+	}
+}
+
+// ******** Study cases ********
+.studyCase{
+	&-description{
+		margin-left: 5rem;
 	}
 }
 
