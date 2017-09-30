@@ -1,0 +1,25 @@
+/*
+ *	Description:    Stylesheet for the buttons
+ *	File:    		_btn.scss
+ *	Version:        1.0 - 30/09/2017
+ *	Author :        Mucht - claessens.mathieu@gmail.com
+*/
+
+.btn{
+	@include font-size(1.8);
+	display: block;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	color: $white;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: .1rem;
+	border: 0;
+	transition: $mainTrans;
+	&-primary{
+		background-color: $orange;
+	}
+	&-secondary{
+		background-color: $greyLight;
+	}
+}

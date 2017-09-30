@@ -1,0 +1,78 @@
+/*
+ *	Description:    Stylesheet for the section elements
+ *	File:    		_section.scss
+ *	Version:        1.0 - 30/09/2017
+ *	Author :        Mucht - claessens.mathieu@gmail.com
+*/
+
+.section{
+    position: relative;
+    padding: 10rem 2.5rem 5rem 2.5rem;
+    &:first-of-type{
+        padding-top: 12.1rem;
+    }
+    &-title{
+        @include font-size(2);
+        position: relative;
+        margin-bottom: 5rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        line-height: 1.6;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -1rem;
+            display: block;
+            width: 5rem;
+            height: .2rem;
+            background-color: $orange;
+            transform: translateX(-50%);
+        }
+    }
+    &-next{
+        @include font-size(1.4);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        padding: 0 5rem 5rem;
+        color: $transparent;
+        text-align: center;
+        transition: $mainTrans;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            width: 3rem;
+            height: 1.5rem;
+            background-image: url("../img/icons/arrow.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: translateX(-50%);
+        }
+    }
+    &-prev{
+        @include font-size(1.4);
+        width: 100%;
+        padding-top: 10rem;
+        color: $white;
+        text-align: center;
+        transition: $mainTrans;
+        &::before{
+            content: "";
+            position: relative;
+            top: .1rem;
+            display: inline-block;
+            width: 3rem;
+            height: 1.5rem;
+            background-image: url("../img/icons/arrow.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: rotate(90deg);
+        }
+    }
+}
