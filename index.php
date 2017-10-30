@@ -24,6 +24,8 @@
 	<link rel="manifest" href="./build/img/favicons/manifest.json">
 	<link rel="mask-icon" href="./build/img/favicons/safari-pinned-tab.svg" color="#323232">
 	<meta name="theme-color" content="#ffffff">
+	<!-- Image for preview -->
+	<meta property="og:image" content="http://www.mathieuclaessens.be/build/img/preview.jpg" />
 	<!-- Practical info -->
 	<meta name="description" content="Personal website of Mathieu Claessens web developper and designer">
 	<meta author="Mucht">
