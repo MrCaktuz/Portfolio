@@ -35,7 +35,7 @@
 			<h1 class="section-title">Study Case - EXIT Studio</h1>
 			<div class="studyCase-content">
 				<img class="studyCase-img" src="/build/img/portfolio/exit/exit.jpg" srcset="/build/img/portfolio/exit/exit-320.jpg 320w, /build/img/portfolio/exit/exit-440.jpg 440w" alt="Image du projet d'EXIT Studio">
-				<p class="studyCase-description">I spent a 12 weeks internship at EXIT Studio as a Front-End Developer & Designer. During this internship they asked me to integrate the new website of the agency. The design was already done when I took over the project but I still had the opportunity to modify it if I felt like it. They juste requested me to use Wordpress as cms apart from that I was very free to take initiatives and test a lot of things during this project.</p>
+				<p class="studyCase-description">I spent a 12 weeks internship at EXIT Studio as a Front-End Developer & Designer. During this internship they asked me to integrate the new website of the agency. The design was already done when I took over the project but I still had the opportunity to modify it if I felt like it. They just requested me to use Wordpress as cms apart from that I was very free to take initiatives and test a lot of things during this project.</p>
 			</div>
 			<a class="studyCase-link btn btn-primary" href="http://exitstudio.be" title="Access the website of EXIT Studio" target="_blanc">Go to the project</a>
 			<a class="section-prev" href="/#portfolio" title="Go back to my portfolio">Portfolio</a>
