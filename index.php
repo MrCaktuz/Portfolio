@@ -77,6 +77,12 @@
 		<h2 class="section-title">Portfolio</h2>
 		<div class="section-wrap portfolio-content">
 			<article class="portfolio-project">
+				<a href="/sbphoto.php" class="portfolio-project-link" title="Go to the projet's page">
+					<h3 class="portfolio-project-title">Sophie Bernard Photography<span class="portfolio-project-role">Development & Design</span></h3>
+					<img class="portfolio-project-img" src="/build/img/portfolio/sbPhoto/sbPhoto.jpg" srcset="/build/img/portfolio/sbPhoto/sbPhoto-320.jpg 320w, /build/img/portfolio/sbPhoto/sbPhoto-440.jpg 440w" alt="Image du projet du Sophie Bernard Photography">
+				</a>
+			</article>
+			<article class="portfolio-project">
 				<a href="/exit.php" class="portfolio-project-link" title="Go to the projet's page">
 					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Development & Design</span></h3>
 					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="/build/img/portfolio/exit/exit-320.jpg 320w, /build/img/portfolio/exit/exit-440.jpg 440w" alt="Image du projet d'EXIT Studio">
