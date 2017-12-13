@@ -9,7 +9,9 @@ html{
     font-size: 10px;
     color: $white;
     background: $grey;
-    background: linear-gradient(to left, rgba(38,50,56,1) 0%,rgba(48,68,73,1) 50%,rgba(38,50,56,1) 100%);
+	background: -moz-linear-gradient(left, $greyDark 0%, $grey 50%, $greyDark 100%);
+	background: -webkit-linear-gradient(left, $greyDark 0%,$grey 50%,$greyDark 100%);
+	background: linear-gradient(to right, $greyDark 0%,$grey 50%,$greyDark 100%);
 }
 
 a{

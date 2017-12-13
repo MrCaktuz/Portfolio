@@ -76,19 +76,19 @@
 	<section id="portfolio" class="section portfolio">
 		<h2 class="section-title">Portfolio</h2>
 		<div class="section-wrap portfolio-content">
-			<article class="portfolio-project">
+			<article class="portfolio-project" data-bottom-top="transform: translateX(-60%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
 				<a href="/sbphoto.php" class="portfolio-project-link" title="Go to the projet's page">
 					<h3 class="portfolio-project-title">Sophie Bernard Photography<span class="portfolio-project-role">Development & Design</span></h3>
 					<img class="portfolio-project-img" src="/build/img/portfolio/sbPhoto/sbPhoto.jpg" srcset="/build/img/portfolio/sbPhoto/sbPhoto-320.jpg 320w, /build/img/portfolio/sbPhoto/sbPhoto-440.jpg 440w" alt="Image du projet du Sophie Bernard Photography">
 				</a>
 			</article>
-			<article class="portfolio-project">
+			<article class="portfolio-project" data-bottom-top="transform: translateX(60%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
 				<a href="/exit.php" class="portfolio-project-link" title="Go to the projet's page">
 					<h3 class="portfolio-project-title">EXIT Studio<span class="portfolio-project-role">Development & Design</span></h3>
 					<img class="portfolio-project-img" src="/build/img/portfolio/exit/exit.jpg" srcset="/build/img/portfolio/exit/exit-320.jpg 320w, /build/img/portfolio/exit/exit-440.jpg 440w" alt="Image du projet d'EXIT Studio">
 				</a>
 			</article>
-			<article class="portfolio-project">
+			<article class="portfolio-project" data-bottom-top="transform: translateX(-60%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
 				<a href="/rbcciney.php" class="portfolio-project-link" title="Go to the projet's page">
 					<h3 class="portfolio-project-title">RBC Ciney<span class="portfolio-project-role">Development & Design</span></h3>
 					<img class="portfolio-project-img" src="/build/img/portfolio/rbcciney/rbcciney.jpg" srcset="/build/img/portfolio/rbcciney/rbcciney-320.jpg 320w, /build/img/portfolio/rbcciney/rbcciney-440.jpg 440w" alt="Image du projet du RBC Ciney">
@@ -100,19 +100,19 @@
 	<section class="section experience" id="experience">
 		<h2 class="section-title">Experience</h2>
 		<div class="section-wrap experience-content">
-			<article class="experience-elt">
+			<article class="experience-elt" data-bottom-top="transform: translateX(60%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
 				<p class="experience-date">Mai 2017 - September 2017</p>
 				<h3 class="experience-title">RBC Ciney</h3>
 				<p class="experience-job">Website</p>
 				<p class="experience-description">As my end of studies project, I made the web site from scratch for my basketball club.</p>
 			</article>
-			<article class="experience-elt">
+			<article class="experience-elt" data-bottom-top="transform: translateX(-60%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
 				<p class="experience-date">September 2014 - September 2017</p>
 				<h3 class="experience-title">Haute École de  la Province de Liège (HEPL)</h3>
 				<p class="experience-job">Web dev & design studies</p>
 				<p class="experience-description">Graduated a three-year studies in Web development and design with distinction</p>
 			</article>
-			<article class="experience-elt">
+			<article class="experience-elt" data-bottom-top="transform: translateX(60%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
 				<p class="experience-date">February 2017 - Mai 2017</p>
 				<h3 class="experience-title">EXIT Studio</h3>
 				<p class="experience-job">Internship Front-End Developer & Designer</p>
@@ -181,7 +181,8 @@
 </footer>
 <!-- Script -->
 <script src="./build/js/jquery-3.2.1.min.js"></script>
-<script src="./build/js//scripts.js"></script>
+<script src="./build/js/skrollr.js"></script>
+<script src="./build/js/scripts.js"></script>
 </html>
 <?php
     unset( $_SESSION['errors'] );

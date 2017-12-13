@@ -15,6 +15,9 @@
 		&-wrap{
 			position: relative;
 			margin: 2.5rem 0;
+			animation-name: animationLogo;
+    		animation-duration: 1s;
+    		animation-timing-function: ease;
 		}
 		&-available{
 			@include font-size(1.2);
@@ -108,8 +111,12 @@
 		}
 	}
 	&-text{
+		transition: $aboutTextTrans;
     	line-height: 1.6;
-	}
+    	animation-name: animationIntro;
+    	animation-duration: 1s;
+    	animation-timing-function: ease;
+    }
 	&-title{
 		@include font-size(1.9);
 		&-name{
@@ -132,4 +139,15 @@
 		margin-top: 2rem;
 		font-weight: $light;
 	}
+}
+
+// ******** Animation settup ********
+@keyframes animationLogo {
+    0%   {transform: translateX(-100%); opacity: 0;}
+    100%  {transform: translateX(0%); opacity: 1;}
+}
+
+@keyframes animationIntro {
+    0%   {transform: translateX(100%); opacity: 0;}
+    100%  {transform: translateX(0%); opacity: 1;}
 }

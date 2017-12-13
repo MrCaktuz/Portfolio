@@ -26,6 +26,7 @@
 		}
 		&-input, &-textarea{
 			@include font-size(1.4);
+    		font-family: $fontStack;
 			width: 100%;
 			padding: 1rem 1rem 1rem 7rem;
 			color: $lightBlue;

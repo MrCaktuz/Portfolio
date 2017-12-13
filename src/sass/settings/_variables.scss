@@ -27,6 +27,8 @@ $logoShadowOver: inset 0rem 0rem .3rem .1rem rgba( 0, 0, 0, .3 );
 // ******** Transitions ********
 $mainTrans: all .25s ease-in-out;
 $menuTrans:  all .3s ease-in-out;
+$aboutLogoTrans : all .25s ease-in-out .25s;
+$aboutTextTrans : all .25s ease-in-out .5s;
 
 // ******** Fonts ********
 $fontStack: 'Lato', sans-serif;

@@ -47,4 +47,8 @@ jQuery( document ).ready( function($) {
 		var studyCaseHeight = windowHeight - footerHeight;
 	    $('.studyCase').css('min-height', studyCaseHeight);
 	}
+
+	// ******** Parallax effects ********
+	var s = skrollr.init();
+	
 } );
