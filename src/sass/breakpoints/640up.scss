@@ -81,22 +81,40 @@
 // ******** Footer section ********
 .footer{
 	&-phone{
+		@include font-size(1.4);
+		position: absolute;
 		top: 50%;
 		left: 2.5rem;
+		// display: block;
 		width: auto;
+		text-align: center;
+		z-index: 1;
+		transition: $mainTrans;
 		transform: translate(0%, -50%);
 		&::before{
+			content:"";
+			position: relative;
+			top: .2rem;
+			display: inline-block;
+			width: 1.4rem;
+			height: 1.4rem;
 			margin-right: .5rem;
+			background-image: url('/build/img/icons/phone.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
 		}
 	}
 	&-mail{
+		@include font-size(1.4);
+		position: absolute;
 		bottom: 50%;
 		right: 2.5rem;
+		// display: block;
 		width: auto;
+		text-align: center;
+		transition: $mainTrans;
 		transform: translate(0%, 50%);
-		&::before{
-			display: none;
-		}
 		&::after{
 			content:"";
 			position: relative;

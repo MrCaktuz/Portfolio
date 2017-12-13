@@ -15,27 +15,7 @@
 		background: linear-gradient(to left, rgba(38,50,56,1) 0%,rgba(48,68,73,1) 50%,rgba(38,50,56,1) 100%);
 	}
 	&-phone{
-		@include font-size(1.4);
-		position: absolute;
-		left: 0%;
-		top: .6rem;
-		width: 100%;
-		text-align: center;
-		z-index: 1;
-		transition: $mainTrans;
-		&::before{
-			content:"";
-			position: relative;
-			top: .2rem;
-			display: inline-block;
-			width: 1.4rem;
-			height: 1.4rem;
-			margin-right: 1rem;
-			background-image: url('/build/img/icons/phone.png');
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
+		display: none;
 	}
 	&-logo{
 		&-border{
@@ -59,25 +39,6 @@
 		}
 	}
 	&-mail{
-		@include font-size(1.4);
-		position: absolute;
-		right: 0%;
-		bottom: .6rem;
-		width: 100%;
-		text-align: center;
-		transition: $mainTrans;
-		&::before{
-			content:"";
-			position: relative;
-			top: .2rem;
-			display: inline-block;
-			width: 1.4rem;
-			height: 1.4rem;
-			margin-right: 1rem;
-			background-image: url('/build/img/icons/mail.png');
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
+		display: none;
 	}
 }
