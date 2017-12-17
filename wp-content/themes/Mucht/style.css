@@ -1,0 +1,3678 @@
+@charset "UTF-8";
+/*
+*	Description:    Fiche de style principale pour Exit Studio
+*	Version:        1.0 - 08/02/2017
+*	Author :        EXIT Studio
+*/
+/*
+*	Import tools
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300,400,500,700);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+* Variables utilisées dans le css
+*/
+/* Blog color */
+/* Background */
+/* Epaisseurs des polices */
+/* Font-family */
+/*
+*	Description:    Fiche de style pour les setup globaux
+*	Version:        1.0 - 08/02/2017
+*	Author :        EXIT Studio
+*/
+/*
+*	Fonts
+*/
+html {
+  font: 400 62.5%/1.5 "Roboto", sans-serif; }
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #323335;
+  background-color: #F4F4F4; }
+  body.page-template-template-services {
+    background-color: #FFFFFF; }
+
+a {
+  transition: all .25s ease;
+  text-decoration: none; }
+
+strong {
+  font-weight: 600; }
+
+em {
+  font-style: italic; }
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%; }
+  .container--full {
+    padding-top: 8.5rem;
+    padding-bottom: 8.5rem;
+    background-color: #F4F4F4; }
+
+.blogCard__container .feedback {
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  color: #323335; }
+
+.notFound .feedback {
+  font-size: 25px;
+  font-size: 2.5rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 4.5rem 0 0 0;
+  text-align: center;
+  color: #323335;
+  line-height: 1.5; }
+  .notFound .feedback p {
+    margin-bottom: 1em; }
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  transform: translatez(0); }
+
+@media screen {
+  * {
+    box-sizing: border-box; }
+  /*
+    *	Import components
+    */
+  /*
+*	Description:    Fiche de style pour le header
+*	Version:        1.0 - 08/02/2017
+*	Author :        EXIT Studio
+*/
+  .header {
+    position: relative;
+    padding: 4.5rem 5% 0; }
+  .titleBlock {
+    margin-top: 11rem;
+    padding-bottom: 4.5rem; }
+    .titleBlock--homepage {
+      margin-top: 25rem; }
+    .titleBlock--contact {
+      padding-bottom: 8.5rem; }
+    .titleBlock__container {
+      position: relative; }
+      .titleBlock__container::after {
+        content: "";
+        display: block;
+        width: 6rem;
+        height: 0.4rem;
+        margin-top: 2.5rem;
+        background-color: #FAB525; }
+    .titleBlock__title {
+      margin-top: 1em;
+      color: #F4F4F4;
+      font-size: 42px;
+      font-size: 4.2rem;
+      font-family: "Roboto Slab", serif;
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: uppercase;
+      text-shadow: 0 0 0.1rem #323335; }
+      .titleBlock__title--homepage {
+        margin-bottom: 4.5rem; }
+        .titleBlock__title--homepage::after {
+          height: 0rem; }
+    .titleBlock__slogan {
+      display: block;
+      color: #F4F4F4; }
+    .titleBlock__domain {
+      padding-top: 1.5rem;
+      font-size: 14px;
+      font-size: 1.4rem;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      color: #F4F4F4; }
+  /*
+*	Description:    Fiche de style pour la navigation
+*	Version:        1.0 - 08/02/2017
+*	Author :        EXIT Studio
+*/
+  /*
+*	Main nav block
+*/
+  .mainNav__langs {
+    position: absolute;
+    top: 6rem;
+    right: calc( 5% + 5.5rem);
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif; }
+  .mainNav__lang {
+    display: inline-block;
+    padding: 0 0.3em 0 0;
+    color: #F4F4F4;
+    text-transform: uppercase; }
+    .mainNav__lang--active {
+      color: #FAB525; }
+    .mainNav__lang:first-child {
+      border-right: 1px solid #F4F4F4; }
+    .mainNav__lang:hover {
+      color: #FAB525; }
+  .mainNav__toggleButton {
+    position: absolute;
+    top: 4.5rem;
+    right: 5%;
+    display: inline-block;
+    width: 4.2rem;
+    height: 4.2rem;
+    color: rgba(255, 255, 255, 0);
+    border: 1px solid #FAB525;
+    border-radius: 50%;
+    background-color: #FAB525;
+    outline: none;
+    z-index: 3; }
+    .mainNav__toggleButton:hover {
+      background-color: #FFF;
+      border-color: #F4F4F4; }
+      .mainNav__toggleButton:hover .menuBurgerSvg__rect {
+        fill: #000; }
+  a .menuBurgerSvg {
+    position: relative;
+    top: 1.4rem;
+    left: 1rem; }
+    a .menuBurgerSvg__rect {
+      transition: .25s ease-in-out;
+      transform: rotate(0deg); }
+  a.nav-open-button .menuBurgerSvg__rect--topLeft {
+    transform: rotate(45deg) translateX(11px) translateY(-15px); }
+  a.nav-open-button .menuBurgerSvg__rect--topRight {
+    transform: rotate(-45deg) translateX(-22px) translateY(14px); }
+  a.nav-open-button .menuBurgerSvg__rect--midLeft {
+    transform: translateX(-10px);
+    opacity: 0; }
+  a.nav-open-button .menuBurgerSvg__rect--midRight {
+    transform: translateX(10px);
+    opacity: 0; }
+  a.nav-open-button .menuBurgerSvg__rect--botLeft {
+    transform: rotate(-45deg) translateX(-20px) translateY(2px); }
+  a.nav-open-button .menuBurgerSvg__rect--botRight {
+    transform: rotate(45deg) translateX(9px) translateY(-27px); }
+  /*
+*	Body class
+*/
+  body::before {
+    content: "";
+    font-size: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 51, 53, 0);
+    z-index: 0;
+    transition: all .25s ease; }
+  .nav-open {
+    position: relative; }
+    .nav-open-button {
+      border: 1px solid #F4F4F4; }
+    .nav-open::before {
+      background-color: rgba(50, 51, 53, 0.8);
+      z-index: 2; }
+    .nav-open .toggle {
+      height: auto;
+      opacity: 1; }
+  /*
+*	Burger menu
+*/
+  .toggle {
+    opacity: 0;
+    position: absolute;
+    top: 6.7rem;
+    right: 2.5%;
+    height: 0;
+    width: 95%;
+    background-color: #FFF;
+    z-index: 3;
+    transition: all .25s ease;
+    overflow: hidden; }
+    .toggle__elt {
+      font-size: 12px;
+      font-size: 1.2rem; }
+    .toggle__footer {
+      position: relative;
+      padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+      border-top: 1px solid #F4F4F4; }
+    .toggle__logo {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem; }
+  .menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0;
+    background-color: #FFF; }
+    .menu > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 33.33333%;
+      margin-right: 0;
+      margin-left: 0; }
+    .menu-item {
+      padding: 1.5rem;
+      border: 1px solid #F4F4F4;
+      background-color: #FFF; }
+      .menu-item a {
+        display: block;
+        width: 100%;
+        padding: 6.5rem 0;
+        font-size: 20px;
+        font-size: 2rem;
+        font-family: "Roboto Slab", serif;
+        text-transform: uppercase;
+        text-align: center;
+        color: #323335;
+        border: 2px solid rgba(255, 255, 255, 0); }
+        .menu-item a:hover {
+          border: 2px solid #FAB525; }
+  .current-menu-item a {
+    background-color: #FAB525; }
+  /*
+*	Description:    Fiche de style pour la navigation
+*	Version:        1.0 - 22/02/2017
+*	Author :        EXIT Studio
+*/
+  /*
+*	Main nav block
+*/
+  .blogNav {
+    background-color: #323335; }
+    .blogNav__list {
+      padding: 1.5rem 5%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin-left: 0; }
+      .blogNav__list > * {
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        display: block;
+        /* IE fix */
+        float: left;
+        width: 16.66667%;
+        margin-right: 0;
+        margin-left: 0; }
+    .blogNav__elt {
+      text-align: center;
+      border-left: 1px solid #F4F4F4; }
+      .blogNav__elt:last-child {
+        border-right: 1px solid #F4F4F4; }
+      .blogNav__elt--active .blogNav__link--all::after {
+        background-color: #FAB525; }
+      .blogNav__elt--active .blogNav__link--design::after {
+        background-color: #00bbc0; }
+      .blogNav__elt--active .blogNav__link--developpement::after {
+        background-color: #5bcd78; }
+      .blogNav__elt--active .blogNav__link--e-marketing::after {
+        background-color: #fb6044; }
+      .blogNav__elt--active .blogNav__link--photographie::after {
+        background-color: #fe7a02; }
+      .blogNav__elt--active .blogNav__link--usability::after {
+        background-color: #a42cff; }
+    .blogNav__link {
+      position: relative;
+      display: block;
+      padding: 0.5rem;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      transition: all .25s ease; }
+      .blogNav__link::after {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        left: 35%;
+        display: block;
+        width: 30%;
+        height: 0.2rem;
+        transition: all .25s ease; }
+      .blogNav__link--all:hover {
+        color: #FAB525; }
+        .blogNav__link--all:hover::after {
+          background-color: #FAB525; }
+      .blogNav__link--design:hover {
+        color: #00bbc0; }
+        .blogNav__link--design:hover::after {
+          background-color: #00bbc0; }
+      .blogNav__link--developpement:hover {
+        color: #5bcd78; }
+        .blogNav__link--developpement:hover::after {
+          background-color: #5bcd78; }
+      .blogNav__link--e-marketing:hover {
+        color: #fb6044; }
+        .blogNav__link--e-marketing:hover::after {
+          background-color: #fb6044; }
+      .blogNav__link--photographie:hover {
+        color: #fe7a02; }
+        .blogNav__link--photographie:hover::after {
+          background-color: #fe7a02; }
+      .blogNav__link--usability:hover {
+        color: #a42cff; }
+        .blogNav__link--usability:hover::after {
+          background-color: #a42cff; }
+  /*
+*	Description:    Fiche de style pour les Call To Action
+*	Version:        1.0 - 08/02/2017
+*	Author :        EXIT Studio
+*/
+  .cta {
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    margin-right: 2.9296875%;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: #F4F4F4;
+    border-radius: 2px;
+    cursor: pointer; }
+    .cta--primary {
+      background-color: #FAB525;
+      border: 1px solid #FAB525; }
+    .cta--secondary {
+      border: 1px solid #F4F4F4; }
+    .cta--tertiary {
+      color: #323335;
+      background-color: #F4F4F4;
+      border: 1px solid #F4F4F4; }
+      .cta--tertiary:hover {
+        background-color: rgba(255, 255, 255, 0); }
+    .cta--primary:hover, .cta--secondary:hover {
+      color: #323335;
+      border-color: #F4F4F4;
+      background-color: #F4F4F4; }
+    .cta__center {
+      min-width: 100%;
+      text-align: center; }
+      .cta__center a {
+        margin: 0; }
+      .cta__center--articles {
+        margin-top: 2.5rem; }
+    .cta__right {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+    .cta--lightBrg:hover {
+      background-color: rgba(255, 255, 255, 0);
+      border-color: #FAB525; }
+    .cta__404 {
+      margin-top: 4rem; }
+      .cta__404 .cta + .cta {
+        margin-left: 4rem; }
+    .cta__end {
+      margin-bottom: 7.5rem; }
+  /*
+*	Description:    Fiche de style pour les formulaires
+*	Version:        1.0 - 09/02/2017
+*	Author :        EXIT Studio
+*/
+  .form__select {
+    display: none; }
+  section.form {
+    width: calc( 90% - 27.5rem);
+    max-width: 85rem; }
+  .form {
+    position: relative;
+    padding-top: 4.5rem;
+    transition: all .25s ease; }
+    .form.success {
+      padding-top: 10rem; }
+    .form__label {
+      font-size: 20px;
+      font-size: 2rem;
+      font-family: "Roboto Slab", serif; }
+    .form__selectContainer {
+      position: relative;
+      margin-top: 2rem; }
+      .form__selectContainer--formSelect {
+        width: 48.5%; }
+    .form__selected {
+      position: relative;
+      width: 100%;
+      min-height: 3.375em;
+      margin-bottom: 2rem;
+      padding: 1.5rem 2rem;
+      color: #323335;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: 300;
+      border: 1px solid rgba(255, 255, 255, 0);
+      border-bottom-color: #8B8D93;
+      background-color: #FFFFFF;
+      transition: all .25s ease;
+      cursor: pointer; }
+      .form__selected:hover {
+        border-color: #FAB525; }
+      .form__selected.active {
+        border-color: #FAB525;
+        border-bottom-color: rgba(255, 255, 255, 0); }
+        .form__selected.active::after {
+          transform: rotateX(-180deg); }
+      .form__selected::after {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-image: url("./icons/arrow.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+    .form__selectOpts {
+      position: absolute;
+      width: 100%;
+      margin-bottom: 2rem;
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      color: #8B8D93;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: 300;
+      background-color: #FFFFFF;
+      border: 1px solid #FAB525;
+      border-top-color: rgba(255, 255, 255, 0);
+      transform: translateY(-3rem);
+      transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      z-index: 1; }
+      .form__selectOpts li {
+        position: relative;
+        padding: 1.5rem 2rem;
+        margin-left: 1.5rem;
+        cursor: pointer; }
+        .form__selectOpts li:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -1rem;
+          width: 2rem;
+          height: 1rem;
+          background-image: url("./icons/arrow-grey.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          transform: translateY(-50%); }
+        .form__selectOpts li:hover {
+          color: #323335; }
+          .form__selectOpts li:hover:before {
+            background-image: url("./icons/arrow-yellow.png"); }
+    .form__selectionList {
+      display: none;
+      transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+    .form__wrap {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      overflow: hidden; }
+      .form__wrap.selected {
+        width: auto;
+        height: auto;
+        opacity: 1; }
+  .acf-form {
+    display: inline-block;
+    width: 100%; }
+    .acf-form-submit {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+      -ms-flex-align: center;
+          align-items: center;
+      text-align: center; }
+      .acf-form-submit input {
+        position: relative;
+        float: right;
+        padding: 1.5rem 7rem 1.5rem 3rem;
+        color: #F4F4F4;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-size: 2rem;
+        font-weight: 500;
+        border: 1px solid #FAB525;
+        border-radius: 0.2rem;
+        background-color: #FAB525;
+        background-image: url("./img/icon-plane-white.png");
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        background-position: 90% 1rem;
+        outline: none;
+        transition: all .25s ease; }
+        .acf-form-submit input:hover {
+          color: #323335;
+          background-color: #F4F4F4;
+          background-image: url("./img/icon-plane-black.png"); }
+  .acf-fields .acf-field .acf-label label {
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400; }
+  .acf-fields div.acf-field {
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+    clear: none; }
+  .acf-fields div.contactForm__field--website {
+    width: 48.5%;
+    float: left; }
+  .acf-fields div.contactForm__field--msg {
+    clear: both; }
+  .acf-field div.acf-input textarea {
+    width: 100%;
+    max-height: 30rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+    color: #8B8D93;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    clear: both;
+    resize: vertical;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-bottom-color: #8B8D93;
+    outline: none; }
+  .acf-field-select {
+    width: 48.5%; }
+  .acf-field-radio {
+    float: right; }
+  .acf-label {
+    clear: both; }
+  .acf-input div.acf-input-wrap input {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+    color: #8B8D93;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-bottom-color: #8B8D93;
+    outline: none; }
+  div.acf-fields div.acf-field-date-picker {
+    width: 0;
+    clear: both;
+    float: right;
+    height: 0;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+    div.acf-fields div.acf-field-date-picker.deadlineChecked {
+      width: 48.5%;
+      height: 100%;
+      opacity: 1; }
+  div.acf-fields div.acf-field.acf-field-select {
+    clear: both;
+    float: left; }
+  div.acf-fields div.acf-field.acf-field-file {
+    width: 48.5%; }
+  .acf-basic-uploader input {
+    margin-bottom: 2rem; }
+  .acf-form ul.acf-radio-list.acf-hl {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: -5%; }
+    .acf-form ul.acf-radio-list.acf-hl > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 45%;
+      margin-right: 0;
+      margin-left: 5%; }
+    .acf-form ul.acf-radio-list.acf-hl li {
+      margin-right: 0; }
+    .acf-form ul.acf-radio-list.acf-hl li label {
+      position: relative;
+      display: block;
+      min-width: 10rem;
+      margin: 0.9rem 0 2rem;
+      padding: 1.5rem 2rem;
+      color: #323335;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: 300;
+      background-color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0);
+      border-bottom-color: #8B8D93; }
+      .acf-form ul.acf-radio-list.acf-hl li label:hover {
+        border-color: #FAB525; }
+      .acf-form ul.acf-radio-list.acf-hl li label input {
+        width: 0;
+        height: 0;
+        opacity: 0; }
+      .acf-form ul.acf-radio-list.acf-hl li label::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 1.5rem;
+        display: block;
+        width: 2.4rem;
+        height: 50%;
+        background-image: url("./icons/validation-yellow.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 2.5rem auto;
+        transform: translateY(50%);
+        opacity: 0;
+        transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+      .acf-form ul.acf-radio-list.acf-hl li label:hover ul.acf-radio-list.acf-hl li label::after {
+        border-color: #FAB525; }
+  ul.acf-radio-list.acf-hl li label.selected::after {
+    opacity: 1; }
+  span.acf-loading, span.acf-spinner {
+    margin-right: 3rem; }
+  .contactForm__field--Fname {
+    width: 48.5%;
+    float: left; }
+  .contactForm__field--Lname {
+    width: 48.5%;
+    float: right; }
+  .contactForm__field--mail {
+    width: 48.5%;
+    float: left; }
+  .contactForm__field--phone {
+    width: 48.5%;
+    float: right; }
+  .contactForm__field--msg {
+    clear: both; }
+  .contactForm__field--check {
+    display: block;
+    width: 48.5%; }
+  .contactForm__field--location {
+    float: right;
+    width: 48.5%; }
+  .contactForm__field--cv {
+    float: left; }
+  .contactForm__field--lm {
+    float: right; }
+  .updated {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    padding: 2rem;
+    border: 1px solid #46b450;
+    background-color: #FFFFFF; }
+  .mc4wp-form {
+    position: relative;
+    display: inline-block;
+    width: 100%; }
+    .mc4wp-form__input {
+      font-size: 12px;
+      font-size: 1.2rem;
+      padding: 1.4rem;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      color: #F4F4F4;
+      outline: none;
+      border: 1px solid #F4F4F4;
+      background-color: rgba(255, 255, 255, 0); }
+      .mc4wp-form__input--newsletter {
+        width: calc( 100% - 5rem); }
+    .mc4wp-form__submit {
+      cursor: pointer;
+      outline: none;
+      transition: all .25s ease; }
+      .mc4wp-form__submit--newsletter {
+        position: absolute;
+        top: 0rem;
+        right: 0.1rem;
+        width: 5rem;
+        height: 4.6rem;
+        color: rgba(255, 255, 255, 0);
+        border: 1px solid #F4F4F4;
+        background: #F4F4F4 url("./img/icon-plane-black.png") center;
+        background-size: 2.6rem 2.6rem;
+        background-repeat: no-repeat; }
+        .mc4wp-form__submit--newsletter:hover {
+          background-color: #FAB525;
+          border-color: #FAB525; }
+  .mc4wp-form-fields {
+    position: relative; }
+  .mc4wp-response {
+    padding-top: 1rem;
+    font-weight: 300; }
+  .mc4wp-form-success .mc4wp-response {
+    color: #F4F4F4;
+    line-height: 1.6; }
+    .mc4wp-form-success .mc4wp-response p {
+      font-size: 14px;
+      font-size: 1.4rem; }
+      .mc4wp-form-success .mc4wp-response p::before {
+        content: "Merci, ";
+        color: #46b450; }
+  .mc4wp-form-error .mc4wp-response {
+    color: #F4F4F4;
+    line-height: 1.6; }
+    .mc4wp-form-error .mc4wp-response p {
+      font-size: 14px;
+      font-size: 1.4rem; }
+      .mc4wp-form-error .mc4wp-response p::before {
+        content: "Oups, ";
+        color: #F55E4F; }
+  .mc4wp-form-error .form__input--newsletter {
+    border-color: #E84533; }
+  /*
+*	Description:    Fiche de style pour les tweets
+*	Version:        1.0 - 08/02/2017
+*	Author :        EXIT Studio
+*/
+  #tweets .tweet {
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.7em; }
+    #tweets .tweet a {
+      color: #F4F4F4;
+      border-bottom: 1px solid #FAB525; }
+      #tweets .tweet a:hover {
+        color: #FAB525; }
+  #tweets .timePosted {
+    margin: 1.5rem 0 3rem; }
+    #tweets .timePosted a {
+      color: #F4F4F4;
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-weight: 300; }
+  #tweets .interact {
+    display: none; }
+  /*
+*	Description:    Fiche de style pour les sections
+*	Version:        1.0 - 09/02/2017
+*	Author :        EXIT Studio
+*/
+  .sections {
+    position: relative;
+    padding-bottom: 7.5rem; }
+    .sections:nth-child(2n+1) {
+      background-color: #323335;
+      color: #F4F4F4; }
+    .sections:nth-child(2n) {
+      background-color: #F4F4F4; }
+      .sections:nth-child(2n)--services {
+        background-color: #FFFFFF; }
+    .sections.blogCard {
+      background-color: #F4F4F4; }
+    .sections__title {
+      padding-top: 7rem;
+      padding-bottom: 5.5rem;
+      padding-bottom: 3.5rem;
+      font-size: 36px;
+      font-size: 3.6rem;
+      font-family: "Roboto Slab", serif;
+      font-weight: 600; }
+      .sections__title--yellow {
+        color: #323335;
+        background-color: #FAB525; }
+        .sections__title--yellow::after {
+          background-color: #323335; }
+      .sections__title--dark {
+        color: #F4F4F4;
+        background-color: #323335; }
+        .sections__title--dark::after {
+          background-color: #FAB525; }
+      .sections__title--light {
+        color: #323335;
+        background-color: #F4F4F4; }
+        .sections__title--light::after {
+          background-color: #FAB525; }
+      .sections__title::after {
+        content: "";
+        display: block;
+        width: 6rem;
+        height: 0.4rem;
+        margin-top: 3.5rem; }
+    .sections__slogan {
+      position: absolute;
+      top: 7rem;
+      right: 5%;
+      width: 40%;
+      max-width: 70rem;
+      margin-bottom: 5.5rem;
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.6; }
+  /*
+*	Description:    Fiche de style pour les services
+*	Version:        1.0 - 09/02/2017
+*	Author :        EXIT Studio
+*/
+  .services {
+    padding-bottom: 4.5rem; }
+    .services--botton {
+      display: none; }
+    .services__list {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin-left: 0;
+      font-size: 0px;
+      font-size: 0rem;
+      background: url("./img/bcgServices.png") 0% 0%;
+      background-size: auto;
+      background-size: 40%; }
+      .services__list > * {
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        display: block;
+        /* IE fix */
+        float: left;
+        width: 50%;
+        margin-right: 0;
+        margin-left: 0; }
+      .services__list--home {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+        margin-left: 0;
+        margin-bottom: 5rem; }
+        .services__list--home > * {
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
+          display: block;
+          /* IE fix */
+          float: left;
+          width: 25%;
+          margin-right: 0;
+          margin-left: 0; }
+    .services__elt {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      width: 50%;
+      padding: 5rem 4rem;
+      text-align: center; }
+      .services__elt:nth-child(2n) {
+        margin-top: 20rem;
+        background-color: #FAB525; }
+      .services__elt:nth-child(2n+1) {
+        background-color: #323335; }
+        .services__elt:nth-child(2n+1) .services__legend {
+          color: #FAB525; }
+        .services__elt:nth-child(2n+1) .services__description {
+          color: #F4F4F4; }
+      .services__elt--home {
+        margin-top: 5rem;
+        text-align: center;
+        transition: all .25s ease; }
+        .services__elt--home:hover .services__link {
+          background-color: #FAB525;
+          transform: scaleY(0.7);
+          transform-origin: top; }
+        .services__elt--home:hover .services__img--home {
+          filter: grayscale(100%) brightness(200%);
+          transform: scaleX(0.7) scaleY(0.9);
+          transform-origin: top; }
+        .services__elt--home:hover .services__legend--home {
+          transform: scaleY(1.4) translateY(-0.5rem); }
+        .services__elt--home:hover .services__description--home {
+          opacity: 1;
+          transform: scaleY(1.4); }
+          .services__elt--home:hover .services__description--home p {
+            opacity: 1;
+            transition: all .25s ease, opacity .25s ease .15s; }
+    .services__link {
+      position: relative;
+      display: block;
+      padding: 4rem 4rem 2rem;
+      transition: all .25s ease; }
+    .services__img {
+      width: 75%;
+      max-width: 20rem;
+      min-width: 10rem; }
+      .services__img--home {
+        height: 10rem;
+        width: auto;
+        transition: all .25s ease; }
+    .services__textBlock {
+      max-width: 55rem;
+      margin: 0 auto; }
+    .services__legend {
+      margin-top: 5rem;
+      font-size: 24px;
+      font-size: 2.4rem;
+      font-weight: 600;
+      font-family: "Roboto", sans-serif; }
+      .services__legend--home {
+        margin-top: 2rem;
+        font-size: 20px;
+        font-size: 2rem;
+        color: #323335;
+        transition: all .25s ease; }
+    .services__description {
+      margin: 4rem auto 0;
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1.6;
+      text-align: left; }
+      .services__description--home {
+        position: absolute;
+        top: 99.7%;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0 4rem 4rem;
+        font-size: 12px;
+        font-size: 1.2rem;
+        color: #323335;
+        overflow: hidden;
+        background-color: #FAB525;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: 0% top;
+        z-index: 1;
+        transition: all .25s ease; }
+        .services__description--home p {
+          opacity: 0;
+          transition: opacity .1s ease 0s; }
+  #services {
+    background-color: #FFFFFF; }
+  /*
+*	Description:    Fiche de style pour les realisations
+*	Version:        1.0 - 10/02/2017
+*	Author :        EXIT Studio
+*/
+  .realisations__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0;
+    margin-bottom: 4rem; }
+    .realisations__container > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0; }
+  .realisations__cols:nth-child(2) {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0; }
+    .realisations__cols:nth-child(2) > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0; }
+    .realisations__cols:nth-child(2) .realisations__block--small {
+      width: 50%; }
+      .realisations__cols:nth-child(2) .realisations__block--small .realisations__tag {
+        max-width: 100%; }
+    .realisations__cols:nth-child(2) .realisations__block--big {
+      width: 100%; }
+  .realisations__block {
+    position: relative;
+    display: block;
+    overflow: hidden; }
+    .realisations__block:hover .realisations__legend {
+      opacity: 1; }
+    .realisations__block:hover .realisations__tag, .realisations__block:hover .realisations__title {
+      transform: translateY(0%);
+      opacity: 1; }
+    .realisations__block:hover .realisations__tag {
+      transition-delay: 0.1s; }
+    .realisations__block:hover .realisations__arrow {
+      transform: translateX(0%);
+      transition-delay: 0.1s;
+      opacity: 1; }
+  .realisations__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+  .realisations__legend {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: rgba(250, 181, 37, 0.9);
+    padding: 2.5rem 2rem;
+    color: #323335;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    opacity: 0; }
+  .realisations__title {
+    font-size: 32px;
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transform: translateY(30%);
+    opacity: 0; }
+  .realisations__tag {
+    font-size: 16px;
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    max-width: 60%;
+    font-weight: 300;
+    line-height: 1.7;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transform: translateY(30%);
+    opacity: 0; }
+  .realisations__arrow {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transform: translateX(-50%);
+    opacity: 0; }
+  /*
+*	Description:    Fiche de style pour les cartes des articles du blog
+*	Version:        1.0 - 10/02/2017
+*	Author :        EXIT Studio
+*/
+  .blogCard__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: -1%;
+    margin-bottom: 2.5rem; }
+    .blogCard__container > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 49%;
+      margin-right: 0;
+      margin-left: 1%; }
+    .blogCard__container--blog {
+      margin: 5% 0; }
+  .blogCard__block {
+    position: relative;
+    display: block;
+    margin-bottom: 1.5rem;
+    overflow: hidden; }
+    .blogCard__block--design .blogCard__legend {
+      background-color: rgba(0, 187, 192, 0.75); }
+    .blogCard__block--developpement .blogCard__legend {
+      background-color: rgba(91, 205, 120, 0.75); }
+    .blogCard__block--e-marketing .blogCard__legend {
+      background-color: rgba(251, 96, 68, 0.75); }
+    .blogCard__block--usability .blogCard__legend {
+      background-color: rgba(164, 44, 255, 0.75); }
+    .blogCard__block--photographie .blogCard__legend {
+      background-color: rgba(254, 122, 2, 0.75); }
+  .blogCard__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+  .blogCard__legend {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 60%;
+    height: 100%;
+    padding: 2.5rem 2rem;
+    line-height: 1.7;
+    color: #F4F4F4;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: 1; }
+    .blogCard__legend--big {
+      left: 0; }
+    .blogCard__legend--small {
+      right: 0; }
+  .blogCard__title {
+    font-size: 18px;
+    font-size: 1.8rem;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
+    font-weight: 600;
+    text-shadow: 0 0 0.3em rgba(0, 0, 0, 0.4); }
+    .blogCard__title--big {
+      left: 0; }
+    .blogCard__title--small {
+      right: 0; }
+  .blogCard__tag {
+    font-size: 12px;
+    font-size: 1.2rem;
+    max-width: 15rem;
+    font-weight: 300;
+    text-transform: uppercase; }
+    .blogCard__tag:before {
+      content: "";
+      display: block;
+      width: 3rem;
+      height: 0.2rem;
+      margin-top: 2rem;
+      margin-bottom: 1em;
+      background-color: #FAB525; }
+  .blogCard__infoWrap {
+    position: absolute;
+    bottom: 2rem;
+    max-width: 34rem; }
+    .blogCard__infoWrap--big {
+      left: 2rem; }
+    .blogCard__infoWrap--small {
+      right: 2rem; }
+  .blogCard__date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: right; }
+  .blogCard__arrow {
+    position: absolute;
+    top: 2rem;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transform: translateX(-30%); }
+    .blogCard__arrow--big {
+      right: 2rem; }
+    .blogCard__arrow--small {
+      left: 2rem; }
+  .blogCard__loading {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 1rem 0;
+    background-color: #323335;
+    opacity: 0.95;
+    z-index: 10; }
+    .blogCard__loading--circle {
+      box-sizing: border-box;
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
+      border-radius: 100%;
+      border: 5px solid rgba(250, 181, 37, 0.2);
+      border-top-color: #FAB525;
+      animation: spin 1s infinite linear; }
+  .category-design .blogCard__block .blogCard__legend {
+    background-color: rgba(0, 187, 192, 0.75); }
+  .category-developpement .blogCard__block .blogCard__legend {
+    background-color: rgba(91, 205, 120, 0.75); }
+  .category-e-marketing .blogCard__block .blogCard__legend {
+    background-color: rgba(251, 96, 68, 0.75); }
+  .category-usability .blogCard__block .blogCard__legend {
+    background-color: rgba(164, 44, 255, 0.75); }
+  .category-photographie .blogCard__block .blogCard__legend {
+    background-color: rgba(254, 122, 2, 0.75); }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg); } }
+  /*
+*	Description:    Fiche de style pour les contenu flexible
+*	Version:        1.0 - 10/02/2017
+*	Author :        EXIT Studio
+*/
+  .flexContent {
+    position: relative;
+    margin-top: 8rem; }
+    .flexContent__container {
+      position: relative;
+      width: 80%; }
+    .flexContent .innerNav {
+      position: absolute;
+      right: 5%;
+      top: 0;
+      max-width: 15%;
+      min-width: 18rem;
+      transform: translateY(0); }
+      .flexContent .innerNav__title {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #FAB525; }
+      .flexContent .innerNav__list {
+        overflow: auto;
+        max-width: 20rem;
+        padding: 1rem;
+        background: linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), transparent), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), transparent) 0 100%;
+        background-repeat: no-repeat;
+        background-color: white;
+        background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+        /* Opera doesn't support this in the shorthand */
+        background-attachment: local, local, scroll, scroll; }
+      .flexContent .innerNav__link {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        font-size: 14px;
+        font-size: 1.4rem;
+        color: #323335;
+        transition: all .25s ease; }
+        .flexContent .innerNav__link:hover {
+          color: #F4F4F4;
+          background-color: #FAB525; }
+        .flexContent .innerNav__link--active {
+          color: #F4F4F4;
+          background-color: #FAB525; }
+    .flexContent .fix-aside {
+      position: fixed;
+      transform: translateY(8rem); }
+    .flexContent .fix-aside-bottom {
+      position: absolute; }
+    .flexContent__wrap {
+      margin-bottom: 4.5rem; }
+    .flexContent__header {
+      position: relative;
+      margin-bottom: 4.5rem;
+      overflow: hidden;
+      background-color: #323335;
+      text-align: center; }
+      .flexContent__header--title {
+        position: relative;
+        padding: 8rem;
+        color: #F4F4F4;
+        font-size: 35px;
+        font-size: 3.5rem;
+        font-family: "Roboto Slab", serif;
+        font-weight: 600;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-shadow: 0 0 0.1rem #323335;
+        z-index: 1; }
+        .flexContent__header--title::after {
+          content: "";
+          position: absolute;
+          bottom: 7rem;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+          width: 6rem;
+          height: 0.4rem;
+          background-color: #FAB525;
+          z-index: 1; }
+      .flexContent__header--img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5; }
+    .flexContent__imgCenter {
+      position: relative;
+      text-align: center; }
+      .flexContent__imgCenter::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 100%;
+        height: 25rem;
+        background-color: #FAB525;
+        transform: translateY(-50%); }
+    .flexContent__img {
+      display: block;
+      width: 100%;
+      height: auto; }
+      .flexContent__imgText {
+        display: none; }
+      .flexContent__img--center {
+        position: relative;
+        display: block;
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+        z-index: 1; }
+    .flexContent__title {
+      font-size: 30px;
+      font-size: 3rem;
+      font-weight: 600; }
+      .flexContent__title::after {
+        content: "";
+        display: block;
+        width: 6rem;
+        height: 0.4rem;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+        background-color: #FAB525; }
+    .flexContent__subTitle, .flexContent .flexContent__textBlock h2 {
+      margin-top: 3rem;
+      font-size: 24px;
+      font-size: 2.4rem;
+      font-weight: 600; }
+      .flexContent__subTitle::after, .flexContent .flexContent__textBlock h2::after {
+        content: "";
+        display: block;
+        width: 3rem;
+        height: 0.2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background-color: #FAB525; }
+      .flexContent__subTitle:first-child, .flexContent .flexContent__textBlock h2:first-child {
+        margin-top: 0; }
+    .flexContent__thirdTitle, .flexContent .flexContent__textBlock h3 {
+      margin-top: 2rem;
+      font-size: 20px;
+      font-size: 2rem;
+      color: rgba(50, 51, 53, 0.25); }
+    .flexContent__twoCols {
+      display: -ms-flexbox;
+      display: flex; }
+      .flexContent__twoCols > * + * {
+        margin-left: 4%; }
+      .flexContent__twoCols .flexContent__imgWrap {
+        width: 48%; }
+    .flexContent__textBlock {
+      display: -ms-flexbox;
+      display: flex;
+      width: 60%;
+      padding: 4rem 4rem 3rem 4rem;
+      font-size: 20px;
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1.7;
+      background-color: #FFFFFF; }
+      .flexContent__textBlock p {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        margin-bottom: 1rem; }
+      .flexContent__textBlock--list, .flexContent__textBlock li {
+        list-style: outside;
+        margin-left: 2rem; }
+      .flexContent__textBlock--quote, .flexContent__textBlock blockquote {
+        padding-left: 2.5rem;
+        font-style: italic;
+        border-left: 4px solid #FAB525; }
+      .flexContent__textBlock--link, .flexContent__textBlock a {
+        color: #323335;
+        text-decoration: underline; }
+        .flexContent__textBlock--link:hover, .flexContent__textBlock a:hover {
+          color: #FAB525; }
+      .flexContent__textBlock--trad {
+        padding-left: 4rem;
+        padding-bottom: 1em; }
+      .flexContent__textBlock--center {
+        display: block;
+        width: 60%;
+        margin: 0 auto 4.5rem; }
+      .flexContent__textBlock--cols {
+        display: block;
+        width: 100%;
+        margin: 0 auto 4.5rem;
+        padding-bottom: 4rem;
+        -moz-column-count: 2;
+             column-count: 2;
+        -moz-column-gap: 4rem;
+             column-gap: 4rem; }
+      .flexContent__textBlock--end {
+        padding-bottom: 4rem; }
+    .flexContent__imgBlock {
+      position: relative;
+      width: 36%;
+      min-height: 30rem;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover; }
+    .flexContent__slider {
+      text-align: center; }
+    .flexContent__sliderV {
+      position: relative;
+      display: block;
+      width: 75%;
+      margin: 0 auto 4.5rem; }
+      .flexContent__sliderV--window {
+        position: absolute;
+        left: 4.2%;
+        top: 5.3%;
+        right: 4.2%;
+        bottom: 31.2%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        /* Safari */
+        /* opera */ }
+        .flexContent__sliderV--window::-webkit-scrollbar {
+          display: none; }
+        .flexContent__sliderV--window::-moz-scrollbars {
+          display: none; }
+        .flexContent__sliderV--window::-o-scrollbar {
+          display: none; }
+        .flexContent__sliderV--window::-google-ms-scrollbar {
+          display: none; }
+        .flexContent__sliderV--window::-khtml-scrollbar {
+          display: none; }
+      .flexContent__sliderV--dotList {
+        position: absolute;
+        top: 40%;
+        right: -5rem;
+        transform: translateY(-50%); }
+      .flexContent__sliderV--dots {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 2rem;
+        background-color: #CECECE;
+        border-radius: 50% 50%;
+        cursor: pointer;
+        transition: all .25s ease; }
+        .flexContent__sliderV--dots:hover {
+          background-color: #FAB525; }
+        .flexContent__sliderV--dots.active {
+          background-color: #FAB525; }
+    .flexContent__sliderBcg {
+      width: 100%;
+      height: auto; }
+    .flexContent__imgScroll {
+      display: block;
+      width: 100%;
+      height: auto; }
+    .flexContent__imgSlider {
+      width: 100%;
+      height: auto; }
+    .flexContent__colWrap {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin-left: -2%; }
+      .flexContent__colWrap > * {
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        display: block;
+        /* IE fix */
+        float: left;
+        width: 48%;
+        margin-right: 0;
+        margin-left: 2%; }
+    .flexContent__Elt {
+      position: relative;
+      display: inline-block;
+      padding-right: 2rem; }
+      .flexContent__Elt::after {
+        content: "//";
+        position: absolute;
+        top: -0.6rem;
+        right: 0.3rem;
+        font-size: 1.5em;
+        color: #FAB525;
+        letter-spacing: -2px; }
+      .flexContent__Elt:last-child::after {
+        content: ""; }
+      .flexContent__Elt--source a {
+        color: #323335;
+        text-decoration: underline; }
+        .flexContent__Elt--source a:hover {
+          color: #FAB525; }
+  .flexContent__articles .flexContent__wrap {
+    margin-bottom: 0; }
+  .flexContent__articles .flexContent__header {
+    margin-bottom: 0; }
+  .flexContent__articles .flexContent__imgCenter {
+    margin-bottom: 4.5rem; }
+  .flexContent__articles .flexContent__textBlock--center {
+    width: 100%;
+    margin: 0;
+    padding: 4rem 10rem 3rem 10rem;
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .flexContent__articles .flexContent__textBlock--end {
+    margin-top: 4.5rem; }
+  .flexContent__articles .flexContent__slider {
+    margin: 4.5rem 0; }
+  .flexContent__articles .flexContent__sliderV {
+    margin: 4.5rem auto; }
+  /*
+*	Description:    Fiche de style pour la section hiring de la page d'accueil
+*	Version:        1.0 - 11/02/2017
+*	Author :        EXIT Studio
+*/
+  .hiring {
+    text-align: center;
+    background-color: #FAB525;
+    color: #323335;
+    padding: 6rem 5%; }
+    .hiring__title {
+      width: 90%;
+      margin: 0 auto 4rem;
+      font-size: 26px;
+      font-size: 2.6rem;
+      font-family: "Roboto Slab", serif;
+      line-height: 1.6; }
+      .hiring__title span {
+        font-weight: 600; }
+    .hiring__content {
+      max-width: 35rem;
+      margin: 0 auto 3.5rem;
+      line-height: 1.6;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: 400; }
+      .hiring__content::after {
+        content: "";
+        display: block;
+        width: 6rem;
+        height: 0.4rem;
+        margin: 3.5rem auto 0;
+        background-color: #323335; }
+  /*
+*	Description:    Fiche de style pour les informations de contact
+*	Version:        1.0 - 08/02/2017
+*	Author :        EXIT Studio
+*/
+  .contactData {
+    text-align: right; }
+    .contactData__elt {
+      display: inline-block;
+      margin: 0 0 0 3.5%;
+      color: #323335; }
+      .contactData__elt:hover {
+        color: #FAB525; }
+      .contactData__elt--footer {
+        color: #F4F4F4; }
+        .contactData__elt--footer::before {
+          color: #F4F4F4; }
+      .contactData__elt::before {
+        content: "";
+        display: inline-block;
+        width: 1.8rem;
+        height: 1.6rem;
+        margin-right: 0.5em;
+        font-family: "icons";
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom; }
+      .contactData__elt--mailDark {
+        margin: 0; }
+        .contactData__elt--mailDark::before {
+          background-image: url("./img/icon-mail-black.png"); }
+      .contactData__elt--phoneDark::before {
+        background-image: url("./img/icon-phone-black.png"); }
+      .contactData__elt--addressDark::before {
+        background-image: url("./img/icon-house-black.png"); }
+      .contactData__elt--mailLight::before {
+        background-image: url("./img/icon-mail.png"); }
+      .contactData__elt--phoneLight::before {
+        background-image: url("./img/icon-phone.png"); }
+      .contactData__elt--addressLight::before {
+        background-image: url("./img/icon-house.png"); }
+  .contactWrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: -5%; }
+    .contactWrap > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 45%;
+      margin-right: 0;
+      margin-left: 5%; }
+  .contactCard {
+    position: relative;
+    top: -4.5rem;
+    width: 27.5rem;
+    margin-left: 5%;
+    margin-bottom: 14rem;
+    padding: 4.5rem;
+    background-color: #FFFFFF; }
+    .contactCard__elt {
+      display: block;
+      color: #323335;
+      line-height: 1.6; }
+    .contactCard__logo {
+      position: relative;
+      left: -1rem;
+      margin-bottom: 2.5rem; }
+    .contactCard__address {
+      width: 100%;
+      margin-bottom: 2.5rem;
+      font-weight: 300; }
+      .contactCard__address:hover {
+        color: #FAB525; }
+    .contactCard__phone:hover {
+      color: #FAB525; }
+    .contactCard__mail {
+      margin-bottom: 2.5rem; }
+      .contactCard__mail:hover {
+        color: #FAB525; }
+    .contactCard__schedule::before {
+      content: "";
+      position: relative;
+      top: 0.2rem;
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+      background: url("./img/icon-clock.png") center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .contactCard__schedule--hours {
+      font-weight: 300; }
+    .contactCard__img {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: auto; }
+  /*
+*	Description:    Fiche de style pour la page à propos
+*	Version:        1.0 - 02/03/2017
+*	Author :        EXIT Studio
+*/
+  .about {
+    position: relative;
+    padding-top: 12rem; }
+    .about__section {
+      margin-bottom: 4.5rem; }
+      .about__section--team {
+        margin-bottom: 9rem; }
+      .about__section--achievements {
+        margin-bottom: 0.5rem;
+        background-color: #323335; }
+      .about__section--insta {
+        margin-bottom: 0; }
+    .about__introBlock {
+      position: relative; }
+    .about__introBcg {
+      position: absolute;
+      top: 4.5rem;
+      width: 100%;
+      padding: 7rem 5rem;
+      background-color: #FAB525;
+      z-index: 0; }
+    .about__introText {
+      width: 50%;
+      max-width: 70rem;
+      font-size: 20px;
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1.6; }
+    .about__slider {
+      position: relative;
+      margin-bottom: 9rem;
+      z-index: 1; }
+    .about__sliderContainer {
+      margin-right: 4.5rem;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin-left: -3%;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+      .about__sliderContainer > * {
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        display: block;
+        /* IE fix */
+        float: left;
+        width: 47%;
+        margin-right: 0;
+        margin-left: 3%; }
+    .about__sliderLinks {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin-left: -2%;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+      .about__sliderLinks > * {
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        display: block;
+        /* IE fix */
+        float: left;
+        width: 23%;
+        margin-right: 0;
+        margin-left: 2%; }
+    .about__sliderLink {
+      width: 20%;
+      max-width: 17rem;
+      height: auto;
+      margin: 4.5rem 6% 4.5rem 0;
+      background-color: #323335; }
+      .about__sliderLink:last-child {
+        margin-right: 0; }
+    .about__sliderImg {
+      display: block;
+      width: 100%;
+      height: auto;
+      opacity: 0.5;
+      transition: all .25s ease; }
+      .about__sliderImg:hover {
+        opacity: 1; }
+      .about__sliderImg--selected {
+        opacity: 1; }
+    .about__sliderImgContainer {
+      width: 45%;
+      max-width: 65rem;
+      height: 65rem;
+      overflow: hidden; }
+    .about__sliderImgPreview {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      height: 100%; }
+    .about__values {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin-left: -4%; }
+      .about__values > * {
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        display: block;
+        /* IE fix */
+        float: left;
+        width: 29.33333%;
+        margin-right: 0;
+        margin-left: 4%; }
+    .about__value {
+      margin-bottom: 4.5rem; }
+    .about__valueTitle {
+      margin-bottom: 2.5rem;
+      font-size: 20px;
+      font-size: 2rem;
+      font-weight: 600;
+      text-transform: uppercase; }
+    .about__valueDescription {
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1.6; }
+    .about__team {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin-left: -4%;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+      .about__team > * {
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        display: block;
+        /* IE fix */
+        float: left;
+        width: 29.33333%;
+        margin-right: 0;
+        margin-left: 4%; }
+    .about__member {
+      position: relative;
+      overflow: hidden;
+      background-color: #FAB525; }
+      .about__member:hover .about__memberLegend {
+        opacity: 1; }
+      .about__member:hover .about__memberName {
+        transform: translateY(0%); }
+      .about__member:hover .about__memberField {
+        transform: translateY(0%); }
+    .about__memberPicture {
+      display: block;
+      width: 100%;
+      height: auto; }
+    .about__memberLegend {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      bottom: 2rem;
+      left: 2rem;
+      padding: 2rem;
+      background-color: rgba(250, 181, 37, 0.9);
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+    .about__memberWrap {
+      position: absolute;
+      bottom: 5%; }
+    .about__memberName {
+      margin-bottom: 1.5rem;
+      font-size: 24px;
+      font-size: 2.4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      transform: translateY(30%);
+      transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+    .about__memberField {
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 1.6;
+      transform: translateY(30%);
+      transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+    .about__achievements {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin-left: 0%;
+      -ms-flex-align: end;
+          align-items: flex-end;
+      text-align: center; }
+      .about__achievements > * {
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        display: block;
+        /* IE fix */
+        float: left;
+        width: 25%;
+        margin-right: 0;
+        margin-left: 0%; }
+    .about__achievement {
+      padding: 8rem 6rem; }
+    .about__achievementsIcon {
+      width: 50%;
+      height: auto; }
+    .about__achievementsTitle {
+      position: relative;
+      width: 65%;
+      min-width: 10rem;
+      max-width: 20rem;
+      margin: 2rem auto;
+      padding: 1.5rem 0;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #F4F4F4; }
+      .about__achievementsTitle::before {
+        content: "";
+        width: 100%;
+        height: 0.1rem;
+        background-color: #F4F4F4;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .about__achievementsTitle::after {
+        content: "";
+        width: 100%;
+        height: 0.1rem;
+        background-color: #F4F4F4;
+        position: absolute;
+        bottom: 0;
+        left: 0; }
+    .about__achievementsValue {
+      font-size: 40px;
+      font-size: 4rem;
+      font-weight: 600;
+      color: #FAB525; }
+    .about__insta {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin-left: -0.5%;
+      padding: 0.5%; }
+      .about__insta > * {
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        display: block;
+        /* IE fix */
+        float: left;
+        width: 24.5%;
+        margin-right: 0;
+        margin-left: 0.5%; }
+    .about__instaListElt {
+      display: block;
+      margin-bottom: 0.5rem; }
+      .about__instaListElt a {
+        display: block;
+        overflow: hidden; }
+        .about__instaListElt a img {
+          transition: all .25s ease-in-out;
+          transform: scale(1.01); }
+          .about__instaListElt a img:hover {
+            transform: scale(1.05); }
+    .about__instaImg {
+      display: block;
+      width: 100%;
+      height: auto; }
+  /*
+*	Description:    Fiche de style pour la Google Map
+*	Version:        1.0 - 21/02/2017
+*	Author :        EXIT Studio
+*/
+  .acf-map {
+    clear: both;
+    display: block;
+    width: 90.5%;
+    height: 35rem;
+    margin: 4.5rem auto;
+    border: 1px solid #8B8D93;
+    border-radius: 0.2rem; }
+  .navigate {
+    float: right;
+    margin-top: 0.5rem; }
+    .navigate-link {
+      text-align: center;
+      color: #3a84df; }
+    .navigate-icon {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      margin: 0 1.6rem;
+      background-image: url("https://maps.gstatic.com/mapfiles/embed/images/entity11_hdpi.png");
+      background-position: 0 1023px; }
+  .google-maps-link a {
+    color: #3a84df; }
+  .place-card {
+    width: 28.5rem;
+    padding: 1rem; }
+  .place-desc-large {
+    float: left;
+    width: 20rem; }
+  .place-name {
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 600; }
+  .address {
+    margin-top: 0.6rem; }
+  /* Slider */
+  .slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent; }
+  .slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0; }
+    .slick-list:focus {
+      outline: none; }
+    .slick-list.dragging {
+      cursor: pointer;
+      cursor: hand; }
+  .slick-slider .slick-track,
+  .slick-slider .slick-list {
+    transform: translate3d(0, 0, 0); }
+  .slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block; }
+    .slick-track:before, .slick-track:after {
+      content: "";
+      display: table; }
+    .slick-track:after {
+      clear: both; }
+    .slick-loading .slick-track {
+      visibility: hidden; }
+  .slick-slide {
+    float: left;
+    height: 40.25vw;
+    min-height: 1px;
+    display: none; }
+    [dir="rtl"] .slick-slide {
+      float: right; }
+    .slick-slide img {
+      display: block;
+      width: 100%;
+      height: auto; }
+    .slick-slide.slick-loading img {
+      display: none; }
+    .slick-slide.dragging img {
+      pointer-events: none; }
+    .slick-initialized .slick-slide {
+      display: block; }
+    .slick-loading .slick-slide {
+      visibility: hidden; }
+    .slick-vertical .slick-slide {
+      display: block;
+      height: auto;
+      border: 1px solid transparent; }
+  .slick-arrow.slick-hidden {
+    display: none; }
+  .flexContent__slider--h .slick-slide img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 6rem;
+    height: 8rem;
+    color: #FAB525;
+    border: none;
+    background-color: #FAB525;
+    z-index: 2;
+    transform: translateY(-50%);
+    outline: none;
+    cursor: pointer;
+    transition: all .25s ease;
+    opacity: 0.75; }
+    .slick-arrow:hover {
+      opacity: 1; }
+    .slick-arrow::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: auto 50%;
+      background-repeat: no-repeat; }
+  .slick-prev {
+    left: 0; }
+    .slick-prev::before {
+      background-image: url("./img/sliderArrow.png"); }
+  .slick-next {
+    right: 0; }
+    .slick-next::before {
+      background-image: url("./img/sliderArrow.png");
+      transform: rotate(180deg); }
+  .flexContent__slider--v .slick-arrow {
+    display: none !important; }
+  .slick-dots {
+    position: absolute;
+    top: 50%;
+    right: -3%;
+    transform: translateY(-50%); }
+    .slick-dots button {
+      font-size: 0px;
+      font-size: 0rem;
+      color: rgba(255, 255, 255, 0);
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-bottom: 2rem;
+      border: 0;
+      border-radius: 50%;
+      background-color: #323335; }
+      .slick-dots button:focus, .slick-dots button:active {
+        outline: 0;
+        background-color: #FAB525; }
+      .slick-dots button::-moz-focus-inner {
+        border: 0; }
+    .slick-dots .slick-active button {
+      outline: 0;
+      background-color: #FAB525; }
+  /*
+*	Description:    Fiche de style pour la page 404
+*	Version:        1.0 - 27/04/2017
+*	Author :        EXIT Studio
+*/
+  body.error404 {
+    background-color: #FAB525; }
+  .sections.notFound {
+    background-color: #FAB525; }
+  /*
+*	Description:    Fiche de style pour le footer
+*	Version:        1.0 - 08/02/2017
+*	Author :        EXIT Studio
+*/
+  .footer {
+    padding-top: 0;
+    padding-bottom: 4.5rem;
+    background-color: #323335;
+    color: #F4F4F4;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start; }
+    .footer__cols {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      margin-right: 0;
+      margin-left: 5%; }
+      .footer__cols:first-child {
+        margin-left: 0; }
+      .footer__cols--one {
+        width: 40%; }
+      .footer__cols--two {
+        width: 30%; }
+      .footer__cols--three {
+        width: 20%; }
+    .footer__section {
+      display: block;
+      width: 100%;
+      max-width: 50rem;
+      margin-bottom: 4rem; }
+    .footer__title {
+      display: block;
+      padding: 3rem 0;
+      font-size: 20px;
+      font-size: 2rem;
+      font-family: "Roboto Slab", serif; }
+      .footer__title::after {
+        content: "";
+        display: block;
+        width: 6rem;
+        height: 0.2rem;
+        margin-top: 2.5rem;
+        background-color: #FAB525; }
+    .footer__img {
+      margin-left: -0.5rem; }
+    .footer__socials {
+      font-size: 0px;
+      font-size: 0rem; }
+    .footer__social {
+      display: inline-block;
+      margin-right: 5%; }
+    .footer__icon {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+      .footer__icon--fb {
+        background-image: url("./img/social-fb.svg"); }
+        .footer__icon--fb:hover {
+          background-image: url("./img/social-fb-hover.svg"); }
+      .footer__icon--tw {
+        background-image: url("./img/social-tw.svg"); }
+        .footer__icon--tw:hover {
+          background-image: url("./img/social-tw-hover.svg"); }
+      .footer__icon--insta {
+        background-image: url("./img/social-insta.svg"); }
+        .footer__icon--insta:hover {
+          background-image: url("./img/social-insta-hover.svg"); }
+      .footer__icon--gp {
+        background-image: url("./img/social-gp.svg"); }
+        .footer__icon--gp:hover {
+          background-image: url("./img/social-gp-hover.svg"); }
+      .footer__icon--ln {
+        background-image: url("./img/social-ln.svg"); }
+        .footer__icon--ln:hover {
+          background-image: url("./img/social-ln-hover.svg"); }
+      .footer__icon--pn {
+        background-image: url("./img/social-pn.svg"); }
+        .footer__icon--pn:hover {
+          background-image: url("./img/social-pn-hover.svg"); }
+    .footer__bottom {
+      text-align: center;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin-left: 0;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      width: 100%;
+      position: relative;
+      padding-top: 3rem;
+      border-top: 1px solid #F4F4F4; }
+      .footer__bottom > * {
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        display: block;
+        /* IE fix */
+        float: left;
+        width: 33.33333%;
+        margin-right: 0;
+        margin-left: 0; }
+    .footer__logo {
+      max-width: 5.5rem; }
+    .footer__copy {
+      width: auto; }
+      .footer__copy span {
+        font-weight: 600; }
+      .footer__copy a {
+        font-weight: 600;
+        color: #F4F4F4; }
+        .footer__copy a:hover {
+          color: #FAB525; }
+    .footer__contactData {
+      width: 70%; }
+      .footer__contactData a {
+        line-height: 1.5; } }
+
+/*
+*	Responsive Managment
+*   Desktop first !!!
+*   Taille en px / 16 = em
+*/
+@media screen and (min-width: 48rem) {
+  /*
+*	Description:    Fiche de style pour les écrans de 768px de large min
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .mc4wp-form__input--newsletter:focus {
+    border-color: #FAB525; }
+  .mc4wp-form-error .form__input--newsletter:focus {
+    border-color: #FAB525; }
+  .acf-fields div.acf-field div.acf-input input:focus, .acf-field div.acf-input textarea:focus {
+    outline: none;
+    border: 1px solid #FAB525; }
+  .acf-form-submit input:hover {
+    color: #323335;
+    background-color: #F4F4F4;
+    background-image: url("./img/icon-plane-black.png"); }
+  .blogCard__block:hover .blogCard__img {
+    transform: scale(1.05); }
+  .blogCard__block:hover .blogCard__legend {
+    width: 100%; }
+  .blogCard__block:hover .blogCard__arrow {
+    transform: translateX(0%);
+    transition-delay: 0.1s;
+    opacity: 1; }
+  .realisations__img {
+    transform: scale(1.01); }
+  .realisations__block:hover .realisations__img {
+    transform: scale(1.05); } }
+
+@media screen and (min-width: 105em) {
+  /*
+*	Description:    Fiche de style pour les écrans de 1480px de large min
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .container {
+    padding-left: 13%;
+    padding-right: 13%; }
+  .sections__slogan {
+    right: 13%; }
+  .services__elt {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    -ms-flex-align: center;
+        align-items: center; }
+    .services__elt > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0; }
+    .services__elt:nth-child(2n) {
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+  .services__img {
+    margin: 0 4.5rem; }
+  .services__legend {
+    text-align: left;
+    margin-top: 0; }
+  .services__description {
+    text-align: left; }
+  .about__section--achievements {
+    padding-left: 13%;
+    padding-right: 13%; }
+  .about__team {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: -2%;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    margin-left: 0; }
+    .about__team > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 31.33333%;
+      margin-right: 0;
+      margin-left: 2%; }
+  .about__memberWrap {
+    position: inherit;
+    bottom: auto; }
+  .about__member {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0;
+    -ms-flex-align: end;
+        align-items: flex-end;
+    margin-bottom: 2.5rem; }
+    .about__member > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0; }
+  .about__memberPicture {
+    width: 40%;
+    height: 100%;
+    transform: none; }
+  .about__memberLegend {
+    width: 60%;
+    min-width: 19rem;
+    position: inherit;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    opacity: 1; }
+  .about__memberName {
+    transform: none; }
+  .about__memberField {
+    transform: none; }
+  .contactWrap {
+    margin-left: 0; }
+  .contactCard {
+    margin-left: 0; }
+  .acf-map {
+    margin-left: 13%;
+    margin-right: 13%;
+    width: auto; } }
+
+@media screen and (max-width: 92.5em) {
+  /*
+*	Description:    Fiche de style pour les écrans de 1480px de large max
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .blogCard__legend {
+    width: 65%; }
+  .realisations__block--small .realisations__title {
+    font-size: 20px;
+    font-size: 2rem; } }
+
+@media screen and (max-width: 80em) {
+  /*
+*	Description:    Fiche de style pour les écrans de 1280px de large max
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .blogCard__infoWrap {
+    width: 92%; }
+  .blogCard__legend {
+    width: 75%; }
+  .blogCard__title {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .blogCard__arrow {
+    display: none; }
+  .realisations__arrow {
+    display: none; }
+  .services--botton {
+    display: block; }
+  .services__list--home {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: -5%; }
+    .services__list--home > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 45%;
+      margin-right: 0;
+      margin-left: 5%; }
+  .services__elt--home {
+    position: relative;
+    background-color: #F8F8FA;
+    border: 0.1rem solid #EEEEEE; }
+    .services__elt--home::after {
+      content: "";
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      display: block;
+      width: 3rem;
+      height: 1.5rem;
+      background-image: url("./img/arrow-black.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 1; }
+    .services__elt--home:hover .services__link {
+      background-color: #F8F8FA;
+      transform: scaleY(1); }
+    .services__elt--home:hover .services__img--home {
+      filter: none;
+      transform: scale(1); }
+    .services__elt--home:hover .services__legend--home {
+      transform: scaleY(1) translateY(0); }
+    .services__elt--home:hover .services__description--home {
+      transform: scaleY(1); }
+  .services__link {
+    padding: 4rem; }
+  .services__description--home {
+    position: inherit;
+    top: auto;
+    left: auto;
+    padding: 0;
+    margin-top: 2rem;
+    background-color: rgba(255, 255, 255, 0);
+    opacity: 1;
+    transform: scaleY(1); }
+    .services__description--home p {
+      opacity: 1; }
+  .flexContent__img--center {
+    width: 70%; }
+  .flexContent__textBlock--center {
+    width: 70%; }
+  .footer__bottom {
+    display: block; }
+  .footer__copy {
+    position: absolute;
+    top: 50%;
+    left: 7rem; }
+  .footer__contactData {
+    width: auto;
+    float: right; }
+  .contactData__elt {
+    margin-bottom: 1rem; }
+    .contactData__elt:last-child {
+      margin-bottom: 0; }
+  .form__label {
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .acf-fields .acf-field .acf-label label {
+    font-size: 18px;
+    font-size: 1.8rem; } }
+
+@media screen and (max-width: 66.875em) {
+  /*
+*	Description:    Fiche de style pour les écrans de 1070px de large max
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .blogCard__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0%;
+    width: 80%;
+    margin: 5% auto 2.5rem; }
+    .blogCard__container > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0%; }
+  .blogCard__legend {
+    width: 60%; }
+  .blogCard__infoWrap {
+    max-width: 36rem; }
+  .blogCard__title {
+    font-size: 20px;
+    font-size: 2rem; }
+  .blogCard__arrow {
+    display: block; }
+  .realisations__legend {
+    padding: 1.5rem 2rem; }
+  .realisations__title {
+    font-size: 20px;
+    font-size: 2rem; }
+  .realisations__tag {
+    font-size: 14px;
+    font-size: 1.4rem; }
+  .sections__list--home {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0;
+    background-color: #FAB525; }
+    .sections__list--home > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0; }
+  .sections__slogan {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .about__sliderImgContainer {
+    height: 45rem;
+    margin-bottom: 7rem; }
+  .about__sliderLinks {
+    position: absolute;
+    right: 4.5rem;
+    bottom: -8rem;
+    width: 45%; }
+  .form__label {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .acf-fields .acf-field .acf-label label {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .innerNav {
+    display: none; }
+  .flexContent__container {
+    width: 100%; } }
+
+@media screen and (max-width: 61.25em) {
+  /*
+*	Description:    Fiche de style pour les écrans de 980px de large max
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .toggle__logo {
+    top: 50%;
+    transform: translateY(-50%); }
+  .toggle__footer {
+    height: 10rem; }
+  .toggle__contactData {
+    width: auto;
+    float: right; }
+  .sections__slogan {
+    width: 50%; }
+  .realisations__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0;
+    width: 85%;
+    margin: 0 auto 4rem; }
+    .realisations__container > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; }
+  .realisations__title {
+    font-size: 32px;
+    font-size: 3.2rem; }
+  .realisations__tag {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .realisations__arrow {
+    display: block; }
+  .realisations__block--small .realisations__arrow {
+    display: none; }
+  .blogNav__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0; }
+    .blogNav__list > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 33.33333%;
+      margin-right: 0;
+      margin-left: 0; }
+  .blogNav__elt {
+    padding: 1rem 0; }
+    .blogNav__elt:nth-child(1) {
+      border-bottom: 1px solid #FFFFFF; }
+    .blogNav__elt:nth-child(2) {
+      border-bottom: 1px solid #FFFFFF; }
+    .blogNav__elt:nth-child(3) {
+      border-right: 1px solid #FFFFFF;
+      border-bottom: 1px solid #FFFFFF; }
+  .blogCard__container {
+    width: 85%; }
+  .blogCard__legend {
+    width: 70%; }
+  .about {
+    padding-top: 8rem; }
+    .about__introBcg {
+      position: inherit;
+      top: 0;
+      padding: 5rem; }
+    .about__introText {
+      width: 100%;
+      max-width: 100%; }
+    .about__sliderImgContainer {
+      display: none; }
+    .about__sliderContainer {
+      margin: auto 0; }
+    .about__sliderLinks {
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      position: inherit;
+      right: auto;
+      bottom: auto;
+      width: 100%;
+      margin-right: 0; }
+    .about__sliderLink {
+      margin: 2.5rem 2.5rem 0 0; }
+    .about__sliderImg {
+      opacity: 1;
+      cursor: auto; }
+    .about__memberName {
+      font-size: 20px;
+      font-size: 2rem; }
+    .about__memberField {
+      font-size: 13px;
+      font-size: 1.3rem; }
+  .contactWrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0%;
+    margin-left: 0; }
+    .contactWrap > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0%; }
+  .contactCard {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    width: 50rem;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin: 0 auto; }
+    .contactCard > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0; }
+    .contactCard__address {
+      max-width: 18rem;
+      margin-bottom: 0; }
+    .contactCard__img {
+      display: none; }
+  section.form {
+    width: 100%;
+    max-width: none;
+    padding-top: 2rem; }
+  .form__label {
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .acf-fields .acf-field .acf-label label {
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .cta--tertiary:hover {
+    background-color: #F4F4F4; }
+  .cta--primary:hover {
+    color: #F4F4F4;
+    border-color: #FAB525;
+    background-color: #FAB525; }
+  .cta--secondary:hover {
+    color: #F4F4F4;
+    border-color: #F4F4F4;
+    background-color: rgba(255, 255, 255, 0); }
+  .footer__bottom {
+    -ms-flex: none;
+        flex: none;
+    text-align: center; }
+  .footer__logo {
+    position: absolute;
+    -ms-flex: none;
+        flex: none;
+    float: none; }
+  .footer__copy {
+    position: inherit;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    -ms-flex: none;
+        flex: none;
+    float: none;
+    margin-bottom: 1rem; }
+  .footer__contactData {
+    display: inline-block;
+    float: none;
+    -ms-flex: none;
+        flex: none;
+    text-align: center; }
+  .footer__img {
+    width: 100%;
+    height: auto; } }
+
+@media screen and (max-width: 48em) {
+  /*
+*	Description:    Fiche de style pour les écrans de 768px de large max
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .realisations__container {
+    width: 90%; }
+  .realisations__legend {
+    padding: 1.5rem 2rem;
+    opacity: 1; }
+  .realisations__title {
+    font-size: 25px;
+    font-size: 2.5rem;
+    opacity: 1;
+    transform: translateY(0); }
+  .realisations__tag {
+    font-size: 16px;
+    font-size: 1.6rem;
+    opacity: 1;
+    transform: translateY(0); }
+  .realisations__arrow {
+    display: none; }
+  .blogCard__container {
+    width: 90%; }
+  .blogCard__title {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .blogCard__arrow {
+    display: none; }
+  .sections__list--home {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: -5%; }
+    .sections__list--home > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 28.33333%;
+      margin-right: 0;
+      margin-left: 5%; }
+  .sections__elt {
+    padding: 5.5rem; }
+  .sections__slogan {
+    position: inherit;
+    top: 0;
+    right: 0;
+    width: 80%;
+    margin: 0 auto 2.5rem;
+    text-align: center; }
+  .about__introText {
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .about__memberPicture {
+    transform: none; }
+  .about__memberLegend {
+    position: inherit;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    opacity: 1; }
+  .about__memberWrap {
+    position: inherit;
+    bottom: auto; }
+  .about__memberName {
+    transform: none; }
+  .about__memberField {
+    transform: none; }
+  .about__achievements {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0; }
+    .about__achievements > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0; }
+  .about__achievement {
+    padding: 4rem 3rem; }
+  .services__elt {
+    padding: 5.5rem 5.5rem; }
+  .form__label {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .acf-fields .acf-field .acf-label label {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .flexContent__imgCenter::after {
+    height: 20rem; }
+  .footer__cols--one {
+    width: 100%; }
+  .footer__cols--two {
+    width: 50%;
+    margin-left: 0; }
+  .footer__cols--three {
+    width: 40%; }
+  .footer__icon {
+    margin-right: 30%; }
+  .footer__img {
+    width: auto; } }
+
+@media screen and (max-width: 40em) {
+  /*
+*	Description:    Fiche de style pour les écrans de 640px de large max
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0; }
+    .menu > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0; }
+    .menu-item a {
+      padding: 3rem 0; }
+  .blogCard__container {
+    width: 100%; }
+  .blogCard__legend {
+    width: 80%; }
+  .realisations__container {
+    width: 100%; }
+  .realisations__tag {
+    font-size: 14px;
+    font-size: 1.4rem; }
+  .services__list--home {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0; }
+    .services__list--home > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; }
+  .services__elt {
+    padding: 4rem 3rem; }
+  .titleBlock .cta + .cta {
+    margin-top: 2rem; }
+  .form__label {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  div.acf-field {
+    width: 100%; }
+    div.acf-field-radio {
+      float: left;
+      width: 48.5%; }
+      div.acf-field-radio .acf-label {
+        width: 200%; }
+  div.acf-fields div.acf-field-date-picker {
+    margin-top: 3.4rem;
+    clear: none; }
+  div.acf-fields div.contactForm__field--website {
+    width: 100%; } }
+
+@media screen and (max-width: 36.25em) {
+  /*
+*	Description:    Fiche de style pour les écrans de 580px de large max
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .menu-item a {
+    padding: 1.5rem 0; }
+  .toggle__footer {
+    height: auto; }
+  .toggle__logo {
+    position: inherit;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    display: block;
+    margin-bottom: 2rem;
+    transform: translateY(0); }
+  .toggle__contactData {
+    float: none; }
+    .toggle__contactData__elt--addressDark {
+      width: 100%; }
+  .contactData {
+    text-align: center; }
+  .blogCard__legend {
+    width: 100%; }
+  .blogCard__infoWrap--big {
+    left: 2rem; }
+  .blogCard__infoWrap--small {
+    right: auto; }
+  .blogCard__title {
+    font-size: 14px;
+    font-size: 1.4rem; }
+  .blogCard__tag {
+    max-width: 80%; }
+  .realisations__title {
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .realisations__block--small .realisations__title {
+    font-size: 14px;
+    font-size: 1.4rem; }
+  .realisations__tag {
+    font-size: 12px;
+    font-size: 1.2rem; }
+  .services__elt {
+    width: 100%; }
+    .services__elt:nth-child(2n) {
+      margin: 0; }
+    .services__elt:last-child {
+      border-bottom: 0.2rem solid #323335; }
+  .services__textBlock {
+    margin: 0 auto; }
+  .about__sliderLink {
+    width: 47%; }
+    .about__sliderLink:nth-child(2n) {
+      margin-right: 0; }
+    .about__sliderLink:nth-child(2n + 1) {
+      margin-right: 5%; }
+  .about__introText {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .about__team {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0; }
+    .about__team > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; }
+  .about__member {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0;
+    -ms-flex-align: end;
+        align-items: flex-end;
+    margin-bottom: 2.5rem; }
+    .about__member > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0; }
+  .about__memberPicture {
+    width: 40%; }
+  .about__memberLegend {
+    width: 60%; }
+  .about__insta {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: -1%;
+    padding: 0 1%; }
+    .about__insta > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 49%;
+      margin-right: 0;
+      margin-left: 1%; }
+  .contactCard {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    width: 65%;
+    margin: 0 auto;
+    text-align: center; }
+    .contactCard > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; }
+    .contactCard__address {
+      text-align: center;
+      margin: 0 auto 2.5rem; }
+    .contactCard__img {
+      display: none; }
+  div.acf-fields div.acf-field.acf-field-file {
+    width: 100%; }
+  .flexContent__imgCenter::after {
+    height: 15rem; }
+  .flexContent__img--center {
+    width: 75%; }
+  .flexContent__textBlock--center {
+    width: 100%; }
+  .flexContent__textBlock--cols {
+    -moz-columns: 1;
+         columns: 1; }
+  .flexContent__twoCols {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0%; }
+    .flexContent__twoCols > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0%; }
+  .flexContent__imgBlock {
+    height: auto; }
+  .flexContent__imgText {
+    width: 100%;
+    height: auto; }
+    .flexContent__imgText--shortImg {
+      position: inherit;
+      left: auto;
+      transform: translateX(0); }
+  .flexContent__Elt {
+    display: block;
+    margin-bottom: 1rem; }
+    .flexContent__Elt::after {
+      content: ""; }
+  .notFound .feedback {
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .footer__logo {
+    position: inherit;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin: 0 auto 2rem; } }
+
+@media screen and (max-width: 30em) {
+  /*
+*	Description:    Fiche de style pour les écrans de 480px de large max
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0; }
+    .menu > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; }
+  .toggle__footer a {
+    line-height: 1.5; }
+  .titleBlock__title {
+    font-size: 35px;
+    font-size: 3.5rem; }
+  .cta {
+    display: block;
+    width: 100%; }
+    .cta__404 {
+      margin: 4.5rem auto 0; }
+      .cta__404 .cta {
+        width: 80%;
+        margin: 0 auto; }
+        .cta__404 .cta + .cta {
+          margin-left: auto;
+          margin-top: 2rem; }
+  .titleBlock--homepage {
+    margin-top: 10rem; }
+  .blogNav__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0; }
+    .blogNav__list > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0; }
+  .blogNav__elt:nth-child(4) {
+    border-bottom: 1px solid #FFFFFF; }
+  .blogNav__elt:nth-child(2) {
+    border-right: 1px solid #FFFFFF; }
+  .blogNav__elt:nth-child(3) {
+    border-right: none; }
+  .blogNav__elt:nth-child(4) {
+    border-right: 1px solid #FFFFFF; }
+  .blogCard__legend {
+    position: inherit;
+    width: 100%; }
+  .blogCard__infoWrap {
+    position: inherit;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    display: block; }
+  .blogCard__title {
+    font-size: 20px;
+    font-size: 2rem; }
+  .realisations__block {
+    position: relative;
+    margin-bottom: 2rem; }
+    .realisations__block--small {
+      width: 100%; }
+  .realisations__cols:nth-child(2) .realisations__block--small {
+    width: 100%; }
+  .realisations__legend {
+    position: inherit;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    padding: 1.5rem 1.5rem; }
+  .realisations__title {
+    font-size: 20px;
+    font-size: 2rem; }
+  .realisations__block--small .realisations__title {
+    font-size: 20px;
+    font-size: 2rem; }
+  .about__introBcg {
+    padding: 2.5rem; }
+  .about__achievement {
+    padding: 2 1.5rem 4.5rem; }
+  .about__achievementsIcon {
+    width: 100%; }
+  .about__insta {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: -2%;
+    padding: 0 2%; }
+    .about__insta > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 48%;
+      margin-right: 0;
+      margin-left: 2%; }
+  .contactCard {
+    width: 100%; }
+  .form__selectContainer--formSelect {
+    width: 100%; }
+  div.acf-field-radio {
+    width: 100%; }
+    div.acf-field-radio .acf-label {
+      width: 100%; }
+  div.acf-fields div.acf-field-date-picker {
+    margin-top: 0;
+    clear: both; }
+    div.acf-fields div.acf-field-date-picker.deadlineChecked {
+      width: 100%; }
+  div.acf-form-submit input {
+    width: calc( 100% - 5rem);
+    font-size: 18px;
+    font-size: 1.8rem; }
+  .flexContent__imgCenter::after {
+    height: 10rem; }
+  .flexContent__img--center {
+    width: 80%; }
+  .flexContent__textBlock--end {
+    margin-bottom: 4.5rem; }
+    .flexContent__textBlock--end:last-child {
+      margin-bottom: 0; }
+  .flexContent__Elt {
+    display: inline-block;
+    margin-bottom: 0; }
+    .flexContent__Elt::after {
+      content: "//"; }
+  .flexContent__colWrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0; }
+    .flexContent__colWrap > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; }
+  .footer__cols--two {
+    width: 100%; }
+  .footer__cols--three {
+    width: 100%;
+    margin-left: 0; } }
+
+@media screen and (max-width: 23.5em) {
+  /*
+*	Description:    Fiche de style pour les écrans de 400px de large max
+*	Version:        1.0 - 20/03/2017
+*	Author :        EXIT Studio
+*/
+  .about__member {
+    display: block;
+    width: 100%;
+    margin: 0 auto 2.5rem; }
+  .about__achievement {
+    padding: 4rem 3rem; }
+  .about__memberPicture {
+    width: 100%; }
+  .about__memberLegend {
+    width: 100%; }
+  .place-card {
+    width: 26.5rem; }
+    .place-card .navigate {
+      width: 4rem; }
+      .place-card .navigate .navigate {
+        width: auto; }
+  .flexContent__Elt {
+    display: block;
+    margin-bottom: 1rem; }
+    .flexContent__Elt::after {
+      content: ""; }
+  .flexContent__colWrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-left: 0; }
+    .flexContent__colWrap > * {
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+      display: block;
+      /* IE fix */
+      float: left;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }

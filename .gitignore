@@ -1,3 +1,9 @@
-node_modules
-build
-.htaccess
+/*
+!wp-content/
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/Mucht/
+wp-content/themes/Mucht/node_modules
+wp-content/themes/Mucht/build
+wp-content/themes/Mucht/.htaccess
