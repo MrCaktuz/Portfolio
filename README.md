@@ -6,3 +6,4 @@
 
 ##Current state
 > Integration without CMS for the moment.
+> Migrating to wordpress.
