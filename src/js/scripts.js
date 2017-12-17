@@ -8,6 +8,7 @@ jQuery( document ).ready( function($) {
 		windowWidth = $( window ).width(),
 		windowHeight = $( window ).height(),
 		footerHeight = $('.footer').height();
+		skrollrInit(windowWidth);
 	} );
 
 	// ******** Navigation managment ********
@@ -49,6 +50,10 @@ jQuery( document ).ready( function($) {
 	}
 
 	// ******** Parallax effects ********
-	var s = skrollr.init();
+	function skrollrInit(width){
+		if ( width > 980 ) {
+			var s = skrollr.init();
+		}
+	} skrollrInit(windowWidth);
 	
 } );
