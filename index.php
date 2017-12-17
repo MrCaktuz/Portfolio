@@ -30,10 +30,10 @@
 	<meta name="description" content="Personal website of Mathieu Claessens web developper and designer">
 	<meta author="Mucht">
 
-    <title>Mathieu Claessens - Front-End Developer &  Web Designer</title>
+    <title>Mathieu Claessens - Web Developer</title>
 </head>
 <body>
-	<h1 class="sr-only">Mathieu Claessens - Front-End Developer & Web Designer</h1>
+	<h1 class="sr-only">Mathieu Claessens - Web Developer</h1>
 	<nav class="navigation">
 		<h2 class="sr-only">Navigation</h2>
 		<a class="navigation-button" href="#" title="Open the menu">
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<div class="about-text">
-				<h2 class="about-title"><span class="about-title-name"><span class="about-title-fname">Mathieu</span> <span class="about-title-lname">Claessens</span></span> <span class="about-title-function">Front-End Developer & Web Designer</span></h2>
+				<h2 class="about-title"><span class="about-title-name"><span class="about-title-fname">Mathieu</span> <span class="about-title-lname">Claessens</span></span> <span class="about-title-function">Web Developer</span></h2>
 				<div class="about-intro">My perfect day is made of some music to set the mood, a big smile to lighten the room, a project to work on, one or two burgers to stay fit and some dad's jokes to laugh at least 10 times a day.</div>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 		<div class="section-wrap portfolio-content">
 			<article class="portfolio-project" data-bottom-top="transform: translateX(-60%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
 				<a href="/sbphoto.php" class="portfolio-project-link" title="Go to the projet's page">
-					<h3 class="portfolio-project-title">Sophie Bernard Photography<span class="portfolio-project-role">Development & Design</span></h3>
+					<h3 class="portfolio-project-title">SB Photography<span class="portfolio-project-role">Development & Design</span></h3>
 					<img class="portfolio-project-img" src="/build/img/portfolio/sbPhoto/sbPhoto.jpg" srcset="/build/img/portfolio/sbPhoto/sbPhoto-320.jpg 320w, /build/img/portfolio/sbPhoto/sbPhoto-440.jpg 440w" alt="Image du projet du Sophie Bernard Photography">
 				</a>
 			</article>
