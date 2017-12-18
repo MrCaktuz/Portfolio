@@ -35,7 +35,7 @@ jQuery( document ).ready( function($) {
     });
 
     // ******** Available button ********
-    if ( windowWidth > 980 ) {
+    if ( windowWidth >= 980 ) {
 	    $('.about-logo-wrap').mouseover(function(e) {
 			$('.about-logo-available').html('Get in touch');
 		} ).mouseleave(function(e){
@@ -44,14 +44,14 @@ jQuery( document ).ready( function($) {
 	}
 
 	// ******** Manage study cases section height ********
-	if ( windowWidth > 980 ) {
+	if ( windowWidth >= 980 ) {
 		var studyCaseHeight = windowHeight - footerHeight;
 	    $('.studyCase').css('min-height', studyCaseHeight);
 	}
 
 	// ******** Parallax effects ********
 	function skrollrInit(width){
-		if ( width > 980 ) {
+		if ( width >= 980 ) {
 			var s = skrollr.init();
 		}
 	} skrollrInit(windowWidth);
