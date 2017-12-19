@@ -10,8 +10,6 @@
 	$fname 			= get_field('fname', 'option');
 	$lname 			= get_field('lname', 'option');
 	$description 	= get_field('description', 'option');
-	$phone 			= get_field('phone', 'option');
-	$mail 			= get_field('mail', 'option');
 	$github 		= get_field('link_github', 'option');
 	$instagram 		= get_field('link_insta', 'option');
 	$linkedin 		= get_field('link_linkedin', 'option');

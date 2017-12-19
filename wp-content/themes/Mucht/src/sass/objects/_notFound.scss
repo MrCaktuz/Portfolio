@@ -1,0 +1,34 @@
+/*
+ *	Description:    Stylesheet for the 404 page content
+ *	File:    		_notFound.scss
+ *	Version:        1.0 - 19/12/2017
+ *	Author :        Mucht - claessens.mathieu@gmail.com
+*/
+
+.notFound{
+	animation-name: animationPage;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	&-content{
+		display: block;
+		max-width: 44rem;
+		margin: 0 auto;
+	}
+	&-description{
+		@include font-size(1.6);
+		font-weight: $light;
+		line-height: 1.5;
+		text-align: center;
+	}
+	&-link{
+		max-width: 28rem;
+		margin-top: 5rem;
+		margin-bottom: 10rem;
+	}
+}
+
+// ******** Animation settup ********
+@keyframes animationPage {
+    0%   {opacity: 0;}
+    100%  {opacity: 1;}
+}

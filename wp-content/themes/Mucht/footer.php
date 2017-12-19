@@ -1,3 +1,8 @@
+<?php
+	// ******** Variables ********
+	$phone 	= get_field('phone', 'option');
+	$mail 	= get_field('mail', 'option');
+?>
 	<footer class="footer">
 		<div class="footer-wrap">
 			<a class="footer-phone" href="tel:+32476524285" title="Call me"><?php echo $phone; ?></a>
