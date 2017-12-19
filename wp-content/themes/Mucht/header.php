@@ -27,5 +27,11 @@
 	<meta name="description" content="Personal website of Mathieu Claessens web developper and designer">
 	<meta author="Mucht">
 	<?php session_start(); ?>
-    <title><?php wp_title(''); ?></title>
+    <?php if( is_front_page() ): ?>
+    	<title><?php bloginfo('title'); ?></title>
+    <?php elseif ( is_404() ) : ?>
+    	<title>Page non trouvée - <?php bloginfo('title'); ?></title>
+    <?php else : ?>
+    	<title>Study case - <?php the_title(); ?> - <?php bloginfo('title'); ?></title>
+    <?php endif; ?>
 </head>

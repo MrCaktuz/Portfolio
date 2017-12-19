@@ -64,9 +64,9 @@
 				$i = 0;
                 $posts = new WP_QUERY( [ 'post_type' => 'projet' ] );
                 if ( $posts -> have_posts() ): while ( $posts -> have_posts() ): $posts -> the_post();
-                	$thumbnail_src = get_the_post_thumbnail_url();
-                	$thumbnail_clean_url = str_replace('.jpg', '', $thumbnail_src);
-                	$srcset = $thumbnail_clean_url . '-320x150.jpg 320w, ' . $thumbnail_clean_url . '-440x150.jpg 440w, ' . $thumbnail_clean_url . '-600x150.jpg 600w';
+                	$thumbnail_src 			= get_the_post_thumbnail_url();
+                	$thumbnail_clean_url 	= str_replace('.jpg', '', $thumbnail_src);
+                	$srcset 				= $thumbnail_clean_url . '-320x150.jpg 320w, ' . $thumbnail_clean_url . '-440x150.jpg 440w, ' . $thumbnail_clean_url . '-600x150.jpg 600w';
             ?>
                 <?php if( $i%2 == 0 ): ?>
 					<article class="portfolio-project" data-bottom-top="transform: translateX(-10%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
@@ -89,24 +89,31 @@
 	<section class="section experience" id="experience">
 		<h2 class="section-title">Experience</h2>
 		<div class="section-wrap experience-content">
-			<article class="experience-elt" data-bottom-top="transform: translateX(10%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
-				<p class="experience-date">Mai 2017 - September 2017</p>
-				<h3 class="experience-title">RBC Ciney</h3>
-				<p class="experience-job">Website</p>
-				<p class="experience-description">As my end of studies project, I made the web site from scratch for my basketball club.</p>
-			</article>
-			<article class="experience-elt" data-bottom-top="transform: translateX(-10%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
-				<p class="experience-date">September 2014 - September 2017</p>
-				<h3 class="experience-title">Haute École de  la Province de Liège (HEPL)</h3>
-				<p class="experience-job">Web dev & design studies</p>
-				<p class="experience-description">Graduated a three-year studies in Web development and design with distinction</p>
-			</article>
-			<article class="experience-elt" data-bottom-top="transform: translateX(10%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
-				<p class="experience-date">February 2017 - Mai 2017</p>
-				<h3 class="experience-title">EXIT Studio</h3>
-				<p class="experience-job">Internship Front-End Developer & Designer</p>
-				<p class="experience-description">Integration of the agency’s website using the CMS Wordpress</p>
-			</article>
+			<?php
+				$i = 0;
+                $posts = new WP_QUERY( [ 'post_type' => 'experience' ] );
+                if ( $posts -> have_posts() ): while ( $posts -> have_posts() ): $posts -> the_post();
+                	$start	= ucfirst(get_field('start'));
+                	$end	= ucfirst(get_field('end'));
+                	$activity	= get_field('activity');
+                	$description	= get_field('description');
+            ?>
+                <?php if( $i%2 == 0 ): ?>
+					<article class="experience-elt" data-bottom-top="transform: translateX(10%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
+						<p class="experience-date"><?php echo $start; ?> - <?php echo $end; ?></p>
+						<h3 class="experience-title"><?php the_title(); ?></h3>
+						<p class="experience-job"><?php echo $activity; ?></p>
+						<p class="experience-description"><?php echo $description; ?></p>
+					</article>
+				<?php else: ?>
+            		<article class="experience-elt" data-bottom-top="transform: translateX(-10%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
+						<p class="experience-date"><?php echo $start; ?> - <?php echo $end; ?></p>
+						<h3 class="experience-title"><?php the_title(); ?></h3>
+						<p class="experience-job"><?php echo $activity; ?></p>
+						<p class="experience-description"><?php echo $description; ?></p>
+					</article>
+                <?php endif; ?>
+            <?php $i++; endwhile; endif; ?>
 			<a href="/resume.pdf" class="experience-resume btn btn-secondary" title="Download my resume" target="_blanc">Download my resume (fr)</a>
 		</div>
 	</section>
@@ -154,21 +161,9 @@
 			</form>
 		</div>
 	</section>
-</body>
-<footer class="footer">
-	<div class="footer-wrap">
-		<a class="footer-phone" href="tel:+32476524285" title="Call me"><?php echo $phone; ?></a>
-		<div class="footer-logo-border">
-			<svg class="footer-logo-content" version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="123px" viewBox="0 0 500 360.56" enable-background="new 0 0 500 360.56" xml:space="preserve">
-				<path fill="#FAFAFA" d="M354.869,88.996c11.027-10.148,23.902-16.286,37.818-16.286c21.918,0,41.189,9.143,61.309,31.086 L499,59.134C472.585,23.482,434.799,1,392.687,1c-28.842,0-58.962,9.437-78.201,28.657L172.121,172.273L1,1v358.56h72.261V173.259 l98.028,98.27L354.869,88.996z"/>
-				<path fill="#F58020" d="M382.765,286.848c-39.38,0-71.263-46.951-72.104-105.273l-62.373,61.9 c20.861,67.17,72.976,115.086,134.476,115.086c47.125,0,88.853-28.106,115.235-71.403l-45.004-44.539 C430.53,269.512,409.144,286.848,382.765,286.848z"/>
-			</svg>
-		</div>
-		<a class="footer-mail" href="mailto:mucht@mathieuclaessens.be" title="Send me an email"><?php echo $mail; ?></a>
-	</div>
-</footer>
-
-</html>
 <?php
 	get_footer();
+	unset( $_SESSION['errors'] );
+    unset( $_SESSION['success'] );
+    unset( $_SESSION['data'] );
 ?>
