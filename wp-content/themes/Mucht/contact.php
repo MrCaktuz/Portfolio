@@ -29,6 +29,6 @@ if ( !empty($errors) ) {
 } else {
     $_SESSION['success'] = 'Thanks for your message. You will hear from me soon';
     $headers = 'FROM: ' . $name . '<' . $email . '>';
-    mail( 'mucht@mathieuclaessens.be.be', 'Pro - ' . $name, $message, $headers );
+    mail( 'mucht@mathieuclaessens.be', 'Pro - ' . $name, $message, $headers );
     header( 'Location: /#contact' );
 }
