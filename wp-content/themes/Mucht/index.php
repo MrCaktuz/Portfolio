@@ -13,6 +13,7 @@
 	$github 		= get_field('link_github', 'option');
 	$instagram 		= get_field('link_insta', 'option');
 	$linkedin 		= get_field('link_linkedin', 'option');
+	$resume 		= get_field('resume_file', 'option');
 ?>
 <body>
 	<h1 class="sr-only"><?php echo $title; ?> - <?php echo $slogan; ?></h1>
@@ -112,7 +113,7 @@
 					</article>
                 <?php endif; ?>
             <?php $i++; endwhile; endif; ?>
-			<a href="http://portfolio.dev/wp-content/uploads/2017/12/resume.pdf" class="experience-resume btn btn-secondary" title="Download my resume" target="_blanc">Download my resume (fr)</a>
+			<a href="<?php echo $resume; ?>" class="experience-resume btn btn-secondary" title="Download my resume" target="_blanc">Download my resume (fr)</a>
 		</div>
 	</section>
 	<section class="section contact" id="contact">
