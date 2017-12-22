@@ -66,6 +66,11 @@
 			color: $lightBlue;
 		}
 	}
+	&-link{
+		&:hover{
+			color: $lightBlue;
+		}
+	}
 }
 
 // ******** About section ********
@@ -174,15 +179,4 @@
 // ******** Footer ********
 .footer{
 	padding: 2.5rem 5rem;
-	&-phone{
-		left: 5rem;
-	}
-	&-mail{
-		right: 5rem;
-	}
-	&-phone, &-mail{
-		&:hover{
-			color: $lightBlue;
-		}
-	}
 }

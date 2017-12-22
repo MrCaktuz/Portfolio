@@ -31,6 +31,10 @@
             transform: translateX(-50%);
         }
     }
+    &-link{
+        font-weight: $bold;
+        transition: $mainTrans;
+    }
     &-next{
         @include font-size(1.4);
         position: absolute;

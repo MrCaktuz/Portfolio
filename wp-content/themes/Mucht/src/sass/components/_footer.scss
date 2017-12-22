@@ -14,9 +14,6 @@
 		background: rgb(38,50,56);
 		background: linear-gradient(to left, rgba(38,50,56,1) 0%,rgba(48,68,73,1) 50%,rgba(38,50,56,1) 100%);
 	}
-	&-phone{
-		display: none;
-	}
 	&-logo{
 		&-border{
 			position: absolute;
@@ -37,8 +34,5 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 		}
-	}
-	&-mail{
-		display: none;
 	}
 }
