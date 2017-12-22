@@ -105,4 +105,9 @@
     add_image_size('project_lg', 600, 150, true);
     add_image_size('project_md', 440, 150, true);
     add_image_size('project_sm', 320, 150, true);
+
+    /****** REGISTER GOOGLE API KEY FOR Google Map in admin ******/
+    add_filter('acf/settings/google_api_key', function() {
+        return 'AIzaSyBQEZb3GTMAmhWy7kP77WP-eZ8t1oWfYmM';
+    });
 ?>

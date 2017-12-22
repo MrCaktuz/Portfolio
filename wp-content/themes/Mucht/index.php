@@ -16,6 +16,7 @@
 	$phone 			= get_field('phone', 'option');
 	$mail 			= get_field('mail', 'option');
 	$resume 		= get_field('resume_file', 'option');
+	$form 		= get_field('form', 'option');
 ?>
 <body>
 	<h1 class="sr-only"><?php echo $title; ?> - <?php echo $slogan; ?></h1>
@@ -121,8 +122,7 @@
 	<section class="section contact" id="contact">
 		<h2 class="section-title">Get in touch</h2>
 		<div class="section-wrap contact-content">
-			<p class="contact-intro">Send me a message with this contact form if you want to start a new project, a new collaboration or send a dad's joke to contribute to my 10 laugh a day therapy. You can also send me an email at <a class="section-link" href="mailto:<?php echo $mail; ?>" title="Send me an email"><?php echo $mail; ?></a></p>
-			<?php echo FrmFormsController::show_form(2, $key = '', $title=true, $description=true); ?>
+			<?php echo $form; ?>
 		</div>
 	</section>
 
