@@ -49,6 +49,11 @@ jQuery( document ).ready( function($) {
 	    $('.studyCase').css('min-height', studyCaseHeight);
 	}
 
+	// ******** Form Submition ********
+	$('#contact-form-submit').click(function(e) {
+		window.location.href = "/#contact";
+	} );
+
 	// ******** Parallax effects ********
 	function skrollrInit(width){
 		if ( width >= 980 ) {
