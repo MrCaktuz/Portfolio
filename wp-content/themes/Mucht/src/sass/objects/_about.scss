@@ -84,19 +84,19 @@
 					opacity: 0;
 				}
 				&-git{
-					background-image: url('/build/img/icons/git.png');
+					background-image: url('../img/icons/git.png');
 					&::after{
 						content: "Github";
 					}
 				}
 				&-insta{
-					background-image: url('/build/img/icons/insta.png');
+					background-image: url('../img/icons/insta.png');
 					&::after{
 						content: "Instagram";
 					}
 				}
 				&-in{
-					background-image: url('/build/img/icons/in.png');
+					background-image: url('../img/icons/in.png');
 					&::after{
 						content: "Linkedin";
 					}
