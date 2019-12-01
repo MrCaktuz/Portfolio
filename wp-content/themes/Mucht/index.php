@@ -96,9 +96,12 @@
                 $posts = new WP_QUERY( [ 'post_type' => 'experience' ] );
                 if ( $posts -> have_posts() ): while ( $posts -> have_posts() ): $posts -> the_post();
                 	$start	= ucfirst(get_field('start'));
-                	$end	= ucfirst(get_field('end'));
+                	$end	= "Actuellement";
                 	$activity	= get_field('activity');
-                	$description	= get_field('description');
+					$description	= get_field('description');
+					if (ucfirst(get_field('end')) !== "") {
+						$end = ucfirst(get_field('end'));
+					}
             ?>
                 <?php if( $i%2 == 0 ): ?>
 					<article class="experience-elt" data-bottom-top="transform: translateX(10%); opacity: 0;" data--250-bottom-top="transform: translateX(0%); opacity: 1;">
