@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::before{
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  mask-image: url('/icons/bg_pattern.png');
+  mask-repeat: repeat;
+  mask-position: center;
+  mask-size: 2rem;
+  background: radial-gradient(circle 15rem at var(--pointerX) var(--pointerY), theme(colors.material.DEFAULT) 0%, theme(colors.material.dark) 100%);
+}
