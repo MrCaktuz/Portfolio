@@ -6,7 +6,7 @@ import { useCookies } from "react-cookie";
 import Loader from "@/components/utils/loader";
 import PostSection from "@/components/posts/Section";
 import BrandLogo from "@/components/icons/BrandLogo";
-import styles from "@/styles/page.module.css";
+import styles from "@/styles/nav.module.css";
 
 export default function Home() {
   const [cookies] = useCookies(["locale"]);
@@ -54,7 +54,7 @@ export default function Home() {
             </h1>
             <p className="text-material-light">{pageContent?.catch_phrase}</p>
           </div>
-          <div className="hidden sticky justify-end top-20 col-span-2 md:inline-block md:col-start-1 md:col-end-1">
+          <div className="hidden sticky justify-end top-20 col-span-2 md:inline-block md:col-start-1 md:col-end-1 md:self-start">
             <nav className={styles.mainNav} aria-labelledby="mainmenulabel">
               <h2 id="mainmenulabel" className="sr-only">
                 Main Menu

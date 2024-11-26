@@ -12,6 +12,7 @@ const postSchema = new Schema(
     tags: String,
     main_link: String,
     section_title: String,
+    section_key: String,
   },
   {
     timestamps: true,

@@ -24,10 +24,10 @@ export default {
         },
       },
       gridTemplateColumns: {
-        homeLayout: "30% 1fr",
+        homeLayout: "auto 1fr",
       },
       gridTemplateRows: {
-        homeLayout: "auto auto 1fr",
+        homeLayout: "auto 1fr",
       },
     },
   },

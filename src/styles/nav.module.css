@@ -5,23 +5,24 @@
 .mainNav ul li a::after {
   content: "";
   display: block;
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   position: absolute;
-  right: 100%;
+  right: 9.5rem;
+  left: auto;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  background-color: var(--color-material-blue);
-  border: 3px solid var(--color-material-dark);
+  background-color: var(--color-material-light);
+  border: 4px solid var(--color-material-dark);
   transition: var(--transition-base);
 }
 
 .mainNav ul li a:hover::after,
 .mainNav ul li a:focus::after,
 .mainNav ul li a:focus-visible::after {
-  right: 11.5rem;
-  left: auto;
+  right: 100%;
+  background-color: var(--color-material-orange);
 }
 
 .mainNav ul li a::before {
@@ -30,15 +31,15 @@
   position: absolute;
   height: 1px;
   right: 100%;
-  left: 0;
+  left: calc(100% - 9.5rem);
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--color-material-white);
+  background-color: var(--color-material-light);
   transition: var(--transition-base);
 }
 
 .mainNav ul li a:hover::before,
 .mainNav ul li a:focus::before,
 .mainNav ul li a:focus-visible::before {
-  left: calc(100% - 11.5rem);
+  left: 0;
 }
