@@ -24,12 +24,6 @@ const LangSwitcher = () => {
 
   useEffect(() => {
     setNextLocale(getNextLocaleValue(cookies.locale));
-    // const availableLangs = [...ENV.AVAILABLE_LANGS];
-    // const currentLocaleIndex = availableLangs.indexOf(cookies.locale);
-    // availableLangs.splice(currentLocaleIndex, 1);
-    // const nextValue = availableLangs[0];
-
-    // setNextLocale(nextValue);
   }, [cookies.locale]);
 
   const switchLocale = () => {
@@ -38,7 +32,7 @@ const LangSwitcher = () => {
 
   return (
     <button
-      className="bg-material p-2 rounded-bl-md absolute top-0 right-0 bold uppercase transition-all ease-in-out  hover:bg-material-light hover:text-material-dark"
+      className="bg-material flex justify-center items-center size-12 rounded-full rounded-tr-none md:rounded-tr-full md:rounded-tl-none fixed top-0 right-0 md:right-auto md:left-0 bold uppercase transition-all ease-in-out md:hover:bg-material-light md:hover:text-material-dark"
       onClick={switchLocale}
     >
       {nextLocale}

@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --transition-base: all .2s ease-in-out;
+    --pointerX: 50%;
+    --pointerY: 50%;
+    --color-material-white: #EDF0F2;
+    --color-material-orange: #F58020;
+    --color-material-blue: #99DBF6;
+    --color-material-light: #879BA6; /* #78909C */
+    --color-material: #37474F;
+    --color-material-dark: #263238;
+  }
+}
+
 body::before{
   content: "";
   display: block;
@@ -15,5 +29,9 @@ body::before{
   mask-repeat: repeat;
   mask-position: center;
   mask-size: 2rem;
-  background: radial-gradient(circle 15rem at var(--pointerX) var(--pointerY), theme(colors.material.DEFAULT) 0%, theme(colors.material.dark) 100%);
+  background: radial-gradient(circle 15rem at var(--pointerX) var(--pointerY), theme(colors.material.DEFAULT) 30%, theme(colors.material.dark) 100%);
+}
+
+a, a:focus, a:focus-visible {
+  outline-color: transparent;
 }

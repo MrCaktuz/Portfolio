@@ -1,6 +1,10 @@
-.brand {
-  mask: url("../../public/icons/logo.png");
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  mask-position: center;
+.loader::after {
+  background-image: conic-gradient(var(--color-material) 75%, var(--color-material-light));
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        transform:rotate(360deg); 
+    } 
 }

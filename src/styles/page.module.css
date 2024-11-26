@@ -1,10 +1,44 @@
-.homePage {
-  background-image: linear-gradient(
-    to right bottom,
-    #90e0ef,
-    #87ccff,
-    #beabfd,
-    #f682c5,
-    #ff6b6b
-  );
+.mainNav a, .mainNav a:focus, .mainNav a:focus-visible {
+  outline: none;
+}
+
+.mainNav ul li a::after {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: var(--color-material-blue);
+  border: 3px solid var(--color-material-dark);
+  transition: var(--transition-base);
+}
+
+.mainNav ul li a:hover::after,
+.mainNav ul li a:focus::after,
+.mainNav ul li a:focus-visible::after {
+  right: 11.5rem;
+  left: auto;
+}
+
+.mainNav ul li a::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 1px;
+  right: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-material-white);
+  transition: var(--transition-base);
+}
+
+.mainNav ul li a:hover::before,
+.mainNav ul li a:focus::before,
+.mainNav ul li a:focus-visible::before {
+  left: calc(100% - 11.5rem);
 }
