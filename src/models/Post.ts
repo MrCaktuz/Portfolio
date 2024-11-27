@@ -2,7 +2,6 @@ import mongoose, { Schema, models } from "mongoose";
 
 const postSchema = new Schema(
   {
-    owner: String,
     lang: String,
     title: String,
     from: String,
@@ -11,8 +10,7 @@ const postSchema = new Schema(
     description: String,
     tags: String,
     main_link: String,
-    section_title: String,
-    section_key: String,
+    section_id: String,
   },
   {
     timestamps: true,

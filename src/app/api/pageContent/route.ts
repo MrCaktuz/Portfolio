@@ -8,13 +8,11 @@ export async function GET() {
   const locale = await getLocale();
   await connectDB();
   let PageContentData = await PageContent.find({
-    owner: ENV.OWNER,
     lang: locale,
   });
 
   if (!PageContentData.length && locale !== ENV.DEFAULT_LANG) {
     PageContentData = await PageContent.find({
-      owner: ENV.OWNER,
       lang: ENV.DEFAULT_LANG,
     });
   }
@@ -28,7 +26,6 @@ export async function POST(request: NextRequest) {
     const { lang, title, job_title, catch_phrase, description } =
       await request.json();
     await PageContent.create({
-      owner: ENV.OWNER,
       lang,
       title,
       job_title,

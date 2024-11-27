@@ -1,7 +1,6 @@
 export const ENV = {
   MONGODB_URI: process.env.MONGODB_URI,
   BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
-  OWNER: process.env.NEXT_PUBLIC_OWNER,
   DEFAULT_LANG: process.env.NEXT_PUBLIC_DEFAULT_LANG,
   AVAILABLE_LANGS: process.env.NEXT_PUBLIC_AVAILABLE_LANGS?.split("|"),
 };
@@ -19,4 +18,18 @@ export const initBgChangeOnMousemove = () => {
       `${oEvent.clientY}px`,
     );
   });
+};
+
+export const scrollObserver = (elms) => {
+  const intObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("onScreen");
+      } else {
+        entry.target.classList.remove("onScreen");
+      }
+    });
+  });
+
+  elms.forEach((elm) => intObserver.observe(elm));
 };

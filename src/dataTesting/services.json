@@ -1,0 +1,98 @@
+{
+  "0":{
+    "lang":"en",
+    "title":"A front-end dev",
+    "to":"",
+    "from":"",
+    "order":"1",
+    "description":"I can jump in and adapt to your stack in no time, whether you already have a web app or need me to create one from scratch.",
+    "tags":"",
+    "main_link":"",
+    "section_title":"What do you need&nbsp;?",
+    "section_nav_label":"Services"
+  },
+  "1": {
+    "lang":"en",
+    "title":"A team leader",
+    "to":"",
+    "from":"",
+    "order":"2",
+    "description":"My leadership, communication skills, and technical background make me the perfect fit to lead a team to success.",
+    "tags":"",
+    "main_link":"",
+    "section_title":"What do you need&nbsp;?",
+    "section_nav_label":"Services"
+  },
+  "2": {
+    "lang":"en",
+    "title":"An accessibility expert",
+    "to":"",
+    "from":"",
+    "order":"3",
+    "description":"Today’s web must be accessible to everyone. I can analyze your website to provide tips and upgrades for a better level of accessibility for a better UX.",
+    "tags":"",
+    "main_link":"",
+    "section_title":"What do you need&nbsp;?",
+    "section_nav_label":"Services"
+  },
+  "3": {
+    "lang":"en",
+    "title":"An integrator",
+    "to":"",
+    "from":"",
+    "order":"2",
+    "description":"My attention to detail and meticulous mind make me a perfect fit to integrate even the most complex designs. From screens to complete design systems, I do it all.",
+    "tags":"",
+    "main_link":"",
+    "section_title":"What do you need&nbsp;?",
+    "section_nav_label":"Services"
+  },
+"4":{
+    "lang":"fr",
+    "title":"Un dev front-end",
+    "to":"",
+    "from":"",
+    "order":"1",
+    "description":"Je peux intervenir et m'adapter à votre stack en un rien de temps, que vous ayez déjà une application web ou que vous ayez besoin que j'en crée une de zéro.",
+    "tags":"",
+    "main_link":"",
+    "section_title":"De quoi avez vous besoin&nbsp;?",
+    "section_nav_label":"Services"
+  },
+  "5": {
+    "lang":"fr",
+    "title":"Un chef d'équipe",
+    "to":"",
+    "from":"",
+    "order":"2",
+    "description":"Mon leadership, mes compétences en communication et mon expertise technique font de moi le candidat idéal pour mener une équipe vers le succès.",
+    "tags":"",
+    "main_link":"",
+    "section_title":"De quoi avez vous besoin&nbsp;?",
+    "section_nav_label":"Services"
+  },
+  "6": {
+    "lang":"fr",
+    "title":"Un expert en accessibilité",
+    "to":"",
+    "from":"",
+    "order":"3",
+    "description":"Le web d’aujourd’hui doit être accessible à tous. Je peux analyser votre site pour fournir des conseils et des améliorations afin d’assurer un meilleur niveau d’accessibilité et une expérience utilisateur (UX) optimisée.",
+    "tags":"",
+    "main_link":"",
+    "section_title":"De quoi avez vous besoin&nbsp;?",
+    "section_nav_label":"Services"
+  },
+  "7": {
+    "lang":"fr",
+    "title":"Un intégrateur",
+    "to":"",
+    "from":"",
+    "order":"2",
+    "description":"Mon attention aux détails et mon esprit méticuleux font de moi un candidat idéal pour intégrer même les conceptions les plus complexes. Des écrans aux systèmes de design complets, je gère tout.",
+    "tags":"",
+    "main_link":"",
+    "section_title":"De quoi avez vous besoin&nbsp;?",
+    "section_nav_label":"Services"
+  }
+}

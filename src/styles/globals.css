@@ -34,8 +34,13 @@
   }
   .observedElements {
     opacity: 0;
-    transform: translateX(100%);
     transition: all 1s ease-in-out;
+  }
+  .observedElements.right {
+    transform: translateX(100%);
+  }
+  .observedElements.left {
+    transform: translateX(-100%);
   }
   .observedElements.onScreen {
     opacity: 1;

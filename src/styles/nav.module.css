@@ -1,3 +1,14 @@
+/* .mainNav {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.mainNav.loaded {
+  opacity: 1;
+  transform: translateX(0%);
+} */
+
 .mainNav a, .mainNav a:focus, .mainNav a:focus-visible {
   outline: none;
 }

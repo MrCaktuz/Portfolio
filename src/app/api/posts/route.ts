@@ -8,13 +8,11 @@ export async function GET() {
   const locale = await getLocale();
   await connectDB();
   let Posts = await Post.find({
-    owner: ENV.OWNER,
     lang: locale,
   });
 
   if (!Posts.length && locale !== ENV.DEFAULT_LANG) {
     Posts = await Post.find({
-      owner: ENV.OWNER,
       lang: ENV.DEFAULT_LANG,
     });
   }
@@ -35,10 +33,9 @@ export async function POST(request: NextRequest) {
       description,
       tags,
       main_link,
-      section_title,
+      section_id,
     } = await request.json();
     await Post.create({
-      owner: ENV.OWNER,
       lang,
       title,
       from,
@@ -47,7 +44,7 @@ export async function POST(request: NextRequest) {
       description,
       tags,
       main_link,
-      section_title,
+      section_id,
     });
 
     return NextResponse.json(

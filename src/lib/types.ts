@@ -1,15 +1,11 @@
 export interface PageContentType {
   _id: string;
-  owner: string;
   title: string;
-  job_title: string;
-  catch_phrase: string;
-  description: string;
+  subtitle: string;
 }
 
 export interface PostType {
   _id: string;
-  owner: string;
   lang: string;
   title: string;
   from: string;
@@ -19,4 +15,15 @@ export interface PostType {
   tags: string;
   main_link: string;
   section_title: string;
+  section_nav_lable: string;
+}
+
+export interface SectionType {
+  _id: string;
+  order: number;
+  section_id: string;
+  title_fr: string;
+  title_en: string;
+  nav_fr: string;
+  nav_en: string;
 }
