@@ -1,10 +1,10 @@
 import React from "react";
 import iconStyles from "@/styles/icons.module.css";
 
-const Loader = () => {
+const Loader = ({ className }: { className: string }) => {
   return (
     <div
-      className={`${iconStyles.loader} size-40 fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-material-dark p-8 rounded-full before:rounded-full before:bg-material-dark before:absolute before:top-0 before:bottom-0 before:right-0 before:left-0 before:z-[-1] after:rounded-full after:absolute after:top-[-5px] after:bottom-[-5px] after:right-[-5px] after:left-[-5px] after:z-[-2]`}
+      className={`${className} ${iconStyles.loader} size-40 fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-material-dark p-8 rounded-full before:rounded-full before:bg-material-dark before:absolute before:top-0 before:bottom-0 before:right-0 before:left-0 before:z-[-1] after:rounded-full after:absolute after:top-[-5px] after:bottom-[-5px] after:right-[-5px] after:left-[-5px] after:z-[-2]`}
     >
       <svg className="size-full" viewBox="-399 -287 1000 720">
         <path

@@ -3,7 +3,7 @@ import React from "react";
 const BrandLogo = ({ className }: { className: string }) => {
   return (
     <svg
-      className={`${className} flex-grow-0 flex-shrink-0`}
+      className={`${className} flex-grow-0 flex-shrink-0 rounded-full`}
       viewBox="0 0 150 150"
     >
       <circle
