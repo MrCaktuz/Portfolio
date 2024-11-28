@@ -56,8 +56,9 @@
     transition-delay: 400ms;
   }
   @media (prefers-reduced-motion) {
-    .observedElements {
-      transition: none;
+    .observedElements,
+    #brandLogo {
+      transition: transform 0s linear, top 0s linear, left 0s linear, right 0s linear, bottom 0s linear;
     }
   }
 }
