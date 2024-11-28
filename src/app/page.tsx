@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { API_URL, initBgChangeOnMousemove, scrollObserver } from "@/lib/utils";
 import LangSwitcher from "@/components/buttons/LangSwitcher";
 import { useCookies } from "react-cookie";
-import PostSection from "@/components/posts/Section";
 import PageNav from "@/components/navs/PageNav";
 import Loader from "@/components/utils/Loader";
+import ServicesSection from "@/components/posts/ServicesSection";
 
 const setBrandPositionVariables = () => {
   const brandLogo = document.getElementById("brandLogo");
@@ -49,7 +49,6 @@ export default function Home() {
         cache: "no-store",
       });
       const data = await res.json();
-
       const groupedData = Object.groupBy(data, ({ section_id }) => section_id);
       setPosts(groupedData);
     }
@@ -68,7 +67,7 @@ export default function Home() {
   useEffect(() => {
     const observedElements = document.querySelectorAll(".observedElements");
     scrollObserver(observedElements);
-  }, [pageContent, sections]);
+  }, [pageContent, posts, sections]);
 
   useEffect(() => {
     setBrandPositionVariables();
@@ -98,61 +97,25 @@ export default function Home() {
           <div
             className={`hide ${pageContent ? "fadeIn" : ""} col-span-2 row-span-3 pt-3 md:col-start-2 md:col-end-2`}
           >
-            <div className="section_services relative mb-20">
-              <h2 className="text-xl pb-4 mb-4 relative uppercase tracking-wider after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-material-blue">
-                What do you need&nbsp;?
-              </h2>
-              <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
-                <div className="observedElements right p-5 md:p-8 border border-material shadow-lg bg-material-dark">
-                  <h3 className="font-sertext-lg mb-5 font-bold">
-                    A Front-End Dev&nbsp;?
-                  </h3>
-                  <p>
-                    I can jump in and adapt to your stack in no time, whether
-                    you already have a web app or need me to create one from
-                    scratch.
-                  </p>
-                </div>
-                <div className="observedElements right p-5 md:p-8 border border-material shadow-lg bg-material-dark">
-                  <h3 className="font-sertext-lg mb-5 font-bold">
-                    A Team Leader&nbsp;?
-                  </h3>
-                  <p>
-                    My leadership, communication skills, and technical
-                    background make me the perfect fit to lead a team to
-                    success.
-                  </p>
-                </div>
-                <div className="observedElements right p-5 md:p-8 border border-material shadow-lg bg-material-dark">
-                  <h3 className="font-sertext-lg mb-5 font-bold">
-                    An Accessibility Expert&nbsp;?
-                  </h3>
-                  <p>
-                    Today’s web must be accessible to everyone. I can analyze
-                    your website to provide tips and upgrades for a better level
-                    of accessibility for a better UX.
-                  </p>
-                </div>
-                <div className="observedElements right p-5 md:p-8 border border-material shadow-lg bg-material-dark">
-                  <h3 className="font-sertext-lg mb-5 font-bold">
-                    An integrator&nbsp;?
-                  </h3>
-                  <p>
-                    My attention to detail and meticulous mind make me a perfect
-                    fit to integrate even the most complex designs. From screens
-                    to complete design systems, I do it all.
-                  </p>
-                </div>
-              </div>
-            </div>
-            {posts &&
-              Object.keys(posts).map((sectionKey) => (
-                <PostSection
-                  key={sectionKey}
-                  section={sectionKey}
-                  posts={posts[sectionKey]}
-                />
-              ))}
+            {sections &&
+              sections.map((section) => {
+                if (section.section_id === "services") {
+                  return (
+                    posts &&
+                    Object.keys(posts).map((sectionKey) => {
+                      if (sectionKey === section.section_id) {
+                        return (
+                          <ServicesSection
+                            key={section.section_id}
+                            sectionTitle={section[`title_${cookies.locale}`]}
+                            posts={posts[sectionKey]}
+                          />
+                        );
+                      }
+                    })
+                  );
+                }
+              })}
           </div>
         </div>
       </main>
