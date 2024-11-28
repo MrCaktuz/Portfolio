@@ -12,7 +12,7 @@ const getNextLocaleValue = (cookieLocale) => {
   return availableLangs[0];
 };
 
-const LangSwitcher = () => {
+const LangSwitcher = ({ className }: { className: string }) => {
   const [cookies, setCookie] = useCookies(["locale"]);
   const [nextLocale, setNextLocale] = useState(
     getNextLocaleValue(cookies.locale) || "",
@@ -32,7 +32,7 @@ const LangSwitcher = () => {
 
   return (
     <button
-      className="bg-material flex justify-center items-center size-12 rounded-full rounded-tr-none fixed top-0 right-0 bold uppercase transition-all ease-in-out md:hover:bg-material-light md:hover:text-material-dark"
+      className={`${className} bg-material flex justify-center items-center size-12 rounded-full rounded-tr-none fixed top-0 right-0 bold uppercase transition-all ease-in-out md:hover:bg-material-light md:hover:text-material-dark`}
       onClick={switchLocale}
     >
       {nextLocale}

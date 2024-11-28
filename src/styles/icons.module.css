@@ -1,6 +1,45 @@
-.loader::after {
+.brand {
+  position: absolute;
+  transition: all .8s ease-in-out, opacity .25s ease-in-out;
+}
+.brandLoaded circle,
+.brandLoading circle{
+  transition: all .5s ease-in-out;
+}
+.brandLoaded::after,
+.brandLoading::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  right: -2px;
+  left: -2px;
+  z-index: -2;
+  transition: all .5s ease-in-out;
+}
+.brandLoading {
+  top: var(--brand-position-top);
+  left: var(--brand-position-left);
+}
+.brandLoading circle {
+  stroke: transparent;
+}
+.brandLoading::after {
   background-image: conic-gradient(var(--color-material) 75%, var(--color-material-light));
-  animation: spin 3s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
+.brandLoaded {
+  top: 0px;
+  left: 0px;
+}
+.brandLoaded circle {
+  stroke: var(--color-material);
+}
+.brandLoaded::after {
+  opacity: 0;
 }
 
 @keyframes spin { 
