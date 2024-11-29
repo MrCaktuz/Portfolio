@@ -10,7 +10,7 @@ import LangSwitcher from "@/components/buttons/LangSwitcher";
 import { useCookies } from "react-cookie";
 import PageNav from "@/components/navs/PageNav";
 import Loader from "@/components/utils/Loader";
-import ServicesSection from "@/components/posts/ServicesSection";
+import ServiceCard from "@/components/posts/ServiceCard";
 
 const setBrandPositionVariables = () => {
   const brandLogo = document.getElementById("brandLogo");
@@ -104,26 +104,34 @@ export default function Home() {
           >
             {sections &&
               sections.map((section) => {
-                if (section.section_id === "services") {
-                  return (
-                    posts &&
-                    Object.keys(posts).map((sectionKey) => {
-                      if (sectionKey === section.section_id) {
-                        return (
-                          <ServicesSection
-                            key={section.section_id}
-                            sectionTitle={
-                              section[
-                                `title_${cookies.locale || ENV.DEFAULT_LANG}`
-                              ]
-                            }
-                            posts={posts[sectionKey]}
-                          />
-                        );
-                      }
-                    })
-                  );
-                }
+                return (
+                  <div
+                    key={section.section_id}
+                    className="section_services relative mb-20"
+                  >
+                    <h2 className="text-2xl pb-2 mb-6 relative tracking-wider after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-material-blue">
+                      {section[`title_${cookies.locale || ENV.DEFAULT_LANG}`]}
+                    </h2>
+                    {section.section_id === "services" &&
+                      posts &&
+                      Object.keys(posts).map((sectionKey) => {
+                        if (sectionKey === section.section_id) {
+                          return (
+                            <div
+                              key={`post_${sectionKey}`}
+                              className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2"
+                            >
+                              {posts[sectionKey].map((post) => {
+                                return (
+                                  <ServiceCard key={post._id} post={post} />
+                                );
+                              })}
+                            </div>
+                          );
+                        }
+                      })}
+                  </div>
+                );
               })}
           </div>
         </div>
