@@ -2,6 +2,7 @@ import React from "react";
 import stylesNav from "@/styles/nav.module.css";
 import { useCookies } from "react-cookie";
 import { SectionType } from "@/lib/types";
+import { ENV } from "@/lib/utils";
 
 const PageNav = ({ sections }: { sections: SectionType[] }) => {
   const [cookies] = useCookies(["locale"]);
@@ -22,34 +23,10 @@ const PageNav = ({ sections }: { sections: SectionType[] }) => {
                 href={`#section_${section.section_id}`}
                 className="p-3 text-material-white bold relative transition-all ease-in-out"
               >
-                {section[`nav_${cookies.locale}`]}
+                {section[`nav_${cookies.locale || ENV.DEFAULT_LANG}`]}
               </a>
             </li>
           ))}
-        {/* <li className="flex justify-end">
-          <a
-            href="#section_services"
-            className="p-3 text-material-white bold relative transition-all ease-in-out"
-          >
-            Services
-          </a>
-        </li>
-        <li className="flex justify-end">
-          <a
-            href="#section_works"
-            className="p-3 text-material-white bold relative transition-all ease-in-out"
-          >
-            Works
-          </a>
-        </li>
-        <li className="flex justify-end">
-          <a
-            href="#section_qualifications"
-            className="p-3 text-material-white bold relative transition-all ease-in-out"
-          >
-            Qualifications
-          </a>
-        </li> */}
       </ul>
     </nav>
   );

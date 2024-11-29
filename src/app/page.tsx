@@ -1,6 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { API_URL, initBgChangeOnMousemove, scrollObserver } from "@/lib/utils";
+import {
+  API_URL,
+  ENV,
+  initBgChangeOnMousemove,
+  scrollObserver,
+} from "@/lib/utils";
 import LangSwitcher from "@/components/buttons/LangSwitcher";
 import { useCookies } from "react-cookie";
 import PageNav from "@/components/navs/PageNav";
@@ -107,7 +112,11 @@ export default function Home() {
                         return (
                           <ServicesSection
                             key={section.section_id}
-                            sectionTitle={section[`title_${cookies.locale}`]}
+                            sectionTitle={
+                              section[
+                                `title_${cookies.locale || ENV.DEFAULT_LANG}`
+                              ]
+                            }
                             posts={posts[sectionKey]}
                           />
                         );

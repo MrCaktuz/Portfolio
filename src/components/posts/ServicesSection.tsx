@@ -9,7 +9,6 @@ const ServicesSection = ({
   sectionTitle: string;
   posts: PostType[];
 }) => {
-  console.warn({ posts, sectionTitle });
   return (
     <div className="section_services relative mb-20">
       <h2 className="text-xl pb-4 mb-4 relative uppercase tracking-wider after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-material-blue">
