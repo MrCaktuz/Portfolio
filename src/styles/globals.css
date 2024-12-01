@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --transition-base: all .2s ease-in-out;
+    --transition-base: all .3s ease-in-out;
     --pointerX: 50%;
     --pointerY: 50%;
     --color-material-white: #EDF0F2;
@@ -34,7 +34,7 @@
   }
   .observedElements {
     opacity: 0;
-    transition: all 1s ease-in-out;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   }
   .observedElements.right {
     transform: translateX(100%);
