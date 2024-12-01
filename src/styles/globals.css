@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth
+  }
+
   :root {
     --transition-base: all .3s ease-in-out;
     --pointerX: 50%;
@@ -10,7 +14,7 @@
     --color-material-white: #EDF0F2;
     --color-material-orange: #F58020;
     --color-material-blue: #99DBF6;
-    --color-material-light: #879BA6; /* #78909C */
+    --color-material-light: #879BA6;
     --color-material: #37474F;
     --color-material-dark: #263238;
   }

@@ -4,6 +4,12 @@
   outline: none;
 }
 
+.mainNav ul li a:hover,
+.mainNav ul li a:focus,
+.mainNav ul li a:focus-visible {
+  color: var(--color-material-orange);
+}
+
 .mainNav ul li a::before {
   content: "";
   display: inline-block;

@@ -33,3 +33,31 @@ export const scrollObserver = (elms) => {
 
   elms.forEach((elm) => intObserver.observe(elm));
 };
+
+const setNavActiveClass = (section, activeClass) => {
+  const middleHeight = window.innerHeight / 2;
+  const { top, bottom } = section.getBoundingClientRect();
+  if (
+    (top > 0 && top < middleHeight) ||
+    (bottom > 0 && bottom < middleHeight)
+  ) {
+    const navLinks = document.querySelectorAll(`.${activeClass}`);
+    navLinks.forEach((navLink) => {
+      navLink.classList.remove(activeClass);
+    });
+    const navElm = document.querySelector(`[href="#${section.id}"]`);
+    navElm?.classList.add(activeClass);
+  }
+};
+
+export const sectionObserver = (activeClass) => {
+  const sections = document.querySelectorAll("[id*=section_]");
+  sections.forEach((section) => {
+    setNavActiveClass(section, activeClass);
+  });
+  window.addEventListener("scroll", () => {
+    sections.forEach((section) => {
+      setNavActiveClass(section, activeClass);
+    });
+  });
+};

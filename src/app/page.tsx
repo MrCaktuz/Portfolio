@@ -5,6 +5,7 @@ import {
   ENV,
   initBgChangeOnMousemove,
   scrollObserver,
+  sectionObserver,
 } from "@/lib/utils";
 import LangSwitcher from "@/components/buttons/LangSwitcher";
 import { useCookies } from "react-cookie";
@@ -12,6 +13,7 @@ import PageNav from "@/components/navs/PageNav";
 import Loader from "@/components/utils/Loader";
 import ServiceCard from "@/components/posts/ServiceCard";
 import stylesWorks from "@/styles/works.module.css";
+import stylesNav from "@/styles/nav.module.css";
 import WorkCard from "@/components/posts/WorkCard";
 
 const setBrandPositionVariables = () => {
@@ -74,6 +76,7 @@ export default function Home() {
   useEffect(() => {
     const observedElements = document.querySelectorAll(".observedElements");
     scrollObserver(observedElements);
+    sectionObserver(stylesNav.active);
   }, [pageContent, posts, sections]);
 
   useEffect(() => {
