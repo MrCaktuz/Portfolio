@@ -1,8 +1,8 @@
-.works_list {
+.post_list {
   position: relative;
 }
 
-.works_list::after {
+.post_list::after {
   content: "";
   display: block;
   position: absolute;
@@ -15,11 +15,11 @@
   z-index: -1;
 }
 
-.works_item {
+.post_item {
   position: relative;
 }
 
-.works_item::before {
+.post_item::before {
   content: "";
   display: block;
   position: absolute;
@@ -33,43 +33,43 @@
   transform: translate(-50%, -50%);
 }
 
-.works_item_link {
+.post_item_link {
   transition: var(--transition-base);
 }
 
-.works_item_link:hover .works_item_content {
+.post_item_link:hover .post_item_content {
   border-color: var(--color-material-orange);
 }
 
-.works_item_link:hover::before {
+.post_item_link:hover::before {
   background-color: var(--color-material-orange);
 }
 
-.works_item_link:hover .works_item_content svg {
+.post_item_link:hover .post_item_content svg {
   opacity: 1;
 }
 
-.works_item_content {
+.post_item_content {
   transition: transform 1s ease-in-out, opacity 1s ease-in-out, border 0.2s ease-in-out, border-radius 0.2s ease-in-out;
   border: 1px solid var(--color-material);
   border-radius: 0 1rem 1rem 1rem;
 }
 
-.works_item_content svg {
+.post_item_content svg {
   transition: var(--transition-base);
 }
 
-.work_tag {
+.post_tag {
   font-size: small;
   position: relative;
   display: inline-block;
   padding: 0.5rem 0.5rem;
-  margin: 0 0 0.5rem 0.8rem;
+  margin-left: 0.8rem;
   background-color: var(--color-material);
 }
 
-.work_tag::before,
-.work_tag::after {
+.post_tag::before,
+.post_tag::after {
   content: "";
   position: absolute;
   top: 0;
@@ -79,16 +79,16 @@
   background-color: var(--color-material);
 }
 
-.work_tag::before {
+.post_tag::before {
   right: 100%;
   clip-path: polygon(100% 0, 0 0, 100% 100%);
 }
-.work_tag::after {
+.post_tag::after {
   left: 100%;
   clip-path: polygon(0 0, 0% 100%, 100% 100%);
 }
 
-.work_tag:first-child {
+.post_tag:first-child {
   margin-left: 0;
   padding-left: 1rem;
   border-top-left-radius: 2rem;
@@ -96,13 +96,13 @@
 }
 
 
-.work_tag:last-child {
+.post_tag:last-child {
   padding-right: 1rem;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
 }
 
-.work_tag:first-child::before,
-.work_tag:last-child::after {
+.post_tag:first-child::before,
+.post_tag:last-child::after {
   display: none;
 }

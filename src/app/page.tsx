@@ -12,9 +12,9 @@ import { useCookies } from "react-cookie";
 import PageNav from "@/components/navs/PageNav";
 import Loader from "@/components/utils/Loader";
 import ServiceCard from "@/components/posts/ServiceCard";
-import stylesWorks from "@/styles/works.module.css";
+import stylesPosts from "@/styles/posts.module.css";
 import stylesNav from "@/styles/nav.module.css";
-import WorkCard from "@/components/posts/WorkCard";
+import PostCard from "@/components/posts/PostCard";
 
 const setBrandPositionVariables = () => {
   const brandLogo = document.getElementById("brandLogo");
@@ -115,7 +115,7 @@ export default function Home() {
                     id={`section_${section.section_id}`}
                     className={`section_${section.section_id} relative mb-20`}
                   >
-                    <h2 className="text-2xl pb-2 mb-6 relative tracking-wider after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-material-blue">
+                    <h2 className="text-2xl pb-2 mb-6 relative uppercase tracking-wider after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-material-blue">
                       {section[`title_${cookies.locale || ENV.DEFAULT_LANG}`]}
                     </h2>
                     {section.section_id === "services" &&
@@ -143,11 +143,31 @@ export default function Home() {
                           return (
                             <div
                               key={`post_${sectionKey}`}
-                              className={`${stylesWorks.works_list} ml-10`}
+                              className={`${stylesPosts.post_list} ml-10`}
                             >
                               {posts[sectionKey].map((post) => {
-                                return <WorkCard key={post._id} post={post} />;
+                                return <PostCard key={post._id} post={post} />;
                               })}
+                            </div>
+                          );
+                        }
+                      })}
+                    {section.section_id === "qualifications" &&
+                      posts &&
+                      Object.keys(posts).map((sectionKey) => {
+                        if (sectionKey === section.section_id) {
+                          return (
+                            <div
+                              key={`post_${sectionKey}`}
+                              className={`${stylesPosts.post_list} ml-10`}
+                            >
+                              {posts[sectionKey].map((post) => (
+                                <PostCard
+                                  key={post._id}
+                                  post={post}
+                                  short={true}
+                                />
+                              ))}
                             </div>
                           );
                         }

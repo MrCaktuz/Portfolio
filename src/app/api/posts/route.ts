@@ -9,12 +9,12 @@ export async function GET() {
   await connectDB();
   let Posts = await Post.find({
     lang: locale,
-  });
+  }).sort({ order: 1 });
 
   if (!Posts.length && locale !== ENV.DEFAULT_LANG) {
     Posts = await Post.find({
       lang: ENV.DEFAULT_LANG,
-    });
+    }).sort({ order: 1 });
   }
 
   return NextResponse.json(Posts);

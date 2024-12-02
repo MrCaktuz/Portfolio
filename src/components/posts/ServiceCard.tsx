@@ -7,8 +7,9 @@ const ServiceCard = ({ post }: { post: PostType }) => {
       key={post._id}
       className="observedElements right p-5 md:p-8 border border-material shadow-lg bg-material-dark"
     >
-      <h3 className="font-sertext-lg mb-5 font-bold">{post.title}</h3>
+      <h3 className="text-xl mb-5">{post.title}</h3>
       <div
+        className="text-material-light"
         dangerouslySetInnerHTML={{
           __html: post.description,
         }}
