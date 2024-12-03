@@ -1,7 +1,7 @@
 import { PostType } from "@/lib/types";
 import React from "react";
 import stylesPosts from "@/styles/posts.module.css";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { LuExternalLink } from "react-icons/lu";
 
 const PostCard = ({ post, short }: { post: PostType; short: boolean }) => {
   const renderContent = () => (
@@ -10,7 +10,7 @@ const PostCard = ({ post, short }: { post: PostType; short: boolean }) => {
     >
       <h3 className="text-xl">{post.title}</h3>
       {post.main_link && (
-        <FaExternalLinkAlt className=" hidden md:block absolute top-4 right-4 opacity-0 text-material-orange" />
+        <LuExternalLink className=" hidden md:block absolute top-4 right-4 opacity-0 text-material-orange" />
       )}
       <div className="absolute top-0 left-0 px-3 flex translate-y-[-50%]">
         {post.to && (

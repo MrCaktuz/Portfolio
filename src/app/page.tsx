@@ -15,6 +15,7 @@ import ServiceCard from "@/components/posts/ServiceCard";
 import stylesPosts from "@/styles/posts.module.css";
 import stylesNav from "@/styles/nav.module.css";
 import PostCard from "@/components/posts/PostCard";
+import FixedNav from "@/components/navs/FixedNav";
 
 const setBrandPositionVariables = () => {
   const brandLogo = document.getElementById("brandLogo");
@@ -62,16 +63,18 @@ export default function Home() {
       setPosts(groupedData);
     }
     fetchPosts();
+  }, [cookies.locale]);
 
+  useEffect(() => {
     async function fetchSections() {
       const res = await fetch(`${API_URL}/sections`, {
         cache: "no-store",
       });
       const data = await res.json();
-      setSections(data);
+      setSections(data.filter((section) => posts[section.section_id]));
     }
     fetchSections();
-  }, [cookies.locale]);
+  }, [posts]);
 
   useEffect(() => {
     const observedElements = document.querySelectorAll(".observedElements");
@@ -85,8 +88,11 @@ export default function Home() {
 
   return (
     <div className="max-w-7xl my-0 mx-auto flex flex-col">
-      <main className="p-5 pt-10 md:p-12 md:pt-24 lg:p-16 lg:pt-32 lg:flex-shrink lg:flex-grow">
-        <LangSwitcher className={`hide ${pageContent ? "fadeIn" : ""}`} />
+      <main className="p-5 pt-10 md:p-14 md:pt-24 lg:p-16 lg:pt-32 lg:flex-shrink lg:flex-grow">
+        <FixedNav
+          sections={sections}
+          className={`hide ${pageContent ? "fadeIn" : ""}`}
+        />
         <div className="grid gap-10 grid-cols-2 md:grid-cols-homeLayout md:grid-rows-homeLayout">
           <div className="size-40 relative mx-auto flex justify-center col-start-1 col-span-2 md:justify-end md:col-span-1">
             <Loader isLoaded={!!pageContent} />
@@ -105,7 +111,7 @@ export default function Home() {
             <PageNav sections={sections} />
           </div>
           <div
-            className={`hide ${pageContent ? "fadeIn" : ""} col-span-2 row-span-3 pt-3 md:col-start-2 md:col-end-2`}
+            className={`hide ${pageContent ? "fadeIn" : ""} col-span-2 row-span-3 pt-3 md:col-start-2 md:col-end-2 overflow-x-hidden`}
           >
             {sections &&
               sections.map((section) => {

@@ -32,7 +32,7 @@ const LangSwitcher = ({ className }: { className: string }) => {
 
   return (
     <button
-      className={`${className} bg-material flex justify-center items-center size-12 rounded-full rounded-tr-none fixed top-0 right-0 bold uppercase transition-all ease-in-out md:hover:bg-material-light md:hover:text-material-dark`}
+      className={`${className} size-12 p-3 bold uppercase rounded-full`}
       onClick={switchLocale}
     >
       {nextLocale}
