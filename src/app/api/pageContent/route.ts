@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import PageContent from "@/models/PageContent";
 import connectDB from "@/lib/mongoose";
 import { getLocale } from "../route";
@@ -7,7 +7,7 @@ import { ENV } from "@/lib/utils";
 export async function GET() {
   const locale = await getLocale();
   await connectDB();
-  let PageContentData = await PageContent.find({
+  let PageContentData = await PageContent.findOne({
     lang: locale,
   });
 
@@ -16,7 +16,7 @@ export async function GET() {
       lang: ENV.DEFAULT_LANG,
     });
   }
-  return NextResponse.json(...PageContentData);
+  return NextResponse.json(PageContentData);
 }
 
 export async function POST(request: NextRequest) {

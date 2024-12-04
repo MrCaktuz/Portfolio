@@ -1,6 +1,5 @@
 import React from "react";
-import { LuMenu } from "react-icons/lu";
-import { LuX } from "react-icons/lu";
+import { LuMenu, LuX } from "react-icons/lu";
 import LangSwitcher from "../buttons/LangSwitcher";
 import { SectionType } from "@/lib/types";
 import PageNav from "./PageNav";
@@ -9,7 +8,7 @@ const FixedNav = ({
   sections,
   className,
 }: {
-  sections: SectionType;
+  sections: SectionType[];
   className: string;
 }) => {
   return (

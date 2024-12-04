@@ -4,18 +4,18 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
   }
 
   :root {
-    --transition-base: all .3s ease-in-out;
+    --transition-base: all 0.3s ease-in-out;
     --pointerX: 50%;
     --pointerY: 50%;
-    --color-material-white: #EDF0F2;
-    --color-material-orange: #F58020;
-    --color-material-blue: #99DBF6;
-    --color-material-light: #879BA6;
-    --color-material: #37474F;
+    --color-material-white: #edf0f2;
+    --color-material-orange: #f58020;
+    --color-material-blue: #99dbf6;
+    --color-material-light: #879ba6;
+    --color-material: #37474f;
     --color-material-dark: #263238;
   }
 }
@@ -23,11 +23,11 @@
 @layer utilities {
   .show {
     opacity: 1;
-    transition: opacity .5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
   }
   .hide {
     opacity: 0;
-    transition: opacity .5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
   }
   .show.fadeOut {
     opacity: 0;
@@ -38,7 +38,9 @@
   }
   .observedElements {
     opacity: 0;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    transition:
+      transform 1s ease-in-out,
+      opacity 1s ease-in-out;
   }
   .observedElements.right {
     transform: translateX(100%);
@@ -62,12 +64,17 @@
   @media (prefers-reduced-motion) {
     .observedElements,
     #brandLogo {
-      transition: transform 0s linear, top 0s linear, left 0s linear, right 0s linear, bottom 0s linear;
+      transition:
+        transform 0s linear,
+        top 0s linear,
+        left 0s linear,
+        right 0s linear,
+        bottom 0s linear;
     }
   }
 }
 
-body::before{
+body::before {
   content: "";
   display: block;
   position: fixed;
@@ -76,13 +83,19 @@ body::before{
   bottom: 0;
   left: 0;
   z-index: -1;
-  mask-image: url('/icons/bg_pattern.png');
+  mask-image: url("/icons/bg_pattern.png");
   mask-repeat: repeat;
   mask-position: center;
   mask-size: 2rem;
-  background: radial-gradient(circle 15rem at var(--pointerX) var(--pointerY), theme(colors.material.DEFAULT) 30%, theme(colors.material.dark) 100%);
+  background: radial-gradient(
+    circle 15rem at var(--pointerX) var(--pointerY),
+    theme(colors.material.DEFAULT) 30%,
+    theme(colors.material.dark) 100%
+  );
 }
 
-a, a:focus, a:focus-visible {
+a,
+a:focus,
+a:focus-visible {
   outline-color: transparent;
 }

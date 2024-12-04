@@ -1,38 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
-import localFont from "next/font/local";
 import "@/styles/globals.css";
-
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["400", "900"],
-});
-
-const georgia = localFont({
-  src: [
-    {
-      path: "../fonts/Georgia.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Georgia Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../fonts/Georgia Bold.ttf",
-      weight: "900",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Georgia Bold Italic.ttf",
-      weight: "900",
-      style: "italic",
-    },
-  ],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -58,7 +26,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/favicon/site.webmanifest",
-  stylesheet: "https://fonts.googleapis.com/css?family=Lato:300,400,400i,700",
 };
 
 export default function RootLayout({
@@ -71,6 +38,12 @@ export default function RootLayout({
       lang="fr"
       className="bg-material-dark text-material-white break-words"
     >
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700"
+          rel="stylesheet"
+        />
+      </head>
       <body className="subpixel-antialiased">{children}</body>
     </html>
   );

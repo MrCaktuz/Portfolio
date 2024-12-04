@@ -9,9 +9,10 @@ const PageNav = ({
   mobile,
 }: {
   sections: SectionType[];
-  mobile: boolean;
+  mobile?: boolean;
 }) => {
   const [cookies] = useCookies(["locale"]);
+  const key = `nav_${cookies.locale || ENV.DEFAULT_LANG}` as keyof SectionType;
 
   return (
     <nav
@@ -32,7 +33,7 @@ const PageNav = ({
                 href={`#section_${section.section_id}`}
                 className={`${mobile ? "w-full text-right" : ""} p-3 text-material-white bold relative transition-all ease-in-out`}
               >
-                {section[`nav_${cookies.locale || ENV.DEFAULT_LANG}`]}
+                {section[key]}
               </a>
             </li>
           ))}

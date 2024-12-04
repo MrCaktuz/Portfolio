@@ -20,7 +20,7 @@ export const initBgChangeOnMousemove = () => {
   });
 };
 
-export const scrollObserver = (elms) => {
+export const scrollObserver = (elms: Element[]) => {
   const intObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -31,10 +31,10 @@ export const scrollObserver = (elms) => {
     });
   });
 
-  elms.forEach((elm) => intObserver.observe(elm));
+  elms.forEach((elm: Element) => intObserver.observe(elm));
 };
 
-const setNavActiveClass = (section, activeClass) => {
+const setNavActiveClass = (section: Element, activeClass: string) => {
   const middleHeight = window.innerHeight / 2;
   const { top, bottom } = section.getBoundingClientRect();
   if (
@@ -50,7 +50,7 @@ const setNavActiveClass = (section, activeClass) => {
   }
 };
 
-export const sectionObserver = (activeClass) => {
+export const sectionObserver = (activeClass: string) => {
   const sections = document.querySelectorAll("[id*=section_]");
   sections.forEach((section) => {
     setNavActiveClass(section, activeClass);

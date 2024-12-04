@@ -7,7 +7,6 @@ import {
   scrollObserver,
   sectionObserver,
 } from "@/lib/utils";
-import LangSwitcher from "@/components/buttons/LangSwitcher";
 import { useCookies } from "react-cookie";
 import PageNav from "@/components/navs/PageNav";
 import Loader from "@/components/utils/Loader";
@@ -16,11 +15,17 @@ import stylesPosts from "@/styles/posts.module.css";
 import stylesNav from "@/styles/nav.module.css";
 import PostCard from "@/components/posts/PostCard";
 import FixedNav from "@/components/navs/FixedNav";
+import {
+  GroupedPostsType,
+  PageContentType,
+  PostType,
+  SectionType,
+} from "@/lib/types";
 
 const setBrandPositionVariables = () => {
   const brandLogo = document.getElementById("brandLogo");
   const brandLogoContainer = brandLogo?.parentElement;
-  const root = document.querySelector(":root");
+  const root = document.querySelector(":root") as HTMLElement;
 
   if (brandLogoContainer) {
     const position = brandLogoContainer.getBoundingClientRect();
@@ -30,17 +35,19 @@ const setBrandPositionVariables = () => {
     const containerHalfX = (position.right - position.left) / 2;
     const top = `${containerCenterY - containerHalfY}px`;
     const left = `${containerCenterX - containerHalfX}px`;
-    root.style.setProperty("--brand-position-top", top);
-    root.style.setProperty("--brand-position-left", left);
-    brandLogo.style.setProperty("opacity", "1");
+    root?.style.setProperty("--brand-position-top", top);
+    root?.style.setProperty("--brand-position-left", left);
+    brandLogo?.style.setProperty("opacity", "1");
   }
 };
 
 export default function Home() {
   const [cookies] = useCookies(["locale"]);
-  const [pageContent, setPageContent] = useState(null);
-  const [sections, setSections] = useState([]);
-  const [posts, setPosts] = useState(null);
+  const [pageContent, setPageContent] = useState<PageContentType>();
+  const [sections, setSections] = useState<SectionType[]>([]);
+  const [posts, setPosts] = useState<GroupedPostsType>({});
+  const titleKey =
+    `title_${cookies.locale || ENV.DEFAULT_LANG}` as keyof SectionType;
 
   useEffect(() => {
     initBgChangeOnMousemove();
@@ -59,7 +66,13 @@ export default function Home() {
         cache: "no-store",
       });
       const data = await res.json();
-      const groupedData = Object.groupBy(data, ({ section_id }) => section_id);
+      const groupedData: GroupedPostsType = Object.groupBy(
+        data,
+        ({ section_id }: PostType) => section_id,
+      );
+      Object.keys(groupedData).forEach((key) => {
+        groupedData[key] = groupedData[key] || []; // Replace undefined with an empty array
+      });
       setPosts(groupedData);
     }
     fetchPosts();
@@ -71,14 +84,18 @@ export default function Home() {
         cache: "no-store",
       });
       const data = await res.json();
-      setSections(data.filter((section) => posts[section.section_id]));
+      setSections(
+        data.filter(
+          (section: SectionType) => posts && posts[section.section_id],
+        ),
+      );
     }
     fetchSections();
   }, [posts]);
 
   useEffect(() => {
     const observedElements = document.querySelectorAll(".observedElements");
-    scrollObserver(observedElements);
+    scrollObserver(Array.from(observedElements));
     sectionObserver(stylesNav.active);
   }, [pageContent, posts, sections]);
 
@@ -122,7 +139,7 @@ export default function Home() {
                     className={`section_${section.section_id} relative mb-20`}
                   >
                     <h2 className="text-2xl pb-2 mb-6 relative uppercase tracking-wider after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-material-blue">
-                      {section[`title_${cookies.locale || ENV.DEFAULT_LANG}`]}
+                      {section[titleKey]}
                     </h2>
                     {section.section_id === "services" &&
                       posts &&
@@ -133,7 +150,7 @@ export default function Home() {
                               key={`post_${sectionKey}`}
                               className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2"
                             >
-                              {posts[sectionKey].map((post) => {
+                              {posts[sectionKey]?.map((post) => {
                                 return (
                                   <ServiceCard key={post._id} post={post} />
                                 );
@@ -151,7 +168,7 @@ export default function Home() {
                               key={`post_${sectionKey}`}
                               className={`${stylesPosts.post_list} ml-10`}
                             >
-                              {posts[sectionKey].map((post) => {
+                              {posts[sectionKey]?.map((post) => {
                                 return <PostCard key={post._id} post={post} />;
                               })}
                             </div>
@@ -160,14 +177,14 @@ export default function Home() {
                       })}
                     {section.section_id === "qualifications" &&
                       posts &&
-                      Object.keys(posts).map((sectionKey) => {
+                      Object.keys(posts).map((sectionKey: string) => {
                         if (sectionKey === section.section_id) {
                           return (
                             <div
                               key={`post_${sectionKey}`}
                               className={`${stylesPosts.post_list} ml-10`}
                             >
-                              {posts[sectionKey].map((post) => (
+                              {posts[sectionKey]?.map((post: PostType) => (
                                 <PostCard
                                   key={post._id}
                                   post={post}

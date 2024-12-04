@@ -3,7 +3,7 @@ import React from "react";
 import stylesPosts from "@/styles/posts.module.css";
 import { LuExternalLink } from "react-icons/lu";
 
-const PostCard = ({ post, short }: { post: PostType; short: boolean }) => {
+const PostCard = ({ post, short }: { post: PostType; short?: boolean }) => {
   const renderContent = () => (
     <div
       className={`${stylesPosts.post_item_content} observedElements right bg-material-dark shadow-lg block mb-8 p-4 pt-6`}

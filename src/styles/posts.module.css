@@ -50,7 +50,11 @@
 }
 
 .post_item_content {
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out, border 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  transition:
+    transform 1s ease-in-out,
+    opacity 1s ease-in-out,
+    border 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out;
   border: 1px solid var(--color-material);
   border-radius: 0 1rem 1rem 1rem;
 }
@@ -94,7 +98,6 @@
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
 }
-
 
 .post_tag:last-child {
   padding-right: 1rem;

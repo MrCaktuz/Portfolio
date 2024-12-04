@@ -3,10 +3,10 @@ import { ENV } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 
-const getNextLocaleValue = (cookieLocale) => {
-  const availableLangs = [...ENV.AVAILABLE_LANGS];
+const getNextLocaleValue = (cookieLocale: string) => {
+  const availableLangs: string[] = [...(ENV.AVAILABLE_LANGS || [])];
   const currentLocaleIndex = availableLangs.indexOf(
-    cookieLocale || ENV.DEFAULT_LANG,
+    cookieLocale || ENV.DEFAULT_LANG || "",
   );
   availableLangs.splice(currentLocaleIndex, 1);
   return availableLangs[0];

@@ -14,8 +14,11 @@ export interface PostType {
   description: string;
   tags: string;
   main_link: string;
-  section_title: string;
-  section_nav_lable: string;
+  section_id: string;
+}
+
+export interface GroupedPostsType {
+  [key: string]: PostType[] | undefined;
 }
 
 export interface SectionType {
