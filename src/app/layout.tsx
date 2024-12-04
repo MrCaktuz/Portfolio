@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import "@/styles/globals.css";
+import { ENV } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -35,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="fr"
+      lang={ENV.DEFAULT_LANG}
       className="bg-material-dark text-material-white break-words"
     >
       <head>

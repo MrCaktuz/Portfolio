@@ -3,6 +3,7 @@
   transition:
     all 0.8s ease-in-out,
     opacity 0.25s ease-in-out;
+  opacity: var(--brand-opacity);
 }
 .brandLoaded circle,
 .brandLoading circle {

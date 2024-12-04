@@ -11,8 +11,8 @@ export async function GET() {
     lang: locale,
   });
 
-  if (!PageContentData.length && locale !== ENV.DEFAULT_LANG) {
-    PageContentData = await PageContent.find({
+  if (!PageContentData && locale !== ENV.DEFAULT_LANG) {
+    PageContentData = await PageContent.findOne({
       lang: ENV.DEFAULT_LANG,
     });
   }

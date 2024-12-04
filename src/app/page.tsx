@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import {
   API_URL,
   ENV,
@@ -37,7 +37,7 @@ const setBrandPositionVariables = () => {
     const left = `${containerCenterX - containerHalfX}px`;
     root?.style.setProperty("--brand-position-top", top);
     root?.style.setProperty("--brand-position-left", left);
-    brandLogo?.style.setProperty("opacity", "1");
+    root?.style.setProperty("--brand-opacity", "1");
   }
 };
 
@@ -53,18 +53,14 @@ export default function Home() {
     initBgChangeOnMousemove();
 
     async function fetchPageContent() {
-      const res = await fetch(`${API_URL}/pageContent`, {
-        cache: "no-store",
-      });
+      const res = await fetch(`${API_URL}/pageContent`);
       const data = await res.json();
       setPageContent(data);
     }
     fetchPageContent();
 
     async function fetchPosts() {
-      const res = await fetch(`${API_URL}/posts`, {
-        cache: "no-store",
-      });
+      const res = await fetch(`${API_URL}/posts`);
       const data = await res.json();
       const groupedData: GroupedPostsType = Object.groupBy(
         data,
@@ -80,9 +76,7 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchSections() {
-      const res = await fetch(`${API_URL}/sections`, {
-        cache: "no-store",
-      });
+      const res = await fetch(`${API_URL}/sections`);
       const data = await res.json();
       setSections(
         data.filter(
@@ -104,103 +98,107 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="max-w-7xl my-0 mx-auto flex flex-col">
-      <main className="p-5 pt-10 md:p-14 md:pt-24 lg:p-16 lg:pt-32 lg:flex-shrink lg:flex-grow">
-        <FixedNav
-          sections={sections}
-          className={`hide ${pageContent ? "fadeIn" : ""}`}
-        />
-        <div className="grid gap-10 grid-cols-2 md:grid-cols-homeLayout md:grid-rows-homeLayout">
-          <div className="size-40 relative mx-auto flex justify-center col-start-1 col-span-2 md:justify-end md:col-span-1">
-            <Loader isLoaded={!!pageContent} />
+    <Suspense fallback={<Loader isLoaded={!!pageContent} />}>
+      <div className="max-w-7xl my-0 mx-auto flex flex-col">
+        <main className="p-5 pt-10 md:p-14 md:pt-24 lg:p-16 lg:pt-32 lg:flex-shrink lg:flex-grow">
+          <FixedNav
+            sections={sections}
+            className={`hide ${pageContent ? "fadeIn" : ""}`}
+          />
+          <div className="grid gap-10 grid-cols-2 md:grid-cols-homeLayout md:grid-rows-homeLayout">
+            <div className="size-40 relative mx-auto flex justify-center col-start-1 col-span-2 md:justify-end md:col-span-1">
+              <Loader isLoaded={!!pageContent} />
+            </div>
+            <div
+              className={`hide ${pageContent ? "fadeIn" : ""} col-span-2 md:col-start-2 md:col-span-1 md:self-center`}
+            >
+              <h1 className="w-full text-3xl md:w-auto md:text-5xl">
+                {pageContent?.title}
+              </h1>
+              <p className="text-material-light">{pageContent?.subtitle}</p>
+            </div>
+            <div
+              className={`hide ${pageContent ? "fadeIn" : ""} hidden sticky justify-end top-20 col-span-2 md:inline-block md:col-start-1 md:col-end-1 md:self-start`}
+            >
+              <PageNav sections={sections} />
+            </div>
+            <div
+              className={`hide ${pageContent ? "fadeIn" : ""} col-span-2 row-span-3 pt-3 md:col-start-2 md:col-end-2 overflow-x-hidden`}
+            >
+              {sections &&
+                sections.map((section) => {
+                  return (
+                    <div
+                      key={section.section_id}
+                      id={`section_${section.section_id}`}
+                      className={`section_${section.section_id} relative mb-20`}
+                    >
+                      <h2 className="text-2xl pb-2 mb-6 relative uppercase tracking-wider after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-material-blue">
+                        {section[titleKey]}
+                      </h2>
+                      {section.section_id === "services" &&
+                        posts &&
+                        Object.keys(posts).map((sectionKey) => {
+                          if (sectionKey === section.section_id) {
+                            return (
+                              <div
+                                key={`post_${sectionKey}`}
+                                className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2"
+                              >
+                                {posts[sectionKey]?.map((post) => {
+                                  return (
+                                    <ServiceCard key={post._id} post={post} />
+                                  );
+                                })}
+                              </div>
+                            );
+                          }
+                        })}
+                      {section.section_id === "works" &&
+                        posts &&
+                        Object.keys(posts).map((sectionKey) => {
+                          if (sectionKey === section.section_id) {
+                            return (
+                              <div
+                                key={`post_${sectionKey}`}
+                                className={`${stylesPosts.post_list} ml-10`}
+                              >
+                                {posts[sectionKey]?.map((post) => {
+                                  return (
+                                    <PostCard key={post._id} post={post} />
+                                  );
+                                })}
+                              </div>
+                            );
+                          }
+                        })}
+                      {section.section_id === "qualifications" &&
+                        posts &&
+                        Object.keys(posts).map((sectionKey: string) => {
+                          if (sectionKey === section.section_id) {
+                            return (
+                              <div
+                                key={`post_${sectionKey}`}
+                                className={`${stylesPosts.post_list} ml-10`}
+                              >
+                                {posts[sectionKey]?.map((post: PostType) => (
+                                  <PostCard
+                                    key={post._id}
+                                    post={post}
+                                    short={true}
+                                  />
+                                ))}
+                              </div>
+                            );
+                          }
+                        })}
+                    </div>
+                  );
+                })}
+            </div>
           </div>
-          <div
-            className={`hide ${pageContent ? "fadeIn" : ""} col-span-2 md:col-start-2 md:col-span-1 md:self-center`}
-          >
-            <h1 className="w-full text-3xl md:w-auto md:text-5xl">
-              {pageContent?.title}
-            </h1>
-            <p className="text-material-light">{pageContent?.subtitle}</p>
-          </div>
-          <div
-            className={`hide ${pageContent ? "fadeIn" : ""} hidden sticky justify-end top-20 col-span-2 md:inline-block md:col-start-1 md:col-end-1 md:self-start`}
-          >
-            <PageNav sections={sections} />
-          </div>
-          <div
-            className={`hide ${pageContent ? "fadeIn" : ""} col-span-2 row-span-3 pt-3 md:col-start-2 md:col-end-2 overflow-x-hidden`}
-          >
-            {sections &&
-              sections.map((section) => {
-                return (
-                  <div
-                    key={section.section_id}
-                    id={`section_${section.section_id}`}
-                    className={`section_${section.section_id} relative mb-20`}
-                  >
-                    <h2 className="text-2xl pb-2 mb-6 relative uppercase tracking-wider after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-material-blue">
-                      {section[titleKey]}
-                    </h2>
-                    {section.section_id === "services" &&
-                      posts &&
-                      Object.keys(posts).map((sectionKey) => {
-                        if (sectionKey === section.section_id) {
-                          return (
-                            <div
-                              key={`post_${sectionKey}`}
-                              className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2"
-                            >
-                              {posts[sectionKey]?.map((post) => {
-                                return (
-                                  <ServiceCard key={post._id} post={post} />
-                                );
-                              })}
-                            </div>
-                          );
-                        }
-                      })}
-                    {section.section_id === "works" &&
-                      posts &&
-                      Object.keys(posts).map((sectionKey) => {
-                        if (sectionKey === section.section_id) {
-                          return (
-                            <div
-                              key={`post_${sectionKey}`}
-                              className={`${stylesPosts.post_list} ml-10`}
-                            >
-                              {posts[sectionKey]?.map((post) => {
-                                return <PostCard key={post._id} post={post} />;
-                              })}
-                            </div>
-                          );
-                        }
-                      })}
-                    {section.section_id === "qualifications" &&
-                      posts &&
-                      Object.keys(posts).map((sectionKey: string) => {
-                        if (sectionKey === section.section_id) {
-                          return (
-                            <div
-                              key={`post_${sectionKey}`}
-                              className={`${stylesPosts.post_list} ml-10`}
-                            >
-                              {posts[sectionKey]?.map((post: PostType) => (
-                                <PostCard
-                                  key={post._id}
-                                  post={post}
-                                  short={true}
-                                />
-                              ))}
-                            </div>
-                          );
-                        }
-                      })}
-                  </div>
-                );
-              })}
-          </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </Suspense>
   );
 }
