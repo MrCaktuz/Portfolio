@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -29,8 +27,41 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deployement
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Build docker image with :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+docker build --secret id=env,src=$(pwd)/.env -t ghcr.io/mrcaktuz/portfolio:latest . 
+```
+
+Make sure you are auth with personal auth :
+```
+echo "YOUR_GITHUB_PAT" | docker login ghcr.io -u YOUR_GITHUB_USERNAME --password-stdin
+```
+
+Push docker image with :
+
+```
+docker push ghcr.io/mrcaktuz/portfolio:latest
+```
+
+Check that it is done here : https://github.com/users/mrcaktuz/packages/container/package/portfolio
+
+Then go to server and run this :
+
+```
+docker stop $(docker ps -a -q)
+```
+
+```
+docker rm $(docker ps -a -q)
+```
+
+```
+docker rmi $(docker images -q)
+```
+
+```
+docker run -d -p 3000:3000 ghcr.io/mrcaktuz/portfolio:latest
+```
